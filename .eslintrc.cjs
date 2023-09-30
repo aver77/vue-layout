@@ -4,19 +4,24 @@ module.exports = {
         browser: true,
         node: true
     },
+    //base method to set up vue + ts parser (vue-eslint-parser, @typescript-eslint/parser)
     parser: "vue-eslint-parser",
     parserOptions: {
         parser: "@typescript-eslint/parser"
     },
+    //define only plugins
+    "plugins": ["vue", "@typescript-eslint", "prettier"],
+    //load plugins and configs
     extends: [
-        "eslint:recommended",
         "plugin:vue/vue3-recommended",
-        "@vue/typescript/recommended",
+        "plugin:@typescript-eslint/recommended",
+        '@vue/typescript/recommended',
         "prettier"
     ],
-    plugins: ["@typescript-eslint", "prettier"],
+    //rules for vue
     rules: {
         "vue/component-api-style": ["warn", ["script-setup", "composition"]],
+        "vue/require-default-prop": 0,
         "vue/order-in-components": [
             "warn",
             {
@@ -56,6 +61,7 @@ module.exports = {
                     "renderError"
                 ]
             }
-        ]
+        ],
+        'prettier/prettier': ['error']
     }
 };
