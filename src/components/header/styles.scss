@@ -1,0 +1,31 @@
+@import "src/shared/styles/vars.scss";
+
+.container {
+  min-height: $headerHeight;
+  max-height: $headerHeight;
+  background: $cGray;
+  backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 $indentLayout;
+
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+.linksSection {
+  display: flex;
+  flex-direction: row;
+  gap: $indentSm;
+}
+
+.linkImage {
+  fill: white;
+  transition: opacity .2s;
+  &:hover, &:focus, &:active {
+    color: $cYellow !important;
+    fill: $cYellow !important;
+  }
+}

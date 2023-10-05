@@ -1,0 +1,32 @@
+@import "src/shared/styles/vars.scss";
+
+.btnShared {
+  cursor: pointer;
+  padding: $indentXS $indentSm;
+  font-size: $fsTextMd;
+  border-radius: $brDefault;
+  border-width: 1px;
+  border-style: solid;
+}
+
+.disabled {
+  background-color: $cDisabled;
+  border-color: $cDisabled;
+}
+
+.filled {
+  background-color: $cYellow;
+  border-color: $cYellow;
+  color: $cGray;
+  transition: color .2s;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.unfilled {
+  border-color: $cYellow;
+  color: $cYellow;
+  background-color: transparent;
+  transition: opacity .2s;
+}

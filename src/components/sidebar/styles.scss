@@ -1,0 +1,57 @@
+@import "src/shared/styles/vars.scss";
+
+.container {
+  width: $sidebarWidth;
+  background: $cDarkGray;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+.logoSection {
+  width: 100%;
+  height: $headerHeight;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logoWrap {
+  background: $cLightGray;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: $brDefault;
+}
+
+.logoText {
+  color: $cLight;
+  font-size: $fsTextL;
+  font-family: 'Birthstone', cursive;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.linkWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.link {
+  color: $cLight;
+  writing-mode: vertical-lr;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  padding: $indentMd 0;
+  cursor: pointer;
+}
