@@ -6,10 +6,11 @@ import Line from "@/shared/ui/components/line/index.vue";
 import PositionItem from "./positionItem/index.vue";
 
 import { positions } from "@/modules/mainModule/components/experience/defaultData";
+import { experienceId } from "@/shared/constants/elementsIds";
 </script>
 
 <template>
-    <div :class="$style.container">
+    <div :id="experienceId" :class="$style.container">
         <div :class="$style.titleWrap">
             <Title :with-dot="true" :title-type="titleTypesEnum.h2"
                 >Experience</Title

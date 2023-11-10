@@ -3,10 +3,12 @@ import Title from "@/shared/ui/components/title/index.vue";
 import { titleTypesEnum } from "@/shared/ui/components/title/titleEnum";
 
 import Mail from "@/shared/assets/svg/components/Mail.vue";
+
+import { contactsId } from "@/shared/constants/elementsIds";
 </script>
 
 <template>
-    <div :class="$style.container">
+    <div :id="contactsId" :class="$style.container">
         <div :class="$style.contentWrap">
             <Title :title-type="titleTypesEnum.h1">Contact</Title>
             <p :class="[$style.contactMsg, $style.lightText]">

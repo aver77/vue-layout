@@ -6,10 +6,11 @@ import { titleTypesEnum } from "@/shared/ui/components/title/titleEnum";
 
 import Line from "@/shared/ui/components/line/index.vue";
 import { projects } from "@/modules/mainModule/components/projects/defaultData";
+import { projectsId } from "@/shared/constants/elementsIds";
 </script>
 
 <template>
-    <div :class="$style.container">
+    <div :id="projectsId" :class="$style.container">
         <div :class="$style.titleWrap">
             <Line :class="$style.line" />
             <Title :with-dot="true" :title-type="titleTypesEnum.h2"

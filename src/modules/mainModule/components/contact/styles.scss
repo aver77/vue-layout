@@ -2,6 +2,7 @@
 
 .container {
   padding: $indentLayout;
+  padding-bottom: calc($indentLayout * 2);
 }
 
 .contentWrap {
