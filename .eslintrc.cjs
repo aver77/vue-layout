@@ -20,6 +20,7 @@ module.exports = {
     ],
     //rules for vue
     rules: {
+        "@typescript-eslint/no-explicit-any": "warn",
         "@typescript-eslint/no-unused-vars": 0,
         "vue/component-api-style": ["warn", ["script-setup", "composition"]],
         "vue/require-default-prop": 0,

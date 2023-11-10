@@ -1,0 +1,16 @@
+@import "src/shared/styles/vars.scss";
+
+.linksSection {
+  display: flex;
+  flex-direction: row;
+  gap: $indentSm;
+}
+
+.linkImage {
+  fill: white;
+  transition: opacity .2s;
+  &:hover, &:focus, &:active {
+    color: $cYellow !important;
+    fill: $cYellow !important;
+  }
+}

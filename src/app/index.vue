@@ -1,9 +1,12 @@
 <script setup lang="ts">
 import AppLayout from "./appLayout/index.vue";
+import MainPage from "@/pages/mainPage/index.vue";
 </script>
 
 <template>
-    <AppLayout><span style="color: red">1123</span></AppLayout>
+    <AppLayout>
+        <MainPage />
+    </AppLayout>
 </template>
 
 <style lang="scss">

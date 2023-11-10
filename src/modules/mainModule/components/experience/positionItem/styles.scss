@@ -1,0 +1,30 @@
+@import "src/shared/styles/vars.scss";
+
+.infoContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: $indentSm;
+}
+
+.skills {
+  margin: $indentL 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: $indentLow
+}
+
+.line {
+  opacity: 0.3;
+  width: 100%;
+}
+
+.lightText {
+  color: $cLight
+}
+
+.position {
+  color: $cYellow
+}

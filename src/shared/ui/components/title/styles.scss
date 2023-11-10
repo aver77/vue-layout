@@ -1,0 +1,42 @@
+@import "src/shared/styles/vars.scss";
+
+.boldWeight {
+  font-weight: $fwBold;
+}
+
+.usualWeight {
+  font-weight: $fwNormal;
+}
+
+.text {
+  color: $cLight;
+  font-weight: $fwEBold;
+}
+
+.dot {
+  color: $cYellow;
+}
+
+.title_h1 {
+  font-size: $fsTextEXL;
+}
+
+.title_h2 {
+  font-size: $fsTextXXL;
+}
+
+.title_h3 {
+  font-size: $fsTextXL;
+}
+
+.title_h4 {
+  font-size: $fsTextL;
+}
+
+.title_h5 {
+  font-size: $fsTextMd;
+}
+
+.title_h6 {
+  font-size: $fsTextDefault;
+}

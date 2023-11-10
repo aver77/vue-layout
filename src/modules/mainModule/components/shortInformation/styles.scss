@@ -1,0 +1,22 @@
+@import "src/shared/styles/vars.scss";
+
+.container {
+  position: relative;
+  padding: $indentLayout;
+}
+
+.infoWrapper {
+  position: relative;
+  z-index: $zIndexPlus;
+  max-width: 700px;
+}
+
+.description {
+  color: $cLight;
+  font-size: $fsTextL;
+  margin: $indentMd 0;
+}
+
+.titleJob {
+  color: $cYellow;
+}

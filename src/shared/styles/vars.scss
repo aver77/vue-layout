@@ -4,6 +4,8 @@ $headerHeight: 80px;
 
 //zIndexes
 $sidebarZIndex: 3;
+$zIndexDefault: 1;
+$zIndexPlus: 2;
 
 //colors
 $cDarkGray: #080808;
@@ -16,6 +18,7 @@ $cDisabled: #EBEBE4;
 
 //border radius
 $brDefault: 6px;
+$brMd: 8px;
 
 //font-sizes
 $fsXS: 12px;
@@ -33,7 +36,8 @@ $ipadSm: 700px;
 $phones: 500px;
 
 //indents
-$indentLayout: 36px;
+$indentHeadLayout: 36px;
+$indentLayout: 96px;
 
 $indentXXL: 46px;
 $indentXL: 32px;
@@ -41,4 +45,12 @@ $indentL: 24px;
 $indentMd: 20px;
 $indentSm: 16px;
 $indentXS: 12px;
-$indentLow: 6px;
+$indentLow: 8px;
+
+//font-weights
+$fwBold: 700;
+$fwNormal: 400;
+$fwEBold: 900;
+
+//width
+$layoutWidth: 1150px;

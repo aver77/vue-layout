@@ -18,7 +18,7 @@
   background-color: $cYellow;
   border-color: $cYellow;
   color: $cGray;
-  transition: color .2s;
+  transition: ease .3s;
   &:hover {
     opacity: 0.8;
   }

@@ -1,0 +1,23 @@
+@import "src/shared/styles/vars.scss";
+
+.container {
+  padding: $indentLayout;
+}
+
+.titleWrap {
+  display: flex;
+  align-items: center;
+  gap: $indentL;
+}
+
+.line {
+  flex-grow: 1;
+}
+
+.positionsWrap {
+  margin-top: $indentL;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: $indentSm;
+}

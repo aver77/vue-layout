@@ -1,0 +1,48 @@
+@import "src/shared/styles/vars.scss";
+
+.container {
+  padding: $indentLayout;
+}
+
+.contentWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: $indentXL;
+  text-align: center;
+}
+
+.contactMsg {
+  max-width: 800px;
+}
+
+.lightText {
+  color: $cLight
+}
+
+.link {
+  color: $cYellow;
+  &:hover, &:focus, &:active {
+    text-decoration: underline;
+  }
+}
+
+.mail {
+  font-size: $fsTextL;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: $indentLow;
+  &:hover, &:focus, &:active {
+    & > * {
+      color: $cYellow;
+      fill: $cYellow;
+    }
+  }
+}
+
+.mailIcon {
+  fill: $cLight
+}
+

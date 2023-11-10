@@ -1,0 +1,58 @@
+@import "src/shared/styles/vars.scss";
+
+.container {
+  position: relative;
+  padding: $indentLayout;
+}
+
+.titleWrap {
+  display: flex;
+  align-items: center;
+  gap: $indentL;
+}
+
+.line {
+  flex-grow: 1;
+}
+
+.infoContainer {
+  margin-top: $indentL;
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  grid-gap: $indentL;
+}
+
+.text {
+  color: $cLight;
+  font-size: $fsTextL;
+  margin-bottom: $indentMd;
+}
+
+.stackWrap {
+  display: flex;
+  flex-direction: column;
+  gap: $indentL;
+}
+
+.linksContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: $indentSm
+}
+
+.linksArrowSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: $indentLow
+}
+
+.myLinks {
+  color: $cYellow;
+  font-size: $fsTextL;
+}
+
+.arrow {
+  fill: $cYellow
+}
