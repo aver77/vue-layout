@@ -10,6 +10,7 @@
   justify-content: space-between;
   padding: 0 $indentHeadLayout;
   margin-left: $sidebarWidth;
+  z-index: $headerZIndex;
 
   position: sticky;
   top: 0;
