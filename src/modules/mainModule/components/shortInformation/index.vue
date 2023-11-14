@@ -13,7 +13,8 @@ import DotsGrid from "./dotsGrid/index.vue";
         <div :class="$style.infoWrapper">
             <Title :title-type="titleTypesEnum.h1">Hey, I'm Nikita</Title>
             <Title :title-type="titleTypesEnum.h3" :with-dot="false">
-                I'm a <span :class="$style.titleJob">Frontend developer</span>
+                I'm a
+                <span :class="$style.titleJob">Frontend developer</span>
             </Title>
             <p :class="$style.description">
                 I'm creative and constantly growing Frontend developer with more

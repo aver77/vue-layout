@@ -7,7 +7,7 @@ import Line from "@/shared/ui/components/line/index.vue";
 import Title from "@/shared/ui/components/title/index.vue";
 import { titleTypesEnum } from "@/shared/ui/components/title/titleEnum";
 
-defineProps({
+const { description } = defineProps({
     companyName: {
         type: String
     },
@@ -31,6 +31,8 @@ defineProps({
         type: Array as PropType<string[]>
     }
 });
+
+const parsedDescription = description?.split("\n");
 </script>
 
 <template>
@@ -50,7 +52,15 @@ defineProps({
             >
             <p :class="$style.lightText">{{ location }}</p>
         </div>
-        <p :class="$style.lightText">{{ description }}</p>
+        <div :class="$style.descriptionContainer">
+            <p
+                v-for="(desc, index) in parsedDescription"
+                :class="$style.lightText"
+                :key="index"
+            >
+                {{ desc }}
+            </p>
+        </div>
         <div :class="$style.skills">
             <Chip
                 v-for="(skill, index) in skills"

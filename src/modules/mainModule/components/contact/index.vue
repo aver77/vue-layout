@@ -42,6 +42,8 @@ useSetScrollValue(contactRef, setContactScrollValue, true);
             <a
                 :class="[$style.lightText, $style.mail]"
                 href="mailto:aser-14@bk.ru"
+                target="_blank"
+                rel="noreferrer noopener"
             >
                 <Mail :class="$style.mailIcon" />
                 <span>aser-14@bk.ru</span>

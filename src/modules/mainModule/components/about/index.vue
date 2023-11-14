@@ -33,26 +33,31 @@ useSetScrollValue(aboutRef, setAboutScrollValue);
         <div :class="$style.infoContainer">
             <div>
                 <p :class="$style.text">
-                    Hey! I'm Bob, if you haven't already gathered that by now.
-                    I'm a painter turned software engineer from Daytona,
-                    Florida. I specialize in the backend, primarily Node and
-                    Rust, but love building with whatever tools are right for
-                    the job.
+                    My expertise covers many different areas: I developed client
+                    parts of high-load product web applications, led the
+                    development of a small team, took part in creating the front
+                    end for startup projects, and also created custom web
+                    applications. The skills I have acquired allow me to quickly
+                    delve into any project and make tangible contributions and
+                    ideas.
                 </p>
                 <p :class="$style.text">
-                    I currently work for Google on Google Photos. I also toss in
-                    my ¢2 with the design systems teams from time to time (once
-                    an artist, always an artist, amirite?).
+                    I am well versed in design, responsive cross-browser layout,
+                    front-end architecture and working with external APIs. As a
+                    stack I prefer React.js / Next.js + Typescript. I have also
+                    worked with various ready-made solutions such as Wordpress,
+                    Service Manager, as well as low-code platforms.
                 </p>
                 <p :class="$style.text">
-                    Outside of work, I still love to paint. Any given Sunday
-                    you'll find me scribbling some happy clouds with my son ☁️ I
-                    even teach courses online if you're looking to learn!
+                    I am continuously expanding my horizons in development and
+                    Computer Science, developing backend on microservice
+                    architecture, using Node.js, Express.js, MongoDB, Docker.
+                    And also, working with various front-end frameworks, such as
+                    Next.js, Vue.js, Svelte.js.
                 </p>
                 <p :class="$style.text">
-                    I'm passively looking for new positions where I can merge my
-                    love for code with my love for the canvas. If you think
-                    you've got an opening that I might like, let's connect 🔗
+                    I have excellent communication skills and am always open to
+                    new professional acquaintances!
                 </p>
                 <div :class="$style.linksContainer">
                     <div :class="$style.linksArrowSection">

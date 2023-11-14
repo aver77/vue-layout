@@ -15,6 +15,45 @@
   aspect-ratio: 16/9;
   border-radius: $brDefault;
   background: $cLightGray;
+  position: relative;
+  overflow: hidden;
+
+  &:hover, &:focus, &:active {
+    .img {
+      bottom: 10%
+    }
+  }
+}
+
+.img {
+  position: absolute;
+  width: 85%;
+  height: 100%;
+  bottom: 0;
+  left: 50%;
+  translate: -50% 20%;
+  transition: all .25s;
+  border-radius: 0.4rem;
+}
+
+.line {
+  flex-grow: 1;
+  height: auto;
+}
+
+.linksContainer {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: $indentLow
+}
+
+.linkSvg {
+  fill: $cLight;
+  &:hover, &:focus, &:active {
+    fill: $cYellow
+  }
 }
 
 .title {

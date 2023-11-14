@@ -1,12 +1,13 @@
+import { PropType } from "vue";
 const getSharedSvgProps = () => {
     return {
         height: {
-            type: String,
-            default: "24px"
+            type: String as PropType<`${string}px`>,
+            default: "28px"
         },
         width: {
-            type: String,
-            default: "24px"
+            type: String as PropType<`${string}px`>,
+            default: "28px"
         },
         style: {
             type: String,

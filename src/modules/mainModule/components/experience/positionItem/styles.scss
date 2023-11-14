@@ -21,6 +21,12 @@
   width: 100%;
 }
 
+.descriptionContainer {
+  display: flex;
+  flex-direction: column;
+  gap: calc($indentLow / 2);
+}
+
 .lightText {
   color: $cLight
 }

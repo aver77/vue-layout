@@ -1,7 +1,7 @@
 @import "src/shared/styles/vars.scss";
 
 .container {
-  padding: $indentLayout;
+  padding: $indentLayout $indentLayout 0 $indentLayout;
 }
 
 .titleWrap {

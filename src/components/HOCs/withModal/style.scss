@@ -1,0 +1,31 @@
+@import "src/shared/styles/vars.scss";
+
+.modalContainer {
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  cursor: pointer;
+  height: 100svh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: auto;
+  padding: $indentLayout;
+  display: flex;
+  justify-content: center;
+  z-index: $zIndexModal;
+  overflow-y: scroll;
+}
+
+.closeIcon {
+  fill: $cLight;
+  position: absolute;
+  top: $indentL;
+  right: $indentL;
+  cursor: pointer;
+}
+
+.slotWrapper {
+  width: fit-content;
+  height: fit-content;
+}

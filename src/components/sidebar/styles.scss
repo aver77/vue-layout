@@ -6,6 +6,7 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  z-index: $sidebarZIndex;
 
   position: fixed;
   top: 0;

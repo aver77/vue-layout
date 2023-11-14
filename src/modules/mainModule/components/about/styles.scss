@@ -2,7 +2,7 @@
 
 .container {
   position: relative;
-  padding: $indentLayout;
+  padding: $indentLayout $indentLayout 0 $indentLayout;
 }
 
 .titleWrap {

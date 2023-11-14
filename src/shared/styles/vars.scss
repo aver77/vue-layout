@@ -3,6 +3,7 @@ $sidebarWidth: 60px;
 $headerHeight: 80px;
 
 //zIndexes
+$zIndexModal: 4;
 $sidebarZIndex: 3;
 $headerZIndex: $sidebarZIndex;
 $zIndexDefault: 1;
@@ -26,10 +27,10 @@ $fsXS: 12px;
 $fsSm: 14px;
 $fsTextDefault: 16px;
 $fsTextMd: 18px;
-$fsTextL: 22px;
-$fsTextXL: 26px;
-$fsTextXXL: 32px;
-$fsTextEXL: 48px;
+$fsTextL: 24px;
+$fsTextXL: 32px;
+$fsTextXXL: 44px;
+$fsTextEXL: 52px;
 
 //dimensions
 $ipadLg: 1000px;

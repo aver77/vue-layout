@@ -18,9 +18,3 @@ const { height, width, style, className } = defineProps(getSharedSvgProps());
         ></path>
     </svg>
 </template>
-
-<style module lang="scss">
-.fill {
-    fill: white;
-}
-</style>
