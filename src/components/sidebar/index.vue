@@ -9,26 +9,39 @@ import {
     projectsId,
     shortInformationId
 } from "@/shared/constants/elementsIds";
-import { isElementInViewport } from "@/components/sidebar/utils";
+import {
+    isElementInViewport,
+    scrollIntoViewAndWait
+} from "@/components/sidebar/utils";
 
 const linkDataWithElements = reactive<Record<string, HTMLElement | null>>({});
 const currentSelectedSidebarKey = ref<string | null>(null);
-const isScrollLocked = ref(false);
+
+const isScrollBlocked = ref(false);
 
 const scrollListener = () => {
-    if (
-        isElementInViewport(document.getElementById(shortInformationId), false)
-    ) {
-        currentSelectedSidebarKey.value = null;
-    } else {
-        if (isElementInViewport(document.getElementById(contactsId))) {
-            currentSelectedSidebarKey.value = SidebarKeys.Contact;
-        } else if (isElementInViewport(document.getElementById(experienceId))) {
-            currentSelectedSidebarKey.value = SidebarKeys.Experience;
-        } else if (isElementInViewport(document.getElementById(projectsId))) {
-            currentSelectedSidebarKey.value = SidebarKeys.Projects;
-        } else if (isElementInViewport(document.getElementById(aboutId))) {
-            currentSelectedSidebarKey.value = SidebarKeys.About;
+    if (!isScrollBlocked.value) {
+        if (
+            isElementInViewport(
+                document.getElementById(shortInformationId),
+                false
+            )
+        ) {
+            currentSelectedSidebarKey.value = null;
+        } else {
+            if (isElementInViewport(document.getElementById(contactsId))) {
+                currentSelectedSidebarKey.value = SidebarKeys.Contact;
+            } else if (
+                isElementInViewport(document.getElementById(experienceId))
+            ) {
+                currentSelectedSidebarKey.value = SidebarKeys.Experience;
+            } else if (
+                isElementInViewport(document.getElementById(projectsId))
+            ) {
+                currentSelectedSidebarKey.value = SidebarKeys.Projects;
+            } else if (isElementInViewport(document.getElementById(aboutId))) {
+                currentSelectedSidebarKey.value = SidebarKeys.About;
+            }
         }
     }
 };
@@ -48,16 +61,18 @@ onUnmounted(() => {
 });
 
 const scrollToTop = () => {
-    isScrollLocked.value = true;
-    window.scrollTo({ top: 0, behavior: "auto" });
-    currentSelectedSidebarKey.value = null;
-    isScrollLocked.value = false;
+    isScrollBlocked.value = true;
+    scrollIntoViewAndWait().then(() => {
+        currentSelectedSidebarKey.value = null;
+        isScrollBlocked.value = false;
+    });
 };
 const scrollToElement = (element: HTMLElement, sidebarKey: string) => {
-    isScrollLocked.value = true;
-    element.scrollIntoView({ behavior: "auto" });
-    currentSelectedSidebarKey.value = sidebarKey;
-    isScrollLocked.value = false;
+    isScrollBlocked.value = true;
+    scrollIntoViewAndWait(element).then(() => {
+        currentSelectedSidebarKey.value = sidebarKey;
+        isScrollBlocked.value = false;
+    });
 };
 </script>
 

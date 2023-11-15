@@ -21,3 +21,24 @@ export const isElementInViewport = (
         }
     }
 };
+
+export const scrollIntoViewAndWait = (element?: HTMLElement): Promise<void> => {
+    const scroll = () =>
+        element
+            ? element.scrollIntoView({
+                  behavior: "smooth"
+              })
+            : window.scrollTo({ top: 0, behavior: "smooth" });
+
+    return new Promise((resolve) => {
+        if ("onscrollend" in window) {
+            document.addEventListener("scrollend", () => resolve(), {
+                once: true
+            });
+            scroll();
+        } else {
+            scroll();
+            resolve();
+        }
+    });
+};

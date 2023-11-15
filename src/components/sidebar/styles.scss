@@ -58,10 +58,12 @@
   height: 100%;
   opacity: 0.6;
   transition: .3s linear;
-  &:hover, &:focus, &:active {
-    border-right: 1px solid $cYellow;
-    background: $cGray;
-    opacity: 1;
+  @media (hover: hover) {
+    &:hover, &:focus, &:active {
+      border-right: 1px solid $cYellow;
+      background: $cGray;
+      opacity: 1;
+    }
   }
 }
 
