@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { PropType, ref } from "vue";
+import { PropType } from "vue";
 import { TLink } from "@/modules/mainModule/components/projects/defaultData";
 
 import Title from "@/shared/ui/components/title/index.vue";
@@ -30,13 +30,11 @@ const { longDesc } = defineProps({
     }
 });
 
-const modalRef = ref<HTMLElement | null>(null);
-
 const parsedLongDesc = longDesc?.split("\n");
 </script>
 
 <template>
-    <div ref="modalRef" :class="$style.container">
+    <div :class="$style.container">
         <img :class="$style.img" :src="image" alt="project img" />
         <div :class="$style.textsContainer">
             <div :class="$style.subTextsContainer">
