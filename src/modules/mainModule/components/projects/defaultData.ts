@@ -119,7 +119,7 @@ export const projects: IProjects[] = [
         name: "Vue.js portfolio app",
         stack: ["Vue.js", "Typescript", "SCSS Modules", "Vite", "..."],
         githubLink: "https://github.com/aver77/vue-layout",
-        projectLink: "https://next-portfolio-b89g.vercel.app",
+        projectLink: "http://localhost:5173",
         shortDesc:
             "The second version of my portfolio with better UX and layout. It was also a little Vue.js training.",
         longDesc: "..."

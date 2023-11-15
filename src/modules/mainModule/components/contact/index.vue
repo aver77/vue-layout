@@ -1,22 +1,14 @@
 <script setup lang="ts">
-import { ref } from "vue";
 import Title from "@/shared/ui/components/title/index.vue";
 import { titleTypesEnum } from "@/shared/ui/components/title/titleEnum";
 
 import Mail from "@/shared/assets/svg/components/Mail.vue";
 
 import { contactsId } from "@/shared/constants/elementsIds";
-import useSetScrollValue from "@/shared/libs/hooks/useSetScrollValue";
-import { useScrollSBStore } from "@/shared/libs/stores/scrollSBStore";
-
-const contactRef = ref<HTMLElement | null>(null);
-const { setContactScrollValue } = useScrollSBStore();
-
-useSetScrollValue(contactRef, setContactScrollValue, true);
 </script>
 
 <template>
-    <div :id="contactsId" ref="contactRef" :class="$style.container">
+    <section :id="contactsId" :class="$style.container">
         <div :class="$style.contentWrap">
             <Title :title-type="titleTypesEnum.h1">Contact</Title>
             <p :class="[$style.contactMsg, $style.lightText]">
@@ -49,7 +41,7 @@ useSetScrollValue(contactRef, setContactScrollValue, true);
                 <span>aser-14@bk.ru</span>
             </a>
         </div>
-    </div>
+    </section>
 </template>
 
 <style lang="scss" module>

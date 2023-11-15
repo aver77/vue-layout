@@ -6,7 +6,11 @@ import ButtonComponent from "@/shared/ui/components/button/index.vue";
 <template>
     <header :class="$style.container">
         <Links />
-        <ButtonComponent>My Resume</ButtonComponent>
+        <ButtonComponent :class="$style.btn"
+            ><a href="src/shared/assets/pdf/NikitaAverochkinCV.pdf"
+                >My Resume</a
+            ></ButtonComponent
+        >
     </header>
 </template>
 

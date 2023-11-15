@@ -1,4 +1,5 @@
 @import "src/shared/styles/vars.scss";
+@import "src/shared/styles/mixins.scss";
 
 .container {
   z-index: $zIndexDefault;
@@ -8,6 +9,13 @@
   right: $indentLayout;
   display: grid;
   grid-template-columns: repeat(25, 1fr);
+  @include ipadLg {
+    overflow: hidden;
+    right: $indentLayoutIpad;
+  }
+  @include iPhones {
+    right: $indentLayoutPhone;
+  }
 }
 
 .dotContainer {

@@ -1,14 +1,21 @@
 @import "src/shared/styles/vars.scss";
+@import "src/shared/styles/mixins.scss";
 
 .container {
   position: relative;
-  padding: $indentLayout $indentLayout 0 $indentLayout;
+  padding: $indentLayout;
+  @include ipadLg {
+    padding: $indentLayoutIpad;
+  }
+  @include iPhones {
+    padding: $indentLayoutPhone;
+  }
 }
 
 .titleWrap {
   display: flex;
   align-items: center;
-  gap: $indentL;
+  gap: $indentXS;
 }
 
 .line {
@@ -20,12 +27,23 @@
   display: grid;
   grid-template-columns: 1fr 400px;
   grid-gap: $indentL;
+  @include ipadLg {
+    grid-template-columns: 1fr;
+  }
+  @include iPhones {
+    margin-top: $indentXS;
+    grid-gap: $indentSm;
+  }
 }
 
 .text {
   color: $cLight;
-  font-size: $fsTextL;
+  font-size: $fsTextMdPlus;
   margin-bottom: $indentMd;
+  @include iPhones {
+    font-size: $fsTextMd;
+    margin-bottom: $indentLow;
+  }
 }
 
 .stackWrap {
@@ -38,7 +56,13 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: $indentSm
+  gap: $indentSm;
+  @include ipadLg {
+    margin-top: $indentL;
+  }
+  @include iPhones {
+    margin-top: $indentSm;
+  }
 }
 
 .linksArrowSection {
@@ -49,8 +73,8 @@
 }
 
 .myLinks {
-  color: $cYellow;
-  font-size: $fsTextL;
+  font-size: $fsTextMdPlus;
+  @include yellowText;
 }
 
 .arrow {

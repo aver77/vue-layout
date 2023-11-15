@@ -10,20 +10,10 @@ import Links from "@/components/links/index.vue";
 import Arrow from "@/shared/assets/svg/components/Arrow.vue";
 
 import { aboutId } from "@/shared/constants/elementsIds";
-
-import { useScrollSBStore } from "@/shared/libs/stores/scrollSBStore";
-import { ref } from "vue";
-import useSetScrollValue from "@/shared/libs/hooks/useSetScrollValue";
-
-const { setAboutScrollValue } = useScrollSBStore();
-
-const aboutRef = ref<HTMLElement | null>(null);
-
-useSetScrollValue(aboutRef, setAboutScrollValue);
 </script>
 
 <template>
-    <div :id="aboutId" ref="aboutRef" :class="$style.container">
+    <section :id="aboutId" :class="$style.container">
         <div :class="$style.titleWrap">
             <Title :with-dot="true" :title-type="titleTypesEnum.h2"
                 >About</Title
@@ -73,7 +63,7 @@ useSetScrollValue(aboutRef, setAboutScrollValue);
                 <StackCard :stack-key="stackKeysEnum.PERSONAL_BACK" />
             </div>
         </div>
-    </div>
+    </section>
 </template>
 
 <style module lang="scss">

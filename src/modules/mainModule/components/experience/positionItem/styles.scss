@@ -1,10 +1,17 @@
 @import "src/shared/styles/vars.scss";
+@import "src/shared/styles/mixins.scss";
 
 .infoContainer {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: $indentSm;
+  gap: $indentMd;
+  @include iPhones {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: $indentLow;
+  }
 }
 
 .skills {
@@ -13,7 +20,10 @@
   justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
-  gap: $indentLow
+  gap: $indentLow;
+  @include iPhones {
+    margin: $indentSm 0;
+  }
 }
 
 .line {
@@ -24,13 +34,23 @@
 .descriptionContainer {
   display: flex;
   flex-direction: column;
-  gap: calc($indentLow / 2);
+  gap: $indentLow;
+  @include iPhones {
+    gap: calc($indentLow / 2);
+  }
 }
 
-.lightText {
-  color: $cLight
+.text {
+  color: $cLight;
+  font-size: $fsTextMdPlus;
+  @include ipadSm {
+    font-size: $fsTextMd;
+  }
+  @include iPhones {
+    font-size: $fsTextDefault;
+  }
 }
 
 .position {
-  color: $cYellow
+  @include yellowText;
 }

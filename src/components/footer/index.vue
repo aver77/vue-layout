@@ -1,5 +1,11 @@
 <script></script>
 
-<template></template>
+<template>
+    <footer :class="$style.container">
+        All rights reserved copyright © 2023
+    </footer>
+</template>
 
-<style></style>
+<style lang="scss" module>
+@import "./style.scss";
+</style>

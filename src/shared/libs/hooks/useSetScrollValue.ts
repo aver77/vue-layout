@@ -2,7 +2,7 @@ import { onMounted, Ref } from "vue";
 
 export default function (
     scrollElemRef: Ref<HTMLElement | null>,
-    setScrollMethod: (v: number) => void,
+    setScrollMethod: (v: DOMRect) => void,
     lastElemRef?: boolean
 ) {
     onMounted(() => {
@@ -11,11 +11,7 @@ export default function (
         if (elem) {
             const elemRect = elem.getBoundingClientRect();
 
-            setScrollMethod(
-                elemRect.y +
-                    window.scrollY -
-                    (lastElemRef ? elemRect.height : 0)
-            );
+            setScrollMethod(elemRect);
         }
     });
 }

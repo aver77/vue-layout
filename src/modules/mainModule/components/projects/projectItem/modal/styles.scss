@@ -1,6 +1,8 @@
 @import "src/shared/styles/vars.scss";
+@import "src/shared/styles/mixins.scss";
 
 .container {
+  cursor: default;
   max-width: 700px;
   width: 100%;
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
@@ -39,7 +41,8 @@
 }
 
 .stackStr {
-  color: $cYellow
+  @include yellowText;
+  font-size: $fsTextMd;
 }
 
 .links {
@@ -60,4 +63,8 @@
   &:hover, &:focus, &:active {
     text-decoration: underline;
   }
+}
+
+.linkText {
+  @include yellowText;
 }

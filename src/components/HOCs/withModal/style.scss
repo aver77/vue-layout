@@ -1,4 +1,5 @@
 @import "src/shared/styles/vars.scss";
+@import "src/shared/styles/mixins.scss";
 
 .modalContainer {
   -webkit-backdrop-filter: blur(12px);
@@ -15,6 +16,9 @@
   justify-content: center;
   z-index: $zIndexModal;
   overflow-y: scroll;
+  @include ipadLg {
+    padding: $indentLayoutIpad;
+  }
 }
 
 .closeIcon {
@@ -23,6 +27,10 @@
   top: $indentL;
   right: $indentL;
   cursor: pointer;
+  @include ipadLg {
+    top: $indentLow;
+    right: $indentLow;
+  }
 }
 
 .slotWrapper {

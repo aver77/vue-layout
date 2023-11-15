@@ -1,3 +1,8 @@
+//dimensions
+$ipadLg: 1000px;
+$ipadSm: 700px;
+$phones: 600px;
+
 //widths
 $sidebarWidth: 60px;
 $headerHeight: 80px;
@@ -27,6 +32,7 @@ $fsXS: 12px;
 $fsSm: 14px;
 $fsTextDefault: 16px;
 $fsTextMd: 18px;
+$fsTextMdPlus: 20px;
 $fsTextL: 24px;
 $fsTextXL: 32px;
 $fsTextXXL: 44px;
@@ -38,7 +44,8 @@ $ipadSm: 700px;
 $phones: 500px;
 
 //indents
-$indentHeadLayout: 36px;
+$indentLayoutPhone: 12px;
+$indentLayoutIpad: 36px;
 $indentLayout: 96px;
 
 $indentXXL: 46px;

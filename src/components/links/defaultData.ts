@@ -17,7 +17,7 @@ export const links: ILink[] = [
         linkComponent: LinkedIn
     },
     {
-        link: "https://www.linkedin.com/in/nikita-averochkin-761917276/",
+        link: "https://www.codewars.com/users/aver77",
         linkComponent: CodeWars
     }
 ];

@@ -2,43 +2,33 @@
 import { onMounted, onUnmounted, reactive, ref } from "vue";
 
 import { linkData, SidebarKeys } from "@/components/sidebar/defaultData";
-import { useScrollSBStore } from "@/shared/libs/stores/scrollSBStore";
-
-const store = useScrollSBStore();
+import {
+    aboutId,
+    contactsId,
+    experienceId,
+    projectsId,
+    shortInformationId
+} from "@/shared/constants/elementsIds";
+import { isElementInViewport } from "@/components/sidebar/utils";
 
 const linkDataWithElements = reactive<Record<string, HTMLElement | null>>({});
 const currentSelectedSidebarKey = ref<string | null>(null);
 const isScrollLocked = ref(false);
 
 const scrollListener = () => {
-    const scrollY = window.scrollY;
-
     if (
-        !isScrollLocked.value &&
-        store.aboutScrollValue &&
-        store.projectsScrollValue &&
-        store.experienceScrollValue &&
-        store.contactScrollValue
+        isElementInViewport(document.getElementById(shortInformationId), false)
     ) {
-        if (
-            scrollY >= store.aboutScrollValue &&
-            scrollY <= store.projectsScrollValue
-        ) {
-            currentSelectedSidebarKey.value = SidebarKeys.About;
-        } else if (
-            scrollY >= store.projectsScrollValue &&
-            scrollY <= store.experienceScrollValue
-        ) {
-            currentSelectedSidebarKey.value = SidebarKeys.Projects;
-        } else if (
-            scrollY >= store.experienceScrollValue &&
-            scrollY <= store.contactScrollValue
-        ) {
-            currentSelectedSidebarKey.value = SidebarKeys.Experience;
-        } else if (scrollY >= store.contactScrollValue) {
+        currentSelectedSidebarKey.value = null;
+    } else {
+        if (isElementInViewport(document.getElementById(contactsId))) {
             currentSelectedSidebarKey.value = SidebarKeys.Contact;
-        } else {
-            currentSelectedSidebarKey.value = null;
+        } else if (isElementInViewport(document.getElementById(experienceId))) {
+            currentSelectedSidebarKey.value = SidebarKeys.Experience;
+        } else if (isElementInViewport(document.getElementById(projectsId))) {
+            currentSelectedSidebarKey.value = SidebarKeys.Projects;
+        } else if (isElementInViewport(document.getElementById(aboutId))) {
+            currentSelectedSidebarKey.value = SidebarKeys.About;
         }
     }
 };
@@ -87,7 +77,7 @@ const scrollToElement = (element: HTMLElement, sidebarKey: string) => {
                 :class="[
                     $style.linkWrapper,
                     currentSelectedSidebarKey === sidebarKey &&
-                        $style.withBorder
+                        $style.highlighted
                 ]"
                 @click="scrollToElement(element, sidebarKey)"
             >

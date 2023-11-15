@@ -65,12 +65,8 @@ const parsedLongDesc = longDesc?.split("\n");
                         rel="noreferrer noopener"
                         :class="$style.link"
                     >
-                        <GitHub
-                            :class="$style.linkImage"
-                            :width="'18px'"
-                            :height="'18px'"
-                        />
-                        <span>source code</span>
+                        <GitHub :width="'18px'" :height="'18px'" />
+                        <span :class="$style.linkText">source code</span>
                     </a>
                     <a
                         v-if="projectLink"
@@ -79,12 +75,8 @@ const parsedLongDesc = longDesc?.split("\n");
                         rel="noreferrer noopener"
                         :class="$style.link"
                     >
-                        <GoTo
-                            :class="$style.linkImage"
-                            :width="'18px'"
-                            :height="'18px'"
-                        />
-                        <span>live project</span>
+                        <GoTo :width="'18px'" :height="'18px'" />
+                        <span :class="$style.linkText">live project</span>
                     </a>
                 </div>
             </div>

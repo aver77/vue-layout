@@ -41,7 +41,7 @@ const parsedDescription = description?.split("\n");
             <Title :with-dot="false" :title-type="titleTypesEnum.h4">{{
                 companyName
             }}</Title>
-            <p :class="$style.lightText">{{ startDate }} - {{ endDate }}</p>
+            <p :class="$style.text">{{ startDate }} - {{ endDate }}</p>
         </div>
         <div :class="$style.infoContainer">
             <Title
@@ -50,12 +50,12 @@ const parsedDescription = description?.split("\n");
                 :title-type="titleTypesEnum.h5"
                 >{{ position }}</Title
             >
-            <p :class="$style.lightText">{{ location }}</p>
+            <p :class="$style.text">{{ location }}</p>
         </div>
         <div :class="$style.descriptionContainer">
             <p
                 v-for="(desc, index) in parsedDescription"
-                :class="$style.lightText"
+                :class="$style.text"
                 :key="index"
             >
                 {{ desc }}

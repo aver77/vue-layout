@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { ref } from "vue";
 import Title from "@/shared/ui/components/title/index.vue";
 import { titleTypesEnum } from "@/shared/ui/components/title/titleEnum";
 
@@ -8,17 +7,10 @@ import PositionItem from "./positionItem/index.vue";
 
 import { positions } from "@/modules/mainModule/components/experience/defaultData";
 import { experienceId } from "@/shared/constants/elementsIds";
-import { useScrollSBStore } from "@/shared/libs/stores/scrollSBStore";
-import useSetScrollValue from "@/shared/libs/hooks/useSetScrollValue";
-
-const experienceRef = ref<HTMLElement | null>(null);
-const { setExperienceScrollValue } = useScrollSBStore();
-
-useSetScrollValue(experienceRef, setExperienceScrollValue);
 </script>
 
 <template>
-    <div :id="experienceId" ref="experienceRef" :class="$style.container">
+    <section :id="experienceId" :class="$style.container">
         <div :class="$style.titleWrap">
             <Title :with-dot="true" :title-type="titleTypesEnum.h2"
                 >Experience</Title
@@ -32,7 +24,7 @@ useSetScrollValue(experienceRef, setExperienceScrollValue);
                 :key="index"
             />
         </div>
-    </div>
+    </section>
 </template>
 
 <style lang="scss" module>

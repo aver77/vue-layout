@@ -1,4 +1,5 @@
 @import "src/shared/styles/vars.scss";
+@import "src/shared/styles/mixins.scss";
 
 .btnShared {
   cursor: pointer;
@@ -7,6 +8,9 @@
   border-radius: $brDefault;
   border-width: 1px;
   border-style: solid;
+  @include iPhones {
+    padding: $indentLow $indentXS;
+  }
 }
 
 .disabled {

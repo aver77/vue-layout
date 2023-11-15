@@ -1,7 +1,14 @@
 @import "src/shared/styles/vars.scss";
+@import "src/shared/styles/mixins.scss";
 
 .container {
-  padding: $indentLayout;
+  padding: 0 $indentLayout $indentLayout $indentLayout;
+  @include ipadLg {
+    padding: 0 $indentLayoutIpad $indentLayoutIpad $indentLayoutIpad;
+  }
+  @include iPhones {
+    padding: $indentLayoutPhone;
+  }
 }
 
 .contentWrap {
@@ -15,6 +22,10 @@
 
 .contactMsg {
   max-width: 800px;
+  font-size: $fsTextMdPlus;
+  @include iPhones {
+    font-size: $fsTextMd;
+  }
 }
 
 .lightText {
@@ -22,7 +33,7 @@
 }
 
 .link {
-  color: $cYellow;
+  @include yellowText;
   &:hover, &:focus, &:active {
     text-decoration: underline;
   }

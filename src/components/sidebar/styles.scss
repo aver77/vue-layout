@@ -1,21 +1,27 @@
 @import "src/shared/styles/vars.scss";
+@import "src/shared/styles/mixins.scss";
 
 .container {
   width: $sidebarWidth;
   background: $cDarkGray;
-  min-height: 100vh;
+  min-height: 100svh;
   display: flex;
   flex-direction: column;
   z-index: $sidebarZIndex;
-
   position: fixed;
   top: 0;
   left: 0;
+  @include iPhones {
+    position: sticky;
+    height: 100svh;
+    overflow-y: scroll;
+  }
 }
 
 .logoSection {
   width: 100%;
   height: $headerHeight;
+  min-height: $headerHeight;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -50,7 +56,13 @@
   cursor: pointer;
   width: 100%;
   height: 100%;
+  opacity: 0.6;
   transition: .3s linear;
+  &:hover, &:focus, &:active {
+    border-right: 1px solid $cYellow;
+    background: $cGray;
+    opacity: 1;
+  }
 }
 
 .link {
@@ -61,7 +73,8 @@
   padding: $indentMd 0;
 }
 
-.withBorder {
+.highlighted {
   border-right: 1px solid $cYellow;
   background: $cGray;
+  opacity: 1;
 }

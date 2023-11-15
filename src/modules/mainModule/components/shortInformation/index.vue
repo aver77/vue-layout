@@ -6,10 +6,11 @@ import Title from "@/shared/ui/components/title/index.vue";
 import { titleTypesEnum } from "@/shared/ui/components/title/titleEnum";
 
 import DotsGrid from "./dotsGrid/index.vue";
+import { shortInformationId } from "@/shared/constants/elementsIds";
 </script>
 
 <template>
-    <section :class="$style.container">
+    <section :id="shortInformationId" :class="$style.container">
         <div :class="$style.infoWrapper">
             <Title :title-type="titleTypesEnum.h1">Hey, I'm Nikita</Title>
             <Title :title-type="titleTypesEnum.h3" :with-dot="false">

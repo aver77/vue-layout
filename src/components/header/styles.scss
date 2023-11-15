@@ -1,4 +1,5 @@
 @import "src/shared/styles/vars.scss";
+@import "src/shared/styles/mixins.scss";
 
 .container {
   min-height: $headerHeight;
@@ -8,13 +9,18 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 $indentHeadLayout;
+  padding: 0 36px;
   margin-left: $sidebarWidth;
   z-index: $headerZIndex;
 
   position: sticky;
   top: 0;
   left: 0;
+
+  @include iPhones {
+    padding: 0 $indentLayoutPhone;
+    margin-left: 0;
+  }
 }
 
 .linksSection {
@@ -29,5 +35,20 @@
   &:hover, &:focus, &:active {
     color: $cYellow !important;
     fill: $cYellow !important;
+  }
+}
+
+.btn {
+  padding: 0;
+  & > a {
+    display: block;
+    padding: $indentXS $indentSm;
+    @include yellowText;
+  }
+
+  @include iPhones {
+    & > a {
+      padding: $indentLow $indentXS;
+    }
   }
 }
