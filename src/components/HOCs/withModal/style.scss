@@ -16,7 +16,6 @@
   display: flex;
   justify-content: center;
   z-index: $zIndexModal;
-  overflow-y: scroll;
   @include ipadLg {
     padding: $indentLayoutIpad;
   }
