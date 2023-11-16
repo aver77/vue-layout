@@ -12,10 +12,14 @@ import { shortInformationId } from "@/shared/constants/elementsIds";
 <template>
     <section :id="shortInformationId" :class="$style.container">
         <div :class="$style.infoWrapper">
-            <Title :title-type="titleTypesEnum.h1">Hey, I'm Nikita</Title>
+            <Title :title-type="titleTypesEnum.h1">{{
+                $t("main.shortInformation.nameGreet")
+            }}</Title>
             <Title :title-type="titleTypesEnum.h3" :with-dot="false">
-                I'm a
-                <span :class="$style.titleJob">Frontend developer</span>
+                {{ $t("shared.i") }}
+                <span :class="$style.titleJob">{{
+                    $t("main.shortInformation.jobTitle")
+                }}</span>
             </Title>
             <p :class="$style.description">
                 I'm creative and constantly growing Frontend developer with more
@@ -25,9 +29,15 @@ import { shortInformationId } from "@/shared/constants/elementsIds";
                 projects, solving extraordinary problems and bringing profit to
                 customers.
             </p>
-            <ButtonComponent :btn-type="buttonTypesEnum.FILLED"
-                >Contact me</ButtonComponent
+            <a
+                href="mailto:aser-14@bk.ru"
+                target="_blank"
+                rel="noreferrer noopener"
             >
+                <ButtonComponent :btn-type="buttonTypesEnum.FILLED">
+                    Contact me
+                </ButtonComponent>
+            </a>
         </div>
         <DotsGrid />
     </section>

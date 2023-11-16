@@ -1,10 +1,8 @@
 <script lang="ts" setup>
 import Links from "../links/index.vue";
 import ButtonComponent from "@/shared/ui/components/button/index.vue";
-
+import LangSwitcher from "./langSwitcher/index.vue";
 import pdfCV from "@/shared/assets/pdf/NikitaAverochkinCV.pdf";
-import UsFlag from "@/shared/assets/svg/components/UsFlag.vue";
-// import cssVars from "@/shared/styles/vars.scss";
 import { ref } from "vue";
 
 const burgerOpened = ref(false);
@@ -29,14 +27,12 @@ const switchBurgerMenu = () => {
             </div>
             <ul :class="[$style.ulMenu, !burgerOpened && $style.hidden]">
                 <li>
-                    <ButtonComponent :class="$style.btn"
-                        ><a :href="pdfCV" target="_blank"
-                            >My Resume</a
-                        ></ButtonComponent
-                    >
+                    <a :href="pdfCV" target="_blank">
+                        <ButtonComponent>My Resume</ButtonComponent>
+                    </a>
                 </li>
                 <li>
-                    <UsFlag :class="$style.flagImg" :height="'24px'" />
+                    <LangSwitcher />
                 </li>
             </ul>
         </div>
