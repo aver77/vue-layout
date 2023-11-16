@@ -63,3 +63,9 @@ $fwEBold: 900;
 
 //width
 $layoutWidth: 1150px;
+
+:export {
+  ipadLg: #{$ipadLg};
+  ipadSm: #{$ipadSm};
+  phones: #{$phones};
+}

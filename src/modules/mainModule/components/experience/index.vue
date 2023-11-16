@@ -15,7 +15,7 @@ import { experienceId } from "@/shared/constants/elementsIds";
             <Title :with-dot="true" :title-type="titleTypesEnum.h2"
                 >Experience</Title
             >
-            <Line :class="$style.line" />
+            <Line />
         </div>
         <div :class="$style.positionsWrap">
             <PositionItem

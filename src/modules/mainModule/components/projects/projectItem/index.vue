@@ -58,7 +58,7 @@ const onCloseModal = () => (modalOpened.value = false);
                 >{{ name }}</Title
             >
             <div :class="$style.linksContainer">
-                <Line :class="$style.line" />
+                <Line />
                 <a :href="githubLink" target="_blank" rel="noreferrer noopener">
                     <GitHub :class="$style.linkSvg" />
                 </a>

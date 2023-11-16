@@ -10,6 +10,7 @@
   border-style: solid;
   @include iPhones {
     padding: $indentLow $indentXS;
+    font-size: $fsTextDefault;
   }
 }
 

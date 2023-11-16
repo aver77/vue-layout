@@ -39,7 +39,7 @@ export const projects: IProjects[] = [
             "INApp is a real-time translation app for for intercultural and interlingual communication.\n" +
             "You can choose a translation language from those offered. And from that time, all the messages in the text chat will be translated to it. Moreover, you can make a video call to any user and after that you will be able to hear and see your interlocutor and also read the subtitles of his speech on language you chose.\n" +
             "As for development - this is fullstack application with modular frontend on React.js + Typescript, which interacts with the server-side via HTTP and WS protocols, and also recognizes speech using the Google Speech-recognition API.\n" +
-            "Backend was written on Node.js + Express with high-level microservices architecture. There are 3 services: gateway - responsible for JWT registration and forwarding requests to other services, translation - responsible for translate all the texts using Yandex translate API, and chats service - based on Websocket protocol, it's implement message and metadata exchange with client-side.\n" +
+            "Backend was written on Node.js + Express.js with high-level microservices architecture. There are 3 services: gateway - responsible for JWT registration and forwarding requests to other services, translation - responsible for translate all the texts using Yandex translate API, and chats service - based on WS protocol, it's implement message and metadata exchange with client-side.\n" +
             "The application was fully deployed in Azure. Frontend - using VM + nginx. Backend - using Kubernetes + terraform cluster."
     },
     {
@@ -72,7 +72,7 @@ export const projects: IProjects[] = [
         longDesc:
             "NW Compiler allows you to compile code in Python, C++ and JavaScript.\n" +
             "Frontend was built using React.js, using MUI library. Additionally, localization and theming have been added to improve user experience.\n" +
-            "Backend was written on Node.js + Express using monolith structure whose purpose is to compile the received code using an HTTP Post request. To make it out, a file with the extension corresponding to its language is created for it. And with the help of child process (exec module built into Node.js), compilation occurs on the machine from which the server is running. For this, pre-installed g++, node and python packages are used."
+            "Backend was written on Node.js + Express.js using monolith structure whose purpose is to compile code received by HTTP Post request. To make it out, a file with the extension corresponding to its language is created for it. And with the help of child process (exec module built into Node.js), compilation occurs on the machine from which the server is running. For this, pre-installed g++, node and python packages are used."
     },
     {
         image: imgInsuranceApp,
@@ -89,9 +89,9 @@ export const projects: IProjects[] = [
         shortDesc:
             "This application has implemented a convenient insurance process, fancy UI and a lot of client functionality.",
         longDesc:
-            "Policy allows you to purchase insurance online for different types of property.\n" +
+            "Policy app allows you to purchase insurance online for different types of property.\n" +
             "This application was made to order and written on React.js + Typescript, using Ant Design as a UI library and modular frontend modular architecture for better scalability in advance.\n" +
-            "By agreement, only part of the functionality was implemented - the main adaptive page with localization and the business process of obtaining car insurance.All the interface was made based on figma layouts received from the designer.\n" +
+            "By agreement, only part of the functionality was implemented - the main adaptive page with localization and the business process of obtaining car insurance. All the interface was made based on figma layouts received from the designer.\n" +
             "At this point the source code of the application has been transferred to the development team for further development."
     },
     {
@@ -106,22 +106,27 @@ export const projects: IProjects[] = [
             "React-flow"
         ],
         githubLink: "https://github.com/aver77/next-portfolio",
-        projectLink: "https://next-portfolio-b89g.vercel.app",
+        projectLink: "https://nw-next-portfolio.vercel.app",
         shortDesc:
             "This is the first version of my portfolio applications. It was also a little Next.js training.",
         longDesc:
-            "The portfolio application is designed as a CV in web format for additional convenience. It contains information my personal information, work experience and skills.\n" +
+            "The portfolio application is designed as a CV in web format for additional convenience. It contains information my personal information, projects, work experience and skills.\n" +
             "As for development, it was written on 13v of Next.js using frontend modular architecture.\n" +
-            "I decided to add information about my latest and greatest projects to this app. Unfortunately, most of the projects are fall under NDA, so I can't share them here. But many other projects that I didn't mention here are stored in my GitHub at the link below.Among them are many designed layout pages, simple web applications for practicing skills and web applications written in various frameworks. There are also some console applications in various programming languages."
+            "I decided to add information about my latest and greatest projects to this app. Unfortunately, most of the projects are fall under NDA, so I can't share them here. But many other projects that I didn't mention here are stored in my GitHub at the link below. Among them are many designed layout pages, simple web applications for practicing skills and web applications written in various frameworks. There are also some console applications in various programming languages and a lot of other things.\n" +
+            "This portfolio app reflects my practical experience, but as about UX - I think this is not the strongest point of it. That's why I decided to develop a second version with better UX and design."
     },
     {
         image: imgVuePortfolio,
         name: "Vue.js portfolio app",
         stack: ["Vue.js", "Typescript", "SCSS Modules", "Vite", "..."],
         githubLink: "https://github.com/aver77/vue-layout",
-        projectLink: "http://localhost:5173",
+        projectLink: "https://nw-vue-portfolio.vercel.app",
         shortDesc:
             "The second version of my portfolio with better UX and layout. It was also a little Vue.js training.",
-        longDesc: "..."
+        longDesc:
+            "The portfolio application is designed as a CV in web format for additional convenience. It contains information my personal information, projects, work experience and skills.\n" +
+            "As for development, it was written on 3v of Vue.js using frontend modular architecture.\n" +
+            "I decided to add information about my latest and greatest projects to this app. Unfortunately, most of the projects are fall under NDA, so I can't share them here. But many other projects that I didn't mention here are stored in my GitHub at the link below. Among them are many designed layout pages, simple web applications for practicing skills and web applications written in various frameworks. There are also some console applications in various programming languages and a lot of other things.\n" +
+            "This portfolio app reflects my practical experience, and in my opinion, has a better design and interface than the first version."
     }
 ];

@@ -19,7 +19,7 @@ import { projectsId } from "@/shared/constants/elementsIds";
 <template>
     <section :id="projectsId" :class="$style.container">
         <div :class="$style.titleWrap">
-            <Line :class="$style.line" />
+            <Line />
             <Title :with-dot="true" :title-type="titleTypesEnum.h2"
                 >Projects</Title
             >
