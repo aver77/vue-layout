@@ -80,10 +80,10 @@ const onCloseModal = () => (modalOpened.value = false);
             </div>
         </div>
     </div>
-    <WithModal v-if="modalOpened" :closeModal="onCloseModal">
+    <WithModal v-if="modalOpened" :close-modal="onCloseModal">
         <Modal
             :name="name"
-            :stackStr="stackStr"
+            :stack-str="stackStr"
             :github-link="githubLink"
             :project-link="projectLink"
             :long-desc="longDesc"
