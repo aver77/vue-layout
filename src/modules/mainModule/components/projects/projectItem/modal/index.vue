@@ -45,9 +45,9 @@ const parsedLongDesc = longDesc?.split("\n");
             </div>
             <div :class="$style.longDescContainer">
                 <p
-                    :class="$style.longDescPart"
                     v-for="(descPart, index) in parsedLongDesc"
                     :key="index"
+                    :class="$style.longDescPart"
                 >
                     {{ descPart }}
                 </p>
