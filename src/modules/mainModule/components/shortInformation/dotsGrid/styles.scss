@@ -13,8 +13,13 @@
     overflow: hidden;
     right: $indentLayoutIpad;
   }
+  @include ipadSm {
+    right: unset;
+    opacity: 0.6;
+    left: $indentLayoutIpad;
+  }
   @include iPhones {
-    right: $indentLayoutPhone;
+    left: $indentLayoutPhone;
   }
 }
 
