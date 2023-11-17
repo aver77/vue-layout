@@ -12,8 +12,8 @@ import { links } from "./defaultData";
             rel="noreferrer noopener"
         >
             <component
-                v-bind:is="linkComponent"
-                v-bind:className="$style.linkImage"
+                :is="linkComponent"
+                :class-name="$style.linkImage"
             ></component>
         </a>
     </div>

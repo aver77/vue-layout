@@ -22,12 +22,7 @@ import { shortInformationId } from "@/shared/constants/elementsIds";
                 }}</span>
             </Title>
             <p :class="$style.description">
-                I'm creative and constantly growing Frontend developer with more
-                than two years of experience working in various industry-leading
-                projects and improving diverse React.js SPA and web-resources.
-                Seeking to apply my expertise in large-scale or open-source
-                projects, solving extraordinary problems and bringing profit to
-                customers.
+                {{ $t("main.shortInformation.description") }}
             </p>
             <a
                 href="mailto:aser-14@bk.ru"
@@ -35,7 +30,7 @@ import { shortInformationId } from "@/shared/constants/elementsIds";
                 rel="noreferrer noopener"
             >
                 <ButtonComponent :btn-type="buttonTypesEnum.FILLED">
-                    Contact me
+                    {{ $t("main.shortInformation.contactBtn") }}
                 </ButtonComponent>
             </a>
         </div>

@@ -10,12 +10,12 @@ module.exports = {
         parser: "@typescript-eslint/parser"
     },
     //define only plugins
-    "plugins": ["vue", "@typescript-eslint", "prettier"],
+    plugins: ["vue", "@typescript-eslint", "prettier"],
     //load plugins and configs
     extends: [
         "plugin:vue/vue3-recommended",
         "plugin:@typescript-eslint/recommended",
-        '@vue/typescript/recommended',
+        "@vue/typescript/recommended",
         "prettier"
     ],
     //rules for vue

@@ -1,4 +1,5 @@
 import { PropType } from "vue";
+
 const getSharedSvgProps = () => {
     return {
         height: {

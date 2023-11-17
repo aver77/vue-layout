@@ -2,7 +2,11 @@
 
 <template>
     <footer :class="$style.container">
-        All rights reserved copyright © 2023
+        {{
+            $t("components.footer.copyright", {
+                year: new Date().getFullYear()
+            })
+        }}
     </footer>
 </template>
 

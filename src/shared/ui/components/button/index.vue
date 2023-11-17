@@ -21,8 +21,8 @@ defineProps({
             disabled
                 ? $style.disabled
                 : btnType === buttonTypesEnum.FILLED
-                ? $style.filled
-                : $style.unfilled
+                  ? $style.filled
+                  : $style.unfilled
         ]"
     >
         <slot></slot>

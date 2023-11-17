@@ -14,8 +14,11 @@ const { closeModal } = defineProps({
 
 const slotWrapperRef = ref<HTMLElement | null>(null);
 
-const handleClickOutside = (e: any) => {
-    if (slotWrapperRef?.value && !slotWrapperRef.value.contains(e.target)) {
+const handleClickOutside = (e: MouseEvent) => {
+    if (
+        slotWrapperRef?.value &&
+        !slotWrapperRef.value.contains(e.target as Node)
+    ) {
         closeModal();
     }
 };

@@ -10,10 +10,11 @@ import { contactsId } from "@/shared/constants/elementsIds";
 <template>
     <section :id="contactsId" :class="$style.container">
         <div :class="$style.contentWrap">
-            <Title :title-type="titleTypesEnum.h1">Contact</Title>
+            <Title :title-type="titleTypesEnum.h1">{{
+                $t("main.contact.title")
+            }}</Title>
             <p :class="[$style.contactMsg, $style.lightText]">
-                Shoot me an email if you want to connect! You can also find me
-                on
+                {{ $t("main.contact.messageStart") }}
                 <a
                     :class="$style.link"
                     href="https://www.linkedin.com/in/nikita-averochkin-761917276/"
@@ -21,7 +22,7 @@ import { contactsId } from "@/shared/constants/elementsIds";
                     rel="noreferrer noopener"
                     >LinkedIn</a
                 >
-                or
+                {{ $t("main.contact.messageDivider") }}
                 <a
                     :class="$style.link"
                     href="https://t.me/NikitaNWB"
@@ -29,7 +30,7 @@ import { contactsId } from "@/shared/constants/elementsIds";
                     rel="noreferrer noopener"
                     >Telegram</a
                 >
-                if that's more your speed.
+                {{ $t("main.contact.messageEnd") }}
             </p>
             <a
                 :class="[$style.lightText, $style.mail]"

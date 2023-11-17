@@ -53,9 +53,9 @@ const parsedLongDesc = longDesc?.split("\n");
                 </p>
             </div>
             <div :class="$style.subTextsContainer">
-                <Title :with-dot="true" :title-type="titleTypesEnum.h4"
-                    >Project links</Title
-                >
+                <Title :with-dot="true" :title-type="titleTypesEnum.h4">{{
+                    $t("main.projects.modal.projectLinks")
+                }}</Title>
                 <div :class="$style.links">
                     <a
                         :href="githubLink"
@@ -64,7 +64,9 @@ const parsedLongDesc = longDesc?.split("\n");
                         :class="$style.link"
                     >
                         <GitHub :width="'18px'" :height="'18px'" />
-                        <span :class="$style.linkText">source code</span>
+                        <span :class="$style.linkText">{{
+                            $t("main.projects.modal.sourceCode")
+                        }}</span>
                     </a>
                     <a
                         v-if="projectLink"
@@ -74,7 +76,9 @@ const parsedLongDesc = longDesc?.split("\n");
                         :class="$style.link"
                     >
                         <GoTo :width="'18px'" :height="'18px'" />
-                        <span :class="$style.linkText">live project</span>
+                        <span :class="$style.linkText">{{
+                            $t("main.projects.modal.liveProject")
+                        }}</span>
                     </a>
                 </div>
             </div>

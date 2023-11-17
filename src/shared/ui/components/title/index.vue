@@ -49,17 +49,17 @@ const defineClass = (style: Record<string, any>) => {
         </h3>
     </template>
     <template v-else-if="titleType === titleTypesEnum.h4">
-        <h4 :class="[$style.title_h4, $style.text]">
+        <h4 v-bind="defineClass($style)">
             <slot></slot><span v-if="withDot" :class="$style.dot">.</span>
         </h4>
     </template>
     <template v-else-if="titleType === titleTypesEnum.h5">
-        <h5 :class="[$style.title_h5, $style.text]">
+        <h5 v-bind="defineClass($style)">
             <slot></slot><span v-if="withDot" :class="$style.dot">.</span>
         </h5>
     </template>
     <template v-else>
-        <h6 :class="[$style.title_h6, $style.text]">
+        <h6 v-bind="defineClass($style)">
             <slot></slot><span v-if="withDot" :class="$style.dot">.</span>
         </h6>
     </template>

@@ -15,43 +15,27 @@ import { aboutId } from "@/shared/constants/elementsIds";
 <template>
     <section :id="aboutId" :class="$style.container">
         <div :class="$style.titleWrap">
-            <Title :with-dot="true" :title-type="titleTypesEnum.h2"
-                >About</Title
-            >
-            <Line />
+            <Title :with-dot="true" :title-type="titleTypesEnum.h2">{{
+                $t("main.about.title")
+            }}</Title>
+            <Line :class="$style.line" />
         </div>
         <div :class="$style.infoContainer">
             <div>
-                <p :class="$style.text">
-                    My expertise covers many different areas: I developed client
-                    parts of high-load product web applications, led the
-                    development of a small team, took part in creating the front
-                    end for startup projects, and also created custom web
-                    applications. The skills I have acquired allow me to quickly
-                    delve into any project and make tangible contributions and
-                    ideas.
-                </p>
-                <p :class="$style.text">
-                    I am well versed in design, responsive cross-browser layout,
-                    front-end architecture and working with external APIs. As a
-                    stack I prefer React.js / Next.js + Typescript. I have also
-                    worked with various ready-made solutions such as Wordpress,
-                    Service Manager, as well as low-code platforms.
-                </p>
-                <p :class="$style.text">
-                    I am continuously expanding my horizons in development and
-                    Computer Science, developing backend on microservice
-                    architecture, using Node.js, Express.js, MongoDB, Docker.
-                    And also, working with various front-end frameworks, such as
-                    Next.js, Vue.js, Svelte.js.
-                </p>
-                <p :class="$style.text">
-                    I have excellent communication skills and am always open to
-                    new professional acquaintances!
+                <p
+                    v-for="(infoText, index) in $t(
+                        'main.about.information'
+                    ).split('\n')"
+                    :key="index"
+                    :class="$style.text"
+                >
+                    {{ infoText }}
                 </p>
                 <div :class="$style.linksContainer">
                     <div :class="$style.linksArrowSection">
-                        <span :class="$style.myLinks">My Links</span>
+                        <span :class="$style.myLinks">{{
+                            $t("main.about.myLinks")
+                        }}</span>
                         <Arrow :class="$style.arrow" />
                     </div>
                     <Links />

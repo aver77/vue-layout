@@ -17,18 +17,20 @@ const switchBurgerMenu = () => {
         <div :class="$style.innerContainer">
             <Links />
             <div
-                @click="switchBurgerMenu"
                 :class="[
                     $style.burgerMenu,
                     burgerOpened && $style.burgerMenuOpen
                 ]"
+                @click="switchBurgerMenu"
             >
                 <div :class="$style.line" />
             </div>
             <ul :class="[$style.ulMenu, !burgerOpened && $style.hidden]">
                 <li>
                     <a :href="pdfCV" target="_blank">
-                        <ButtonComponent>My Resume</ButtonComponent>
+                        <ButtonComponent>{{
+                            $t("components.header.resumeBtn")
+                        }}</ButtonComponent>
                     </a>
                 </li>
                 <li>

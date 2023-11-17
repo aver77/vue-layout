@@ -19,9 +19,8 @@ const isHorizontal = layout === lineLayoutsEnum.HORIZONTAL;
 <template>
     <div
         :style="{
-            [isHorizontal
-                ? 'border-bottom'
-                : 'border-left']: `${thickness} solid`
+            [isHorizontal ? 'border-bottom' : 'border-left']:
+                `${thickness} solid`
         }"
         :class="[isHorizontal ? $style.horizontal : $style.vertical]"
     />

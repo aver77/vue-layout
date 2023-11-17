@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import { PropType } from "vue";
-import { getStackByKey, stackKeysEnum } from "./defaultData";
+import {
+    getImgAndStackByKey,
+    getTitleByKeyAndT,
+    stackKeysEnum
+} from "./defaultData";
 
 import Title from "@/shared/ui/components/title/index.vue";
 import { titleTypesEnum } from "@/shared/ui/components/title/titleEnum";
@@ -14,7 +18,7 @@ const { stackKey } = defineProps({
     }
 });
 
-const { currentStack, imgComponent, title } = getStackByKey(stackKey);
+const { currentStack, imgComponent } = getImgAndStackByKey(stackKey);
 </script>
 
 <template>
@@ -22,7 +26,7 @@ const { currentStack, imgComponent, title } = getStackByKey(stackKey);
         <div :class="$style.titleContainer">
             <component :is="imgComponent" :class="$style.img"></component>
             <Title :title-type="titleTypesEnum.h4" :with-dot="false">{{
-                title
+                getTitleByKeyAndT(stackKey, $t)
             }}</Title>
         </div>
         <div :class="$style.stackContainer">

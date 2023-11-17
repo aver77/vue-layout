@@ -32,6 +32,11 @@
   }
 }
 
+.line {
+  width: unset;
+  flex-grow: 1;
+}
+
 .text {
   color: $cLight;
   font-size: $fsTextMdPlus;

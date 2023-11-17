@@ -43,33 +43,33 @@ $baseFSDecr: 8px;
 .title_h3 {
   font-size: $fsTextXL;
   @include ipadSm {
-    font-size: $fsTextXL - $baseFSDecr / 2;
+    font-size: calc($fsTextXL - $baseFSDecr / 2);
   }
   @include iPhones {
-    font-size: $fsTextXL - $baseFSDecr;
+    font-size: calc($fsTextXL - $baseFSDecr);
   }
 }
 
 .title_h4 {
   font-size: $fsTextL;
   @include ipadSm {
-    font-size: $fsTextL - $baseFSDecr / 4;
+    font-size:  calc($fsTextL - $baseFSDecr / 4);
   }
   @include iPhones {
-    font-size: $fsTextL - $baseFSDecr / 2;
+    font-size:  calc($fsTextL - $baseFSDecr / 2);
   }
 }
 
 .title_h5 {
   font-size: $fsTextMdPlus;
   @include iPhones {
-    font-size: $fsTextMdPlus - $baseFSDecr / 4;
+    font-size: calc($fsTextMdPlus - $baseFSDecr / 4);
   }
 }
 
 .title_h6 {
   font-size: $fsTextMd;
   @include iPhones {
-    font-size: $fsTextMd - $baseFSDecr / 4;
+    font-size: calc($fsTextMd - $baseFSDecr / 4);
   }
 }

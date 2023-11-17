@@ -5,7 +5,7 @@ import { titleTypesEnum } from "@/shared/ui/components/title/titleEnum";
 import Line from "@/shared/ui/components/line/index.vue";
 import PositionItem from "./positionItem/index.vue";
 
-import { positions } from "@/modules/mainModule/components/experience/defaultData";
+import { getPositions } from "@/modules/mainModule/components/experience/defaultData";
 import { experienceId } from "@/shared/constants/elementsIds";
 </script>
 
@@ -19,7 +19,7 @@ import { experienceId } from "@/shared/constants/elementsIds";
         </div>
         <div :class="$style.positionsWrap">
             <PositionItem
-                v-for="(position, index) in positions"
+                v-for="(position, index) in getPositions($t)"
                 v-bind="position"
                 :key="index"
             />

@@ -5,28 +5,21 @@ import Title from "@/shared/ui/components/title/index.vue";
 import { titleTypesEnum } from "@/shared/ui/components/title/titleEnum";
 
 import Line from "@/shared/ui/components/line/index.vue";
-import { projects } from "@/modules/mainModule/components/projects/defaultData";
+import { getProjects } from "@/modules/mainModule/components/projects/defaultData";
 import { projectsId } from "@/shared/constants/elementsIds";
-// import { useScrollSBStore } from "@/shared/libs/stores/scrollSBStore";
-// import useSetScrollValue from "@/shared/libs/hooks/useSetScrollValue";
-
-// const projectsRef = ref<HTMLElement | null>(null);
-// const { setProjectsScrollValue } = useScrollSBStore();
-//
-// useSetScrollValue(projectsRef, setProjectsScrollValue);
 </script>
 
 <template>
     <section :id="projectsId" :class="$style.container">
         <div :class="$style.titleWrap">
             <Line />
-            <Title :with-dot="true" :title-type="titleTypesEnum.h2"
-                >Projects</Title
-            >
+            <Title :with-dot="true" :title-type="titleTypesEnum.h2">{{
+                $t("main.projects.title")
+            }}</Title>
         </div>
         <div :class="$style.projectsWrap">
             <ProjectItem
-                v-for="project in projects"
+                v-for="project in getProjects($t)"
                 :key="project.name"
                 v-bind="project"
             />

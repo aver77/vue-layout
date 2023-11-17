@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import { onMounted, onUnmounted, reactive, ref } from "vue";
 
-import { linkData, SidebarKeys } from "@/components/sidebar/defaultData";
+import { linkData } from "@/components/sidebar/defaultData";
+import { SidebarKeys } from "@/shared/constants/enums/sidebarKeys";
 import {
     aboutId,
     contactsId,
@@ -96,7 +97,9 @@ const scrollToElement = (element: HTMLElement, sidebarKey: string) => {
                 ]"
                 @click="scrollToElement(element, sidebarKey)"
             >
-                <a :class="$style.link">{{ sidebarKey }}</a>
+                <a :class="$style.link">{{
+                    $t(`components.sidebar.${sidebarKey}`)
+                }}</a>
             </div>
         </nav>
     </aside>

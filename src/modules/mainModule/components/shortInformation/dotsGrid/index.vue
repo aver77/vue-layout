@@ -6,8 +6,8 @@ import gridArray from "./gridData";
     <div :class="$style.container">
         <div
             v-for="(_, index) in gridArray"
-            :class="$style.dotContainer"
             :key="index"
+            :class="$style.dotContainer"
         >
             <div :class="$style.dot" />
         </div>

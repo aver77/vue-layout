@@ -2,6 +2,7 @@ import Frontend from "@/shared/assets/svg/components/Frontend.vue";
 import Server from "@/shared/assets/svg/components/Server.vue";
 import Console from "@/shared/assets/svg/components/Console.vue";
 import { Component } from "vue";
+
 export enum stackKeysEnum {
     WORK = "WORK",
     PERSONAL_FRONT = "PERSONAL_FRONT",
@@ -47,23 +48,22 @@ export const stackPersonalBackUsage = [
     "Microservices"
 ];
 
-interface IGetStackByKey {
-    title: string;
+interface IGetImgAndStackByKey {
     imgComponent: Component;
     currentStack: string[];
 }
-export const getStackByKey = (key: stackKeysEnum): IGetStackByKey => {
+export const getImgAndStackByKey = (
+    key: stackKeysEnum
+): IGetImgAndStackByKey => {
     switch (key) {
         case stackKeysEnum.WORK: {
             return {
-                title: "Use at work",
                 imgComponent: Console,
                 currentStack: stackWorkUsage
             };
         }
         case stackKeysEnum.PERSONAL_BACK: {
             return {
-                title: "Personal backend usage",
                 imgComponent: Server,
                 currentStack: stackPersonalBackUsage
             };
@@ -71,10 +71,24 @@ export const getStackByKey = (key: stackKeysEnum): IGetStackByKey => {
         case stackKeysEnum.PERSONAL_FRONT:
         default: {
             return {
-                title: "Personal frontend usage",
                 imgComponent: Frontend,
                 currentStack: stackPersonalFrontUsage
             };
+        }
+    }
+};
+
+export const getTitleByKeyAndT = (key: stackKeysEnum, t: any) => {
+    switch (key) {
+        case stackKeysEnum.WORK: {
+            return t("main.about.stackTitle.work");
+        }
+        case stackKeysEnum.PERSONAL_BACK: {
+            return t("main.about.stackTitle.backend");
+        }
+        case stackKeysEnum.PERSONAL_FRONT:
+        default: {
+            return t("main.about.stackTitle.frontend");
         }
     }
 };

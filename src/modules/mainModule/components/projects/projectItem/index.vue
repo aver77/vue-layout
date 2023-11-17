@@ -75,7 +75,7 @@ const onCloseModal = () => (modalOpened.value = false);
             <div :class="$style.shortDescContainer">
                 <span :class="$style.shortDesc">{{ shortDesc }}</span>
                 <span :class="$style.learnMore" @click="onOpenModal">
-                    Learn more ➤
+                    {{ $t("main.projects.learnMore") }} ➤
                 </span>
             </div>
         </div>

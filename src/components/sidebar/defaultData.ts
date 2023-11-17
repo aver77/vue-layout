@@ -5,12 +5,7 @@ import {
     projectsId
 } from "@/shared/constants/elementsIds";
 
-export enum SidebarKeys {
-    About = "About",
-    Projects = "Projects",
-    Experience = "Experience",
-    Contact = "Contact"
-}
+import { SidebarKeys } from "@/shared/constants/enums/sidebarKeys";
 
 export const linkData = {
     [SidebarKeys.About]: aboutId,

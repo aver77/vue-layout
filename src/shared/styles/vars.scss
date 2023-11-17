@@ -64,8 +64,12 @@ $fwEBold: 900;
 //width
 $layoutWidth: 1150px;
 
+//other sizes
+$defaultSvgSize: 28px;
+
 :export {
   ipadLg: #{$ipadLg};
   ipadSm: #{$ipadSm};
   phones: #{$phones};
+  defaultSvgSize: #{$defaultSvgSize};
 }

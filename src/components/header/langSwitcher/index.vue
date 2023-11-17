@@ -20,17 +20,17 @@ const switchLang = () => {
 </script>
 
 <template>
-    <UsFlag
-        v-if="locale === EN"
-        @click="switchLang"
-        :class="$style.flagImg"
-        :height="'24px'"
-    />
     <RuFlag
-        v-else
-        @click="switchLang"
+        v-if="locale === EN"
         :class="$style.flagImg"
         :height="'24px'"
+        @click="switchLang"
+    />
+    <UsFlag
+        v-else
+        :class="$style.flagImg"
+        :height="'24px'"
+        @click="switchLang"
     />
 </template>
 
