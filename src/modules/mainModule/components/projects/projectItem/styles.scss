@@ -18,6 +18,8 @@
   background: $cLightGray;
   position: relative;
   overflow: hidden;
+  height: unset;
+  width: unset;
 
   &:hover, &:focus, &:active {
     .img {

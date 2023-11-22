@@ -5,11 +5,11 @@ import buttonTypesEnum from "./buttonTypesEnum";
 defineProps({
     btnType: {
         type: String as PropType<buttonTypesEnum>,
-        default: buttonTypesEnum.UNFILLED
+        default: () => buttonTypesEnum.UNFILLED
     },
     disabled: {
         type: Boolean,
-        default: false
+        default: () => false
     }
 });
 </script>

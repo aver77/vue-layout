@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import WithAnimation from "@/components/HOCs/withAnimation/index.vue";
+
 import StackCard from "./stackCard/index.vue";
 import { stackKeysEnum } from "./stackCard/defaultData";
 
@@ -10,41 +12,59 @@ import Links from "@/components/links/index.vue";
 import Arrow from "@/shared/assets/svg/components/Arrow.vue";
 
 import { aboutId } from "@/shared/constants/elementsIds";
+import { ref } from "vue";
+
+const target = ref<HTMLElement | null>(null);
+const getTargetRef = () => target;
 </script>
 
 <template>
-    <section :id="aboutId" :class="$style.container">
+    <section ref="target" :id="aboutId" :class="$style.container">
         <div :class="$style.titleWrap">
-            <Title :with-dot="true" :title-type="titleTypesEnum.h2">{{
-                $t("main.about.title")
-            }}</Title>
+            <WithAnimation :get-slot-ref="getTargetRef">
+                <Title :with-dot="true" :title-type="titleTypesEnum.h2">{{
+                    $t("main.about.title")
+                }}</Title>
+            </WithAnimation>
             <Line :class="$style.line" />
         </div>
         <div :class="$style.infoContainer">
             <div>
-                <p
+                <WithAnimation
                     v-for="(infoText, index) in $t(
                         'main.about.information'
                     ).split('\n')"
                     :key="index"
-                    :class="$style.text"
+                    :wrapper-class="$style.text"
+                    :get-slot-ref="getTargetRef"
                 >
                     {{ infoText }}
-                </p>
-                <div :class="$style.linksContainer">
-                    <div :class="$style.linksArrowSection">
-                        <span :class="$style.myLinks">{{
-                            $t("main.about.myLinks")
-                        }}</span>
-                        <Arrow :class="$style.arrow" />
+                </WithAnimation>
+                <WithAnimation :get-slot-ref="getTargetRef">
+                    <div :class="$style.linksContainer">
+                        <div :class="$style.linksArrowSection">
+                            <span :class="$style.myLinks">{{
+                                $t("main.about.myLinks")
+                            }}</span>
+                            <Arrow :class="$style.arrow" />
+                        </div>
+                        <Links />
                     </div>
-                    <Links />
-                </div>
+                </WithAnimation>
             </div>
             <div :class="$style.stackWrap">
-                <StackCard :stack-key="stackKeysEnum.WORK" />
-                <StackCard :stack-key="stackKeysEnum.PERSONAL_FRONT" />
-                <StackCard :stack-key="stackKeysEnum.PERSONAL_BACK" />
+                <StackCard
+                    :stack-key="stackKeysEnum.WORK"
+                    :get-parent-ref="getTargetRef"
+                />
+                <StackCard
+                    :stack-key="stackKeysEnum.PERSONAL_FRONT"
+                    :get-parent-ref="getTargetRef"
+                />
+                <StackCard
+                    :stack-key="stackKeysEnum.PERSONAL_BACK"
+                    :get-parent-ref="getTargetRef"
+                />
             </div>
         </div>
     </section>

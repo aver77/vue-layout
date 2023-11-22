@@ -23,7 +23,7 @@ const { longDesc } = defineProps({
     },
     projectLink: {
         type: String as PropType<TLink>,
-        default: undefined
+        default: () => undefined
     },
     longDesc: {
         type: String

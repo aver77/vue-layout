@@ -5,11 +5,11 @@ import { lineLayoutsEnum } from "@/shared/ui/components/line/lineEnum";
 const { layout } = defineProps({
     thickness: {
         type: String as PropType<`${string}px`>,
-        default: "1px"
+        default: () => "1px"
     },
     layout: {
         type: String as PropType<lineLayoutsEnum>,
-        default: lineLayoutsEnum.HORIZONTAL
+        default: () => lineLayoutsEnum.HORIZONTAL
     }
 });
 

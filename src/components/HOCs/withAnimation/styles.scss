@@ -1,0 +1,26 @@
+@import "src/shared/styles/vars.scss";
+
+.wrapper {
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+  transition: 1.2s ease;
+  transform: translateY(75px) translateZ(0);
+}
+
+.wrapperEndAnimation {
+  transform: none;
+}
+
+.animationDiv {
+  position: absolute;
+  transition: 1s ease;
+  inset: calc($indentLow / 2) 0 calc($indentLow / 2) 0;
+  background: $cYellow;
+  z-index: $zIndexAnimation;
+  border-radius: $brDefault;
+}
+
+.animationDivEnd {
+  inset: calc($indentLow / 2) 0 calc($indentLow / 2) 100%;
+}

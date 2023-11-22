@@ -1,5 +1,8 @@
 <script setup lang="ts">
-import { PropType } from "vue";
+import { PropType, Ref } from "vue";
+
+import WithAnimation from "@/components/HOCs/withAnimation/index.vue";
+
 import {
     getImgAndStackByKey,
     getTitleByKeyAndT,
@@ -14,7 +17,13 @@ import Chip from "@/shared/ui/components/chip/index.vue";
 const { stackKey } = defineProps({
     stackKey: {
         type: String as PropType<stackKeysEnum>,
-        default: stackKeysEnum.WORK
+        default: () => stackKeysEnum.WORK
+    },
+    getParentRef: {
+        type: Function as PropType<() => Ref<HTMLElement | null>>,
+        default: () => {
+            return () => null;
+        }
     }
 });
 
@@ -22,7 +31,7 @@ const { currentStack, imgComponent } = getImgAndStackByKey(stackKey);
 </script>
 
 <template>
-    <div>
+    <WithAnimation :get-slot-ref="getParentRef">
         <div :class="$style.titleContainer">
             <component :is="imgComponent" :class="$style.img"></component>
             <Title :title-type="titleTypesEnum.h4" :with-dot="false">{{
@@ -34,7 +43,7 @@ const { currentStack, imgComponent } = getImgAndStackByKey(stackKey);
                 <Chip :text="stName" />
             </template>
         </div>
-    </div>
+    </WithAnimation>
 </template>
 
 <style module lang="scss">

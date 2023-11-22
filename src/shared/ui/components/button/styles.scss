@@ -1,6 +1,23 @@
 @import "src/shared/styles/vars.scss";
 @import "src/shared/styles/mixins.scss";
 
+$btnTransition: ease .3s;
+
+@mixin btn($color, $backgroundColor) {
+  border-color: $cYellow;
+  color: $color;
+  background-color: $backgroundColor;
+  background-image: linear-gradient($color, $color);
+  background-size: 0 100%;
+  background-repeat: no-repeat;
+  transition: ease .3s;
+  &:hover, &:focus, &:active {
+    background-color: transparent;
+    color: $backgroundColor;
+    background-size: 100% 100%;
+  }
+}
+
 .btnShared {
   cursor: pointer;
   padding: $indentXS $indentSm;
@@ -20,18 +37,9 @@
 }
 
 .filled {
-  background-color: $cYellow;
-  border-color: $cYellow;
-  color: $cGray;
-  transition: ease .3s;
-  &:hover {
-    opacity: 0.8;
-  }
+  @include btn($cGray, $cYellow)
 }
 
 .unfilled {
-  border-color: $cYellow;
-  color: $cYellow;
-  background-color: transparent;
-  transition: opacity .2s;
+  @include btn($cYellow, $cGray)
 }

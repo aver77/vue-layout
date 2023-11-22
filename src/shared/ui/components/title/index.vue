@@ -8,11 +8,11 @@ import { PropType } from "vue";
 const { titleType, weight } = defineProps({
     withDot: {
         type: Boolean,
-        default: true
+        default: () => true
     },
     weight: {
         type: String as PropType<titleWeightsEnum>,
-        default: titleWeightsEnum.EBOLD
+        default: () => titleWeightsEnum.EBOLD
     },
     titleType: {
         type: String as PropType<titleTypesEnum>,

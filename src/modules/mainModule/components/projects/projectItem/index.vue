@@ -2,6 +2,7 @@
 import { PropType, ref } from "vue";
 import { TLink } from "../defaultData";
 
+import WithAnimation from "@/components/HOCs/withAnimation/index.vue";
 import WithModal from "@/components/HOCs/withModal/index.vue";
 import Modal from "./modal/index.vue";
 
@@ -11,6 +12,7 @@ import { titleTypesEnum } from "@/shared/ui/components/title/titleEnum";
 import Line from "@/shared/ui/components/line/index.vue";
 import GitHub from "@/shared/assets/svg/components/GitHub.vue";
 import GoTo from "@/shared/assets/svg/components/GoTo.vue";
+import { Ref } from "vue/dist/vue";
 
 const { stack } = defineProps({
     image: {
@@ -27,13 +29,19 @@ const { stack } = defineProps({
     },
     projectLink: {
         type: String as PropType<TLink>,
-        default: undefined
+        default: () => undefined
     },
     shortDesc: {
         type: String
     },
     longDesc: {
         type: String
+    },
+    getParentRef: {
+        type: Function as PropType<() => Ref<HTMLElement | null>>,
+        default: () => {
+            return () => null;
+        }
     }
 });
 
@@ -47,16 +55,22 @@ const onCloseModal = () => (modalOpened.value = false);
 
 <template>
     <div :class="$style.container">
-        <div :class="$style.imgContainer" @click="onOpenModal">
+        <WithAnimation
+            :get-slot-ref="getParentRef"
+            :wrapper-class="$style.imgContainer"
+            @click="onOpenModal"
+        >
             <img :src="image" :class="$style.img" alt="project image" />
-        </div>
+        </WithAnimation>
         <div :class="$style.textsContainer">
-            <Title
-                :with-dot="false"
-                :title-type="titleTypesEnum.h4"
-                :class="$style.title"
-                >{{ name }}</Title
-            >
+            <WithAnimation :get-slot-ref="getParentRef">
+                <Title
+                    :with-dot="false"
+                    :title-type="titleTypesEnum.h4"
+                    :class="$style.title"
+                    >{{ name }}</Title
+                >
+            </WithAnimation>
             <div :class="$style.linksContainer">
                 <Line />
                 <a :href="githubLink" target="_blank" rel="noreferrer noopener">
@@ -71,13 +85,18 @@ const onCloseModal = () => (modalOpened.value = false);
                     <GoTo :class="$style.linkSvg" />
                 </a>
             </div>
-            <p :class="$style.stackStr">{{ stackStr }}</p>
-            <div :class="$style.shortDescContainer">
+            <WithAnimation :get-slot-ref="getParentRef">
+                <p :class="$style.stackStr">{{ stackStr }}</p>
+            </WithAnimation>
+            <WithAnimation
+                :get-slot-ref="getParentRef"
+                :wrapper-class="$style.shortDescContainer"
+            >
                 <span :class="$style.shortDesc">{{ shortDesc }}</span>
                 <span :class="$style.learnMore" @click="onOpenModal">
                     {{ $t("main.projects.learnMore") }} ➤
                 </span>
-            </div>
+            </WithAnimation>
         </div>
     </div>
     <WithModal v-if="modalOpened" :close-modal="onCloseModal">
