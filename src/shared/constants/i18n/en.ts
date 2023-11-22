@@ -109,6 +109,7 @@ const en = {
             learnMore: "Learn more"
         },
         experience: {
+            title: "Experience",
             it1: {
                 title: "IT1",
                 startDate: "June 2023",

@@ -12,9 +12,9 @@ import { experienceId } from "@/shared/constants/elementsIds";
 <template>
     <section :id="experienceId" :class="$style.container">
         <div :class="$style.titleWrap">
-            <Title :with-dot="true" :title-type="titleTypesEnum.h2"
-                >Experience</Title
-            >
+            <Title :with-dot="true" :title-type="titleTypesEnum.h2">{{
+                $t("main.experience.title")
+            }}</Title>
             <Line />
         </div>
         <div :class="$style.positionsWrap">

@@ -109,6 +109,7 @@ const ru = {
             learnMore: "Узнать больше"
         },
         experience: {
+            title: "Опыт",
             it1: {
                 title: "ИТ1",
                 startDate: "Июнь 2023",
