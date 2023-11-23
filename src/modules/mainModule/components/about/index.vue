@@ -26,7 +26,7 @@ const getTargetRef = () => target;
                     $t("main.about.title")
                 }}</Title>
             </WithAnimation>
-            <Line :class="$style.line" />
+            <Line :flexed="true" />
         </div>
         <div :class="$style.infoContainer">
             <div>

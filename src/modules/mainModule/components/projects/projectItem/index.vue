@@ -90,7 +90,7 @@ const onCloseModal = () => (modalOpened.value = false);
             </WithAnimation>
             <WithAnimation
                 :get-slot-ref="getParentRef"
-                :wrapper-class="$style.shortDescContainer"
+                :slot-class="$style.shortDescContainer"
             >
                 <span :class="$style.shortDesc">{{ shortDesc }}</span>
                 <span :class="$style.learnMore" @click="onOpenModal">

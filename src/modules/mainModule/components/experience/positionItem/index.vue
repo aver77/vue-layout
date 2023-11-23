@@ -74,10 +74,7 @@ defineProps({
                 {{ desc }}
             </WithAnimation>
         </div>
-        <WithAnimation
-            :get-slot-ref="getParentRef"
-            :wrapper-class="$style.skills"
-        >
+        <WithAnimation :get-slot-ref="getParentRef" :slot-class="$style.skills">
             <Chip
                 v-for="(skill, index) in skills"
                 :key="skill + index"

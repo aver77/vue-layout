@@ -19,7 +19,7 @@ const getTargetRef = () => target;
 <template>
     <section ref="target" :id="projectsId" :class="$style.container">
         <div :class="$style.titleWrap">
-            <Line />
+            <Line :flexed="true" />
             <WithAnimation :get-slot-ref="getTargetRef">
                 <Title :with-dot="true" :title-type="titleTypesEnum.h2">{{
                     $t("main.projects.title")

@@ -10,6 +10,10 @@ const { layout } = defineProps({
     layout: {
         type: String as PropType<lineLayoutsEnum>,
         default: () => lineLayoutsEnum.HORIZONTAL
+    },
+    flexed: {
+        type: Boolean,
+        default: () => false
     }
 });
 
@@ -22,7 +26,10 @@ const isHorizontal = layout === lineLayoutsEnum.HORIZONTAL;
             [isHorizontal ? 'border-bottom' : 'border-left']:
                 `${thickness} solid`
         }"
-        :class="[isHorizontal ? $style.horizontal : $style.vertical]"
+        :class="[
+            isHorizontal ? $style.horizontal : $style.vertical,
+            flexed && $style.flexed
+        ]"
     />
 </template>
 

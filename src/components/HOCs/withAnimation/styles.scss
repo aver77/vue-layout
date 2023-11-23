@@ -2,14 +2,20 @@
 
 .wrapper {
   position: relative;
+  overflow: hidden;
+}
+
+.slotWrapper {
   width: fit-content;
   height: fit-content;
-  transition: 1.2s ease;
+  opacity: 0;
+  transition: 1.5s ease;
   transform: translateY(75px) translateZ(0);
 }
 
-.wrapperEndAnimation {
+.slotWrapperEndAnimation {
   transform: none;
+  opacity: 1;
 }
 
 .animationDiv {
@@ -17,8 +23,7 @@
   transition: 1s ease;
   inset: calc($indentLow / 2) 0 calc($indentLow / 2) 0;
   background: $cYellow;
-  z-index: $zIndexAnimation;
-  border-radius: $brDefault;
+  z-index: $zIndexPlus;
 }
 
 .animationDivEnd {

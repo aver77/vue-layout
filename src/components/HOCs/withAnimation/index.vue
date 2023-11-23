@@ -15,6 +15,14 @@ const { getSlotRef } = defineProps({
     wrapperStyle: {
         type: Object as PropType<CSSProperties>,
         default: () => ({})
+    },
+    slotClass: {
+        type: String,
+        default: () => ""
+    },
+    slotStyle: {
+        type: Object as PropType<CSSProperties>,
+        default: () => ({})
     }
 });
 
@@ -35,15 +43,17 @@ onMounted(() => {
 </script>
 
 <template>
-    <div
-        :class="[
-            $style.wrapper,
-            wrapperClass,
-            isElementWasInViewPort && $style.wrapperEndAnimation
-        ]"
-        :style="wrapperStyle"
-    >
-        <slot></slot>
+    <div :class="[$style.wrapper, wrapperClass]" :style="wrapperStyle">
+        <div
+            :class="[
+                $style.slotWrapper,
+                slotClass,
+                isElementWasInViewPort && $style.slotWrapperEndAnimation
+            ]"
+            :style="slotStyle"
+        >
+            <slot></slot>
+        </div>
         <div
             :class="[
                 $style.animationDiv,

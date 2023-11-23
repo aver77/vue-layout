@@ -24,7 +24,7 @@ const getTargetRef = () => target;
                     $t("main.experience.title")
                 }}</Title>
             </WithAnimation>
-            <Line />
+            <Line :flexed="true" />
         </div>
         <div :class="$style.positionsWrap">
             <PositionItem
