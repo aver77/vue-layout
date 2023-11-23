@@ -9,7 +9,7 @@
   width: fit-content;
   height: fit-content;
   opacity: 0;
-  transition: 1.5s ease;
+  transition: 0.9s ease;
   transform: translateY(75px) translateZ(0);
 }
 
@@ -20,7 +20,7 @@
 
 .animationDiv {
   position: absolute;
-  transition: 1s ease;
+  transition: 0.6s ease;
   inset: calc($indentLow / 2) 0 calc($indentLow / 2) 0;
   background: $cYellow;
   z-index: $zIndexPlus;
