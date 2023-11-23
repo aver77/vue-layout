@@ -29,8 +29,8 @@ const getTargetRef = () => target;
         <div :class="$style.positionsWrap">
             <PositionItem
                 v-for="(position, index) in getPositions($t)"
-                v-bind="position"
                 :key="index"
+                v-bind="position"
                 :get-parent-ref="getTargetRef"
             />
         </div>

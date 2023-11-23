@@ -1,10 +1,11 @@
 <script setup lang="ts">
-import { PropType, ref } from "vue";
+import { PropType, ref, defineAsyncComponent, Ref } from "vue";
 import { TLink } from "../defaultData";
 
 import WithAnimation from "@/components/HOCs/withAnimation/index.vue";
 import WithModal from "@/components/HOCs/withModal/index.vue";
-import Modal from "./modal/index.vue";
+
+const Modal = defineAsyncComponent(() => import("./modal/index.vue"));
 
 import Title from "@/shared/ui/components/title/index.vue";
 import { titleTypesEnum } from "@/shared/ui/components/title/titleEnum";
@@ -12,7 +13,6 @@ import { titleTypesEnum } from "@/shared/ui/components/title/titleEnum";
 import Line from "@/shared/ui/components/line/index.vue";
 import GitHub from "@/shared/assets/svg/components/GitHub.vue";
 import GoTo from "@/shared/assets/svg/components/GoTo.vue";
-import { Ref } from "vue/dist/vue";
 
 const { stack } = defineProps({
     image: {
@@ -98,17 +98,17 @@ const onCloseModal = () => (modalOpened.value = false);
                 </span>
             </WithAnimation>
         </div>
+        <WithModal :modal-opened="modalOpened" :close-modal="onCloseModal">
+            <Modal
+                :name="name"
+                :stack-str="stackStr"
+                :github-link="githubLink"
+                :project-link="projectLink"
+                :long-desc="longDesc"
+                :image="image"
+            />
+        </WithModal>
     </div>
-    <WithModal v-if="modalOpened" :close-modal="onCloseModal">
-        <Modal
-            :name="name"
-            :stack-str="stackStr"
-            :github-link="githubLink"
-            :project-link="projectLink"
-            :long-desc="longDesc"
-            :image="image"
-        />
-    </WithModal>
 </template>
 
 <style lang="scss" module>

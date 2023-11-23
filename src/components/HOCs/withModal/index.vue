@@ -1,14 +1,20 @@
 <script setup lang="ts">
-import { onMounted, onUnmounted, PropType, ref } from "vue";
+import { onUpdated, PropType, ref } from "vue";
 import Close from "@/shared/assets/svg/components/Close.vue";
 
-const { closeModal } = defineProps({
+import { Presence, Motion } from "motion/vue";
+
+const props = defineProps({
     modalClass: {
         type: String
     },
     closeModal: {
         type: Function as PropType<() => void>,
         default: () => {}
+    },
+    modalOpened: {
+        type: Boolean,
+        default: () => false
     }
 });
 
@@ -19,31 +25,41 @@ const handleClickOutside = (e: MouseEvent) => {
         slotWrapperRef?.value &&
         !slotWrapperRef.value.contains(e.target as Node)
     ) {
-        closeModal();
+        props.closeModal();
     }
 };
 
-onMounted(() => {
-    document.body.style.overflowY = "hidden";
+onUpdated(() => {
+    document.body.style.overflowY = props.modalOpened ? "hidden" : "auto";
 
-    document.addEventListener("click", handleClickOutside, true);
-});
-
-onUnmounted(() => {
-    document.body.style.overflowY = "auto";
-
-    document.removeEventListener("click", handleClickOutside, true);
+    props.modalOpened
+        ? document.addEventListener("click", handleClickOutside, true)
+        : document.removeEventListener("click", handleClickOutside, true);
 });
 </script>
 
 <template>
-    <teleport to="#app"
-        ><div :class="[$style.modalContainer, modalClass]">
-            <div ref="slotWrapperRef" :class="$style.slotWrapper">
-                <slot></slot>
-            </div>
-            <Close :class="$style.closeIcon" @click="closeModal" /></div
-    ></teleport>
+    <Teleport to="body">
+        <Presence>
+            <Motion
+                v-if="modalOpened"
+                tag="div"
+                :transition="{
+                    duration: 0.3,
+                    animationTimingFunction: 'ease'
+                }"
+                :initial="{ opacity: 0 }"
+                :animate="{ opacity: 1 }"
+                :exit="{ opacity: 0 }"
+                :class="[$style.modalContainer, modalClass]"
+            >
+                <div ref="slotWrapperRef" :class="$style.slotWrapper">
+                    <slot></slot>
+                </div>
+                <Close :class="$style.closeIcon" @click="closeModal" />
+            </Motion>
+        </Presence>
+    </Teleport>
 </template>
 
 <style lang="scss" module>

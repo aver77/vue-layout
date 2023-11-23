@@ -28,8 +28,8 @@ const getTargetRef = () => target;
         </div>
         <div :class="$style.projectsWrap">
             <ProjectItem
-                v-for="project in getProjects($t)"
-                :key="project.name"
+                v-for="(project, index) in getProjects($t)"
+                :key="index"
                 v-bind="project"
                 :get-parent-ref="getTargetRef"
             />
