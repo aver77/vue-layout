@@ -102,7 +102,7 @@ export const getProjects = (
             "Typescript",
             "SCSS Modules",
             "Intlify",
-            "Vue-Motion (temp)",
+            "Motion One",
             "Vite"
         ],
         githubLink: "https://github.com/aver77/vue-layout",
