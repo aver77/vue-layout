@@ -15,7 +15,7 @@ const switchBurgerMenu = () => {
 <template>
     <header :class="$style.container">
         <div :class="$style.innerContainer">
-            <Links />
+            <Links :heading="true" />
             <div
                 :class="[
                     $style.burgerMenu,

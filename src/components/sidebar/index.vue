@@ -14,11 +14,15 @@ import {
     isElementInViewport,
     scrollIntoViewAndWait
 } from "@/components/sidebar/utils";
+import { observeElement } from "@/shared/lib/utils/observeElement";
 
 const linkDataWithElements = reactive<Record<string, HTMLElement | null>>({});
 const currentSelectedSidebarKey = ref<string | null>(null);
 
 const isScrollBlocked = ref(false);
+
+const isElementWasInViewPort = ref(false);
+const sidebarRef = ref(null);
 
 const scrollListener = () => {
     if (!isScrollBlocked.value) {
@@ -48,10 +52,14 @@ const scrollListener = () => {
 };
 
 onMounted(() => {
-    window.addEventListener("scroll", scrollListener);
+    if (!isElementWasInViewPort.value) {
+        observeElement(sidebarRef, [isElementWasInViewPort]);
+    }
 });
 
 onMounted(() => {
+    window.addEventListener("scroll", scrollListener);
+
     Object.entries(linkData).forEach(([sidebarKey, id]) => {
         linkDataWithElements[sidebarKey] = document.getElementById(id);
     });
@@ -78,7 +86,7 @@ const scrollToElement = (element: HTMLElement, sidebarKey: string) => {
 </script>
 
 <template>
-    <aside :class="$style.container">
+    <aside ref="sidebarRef" :class="$style.container">
         <div :class="$style.logoSection" @click="scrollToTop">
             <div :class="$style.logoWrap">
                 <span :class="$style.logoText">NW</span>
@@ -90,8 +98,10 @@ const scrollToElement = (element: HTMLElement, sidebarKey: string) => {
                     linkDataWithElements
                 )"
                 :key="index"
+                :style="{ 'transition-duration': `${0.2 * (index + 1)}s` }"
                 :class="[
                     $style.linkWrapper,
+                    isElementWasInViewPort && $style.linkAnimated,
                     currentSelectedSidebarKey === sidebarKey &&
                         $style.highlighted
                 ]"

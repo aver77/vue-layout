@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { CSSProperties, onMounted, PropType, Ref, ref } from "vue";
+import { observeElement } from "@/shared/lib/utils/observeElement";
 
 const { getSlotRef } = defineProps({
     getSlotRef: {
@@ -29,15 +30,17 @@ const { getSlotRef } = defineProps({
 const isElementWasInViewPort = ref(false);
 
 onMounted(() => {
-    if (!isElementWasInViewPort.value && getSlotRef()) {
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((el) => {
-                if (el.isIntersecting) {
-                    isElementWasInViewPort.value = true;
-                }
-            });
-        });
-        observer.observe(getSlotRef().value as Element);
+    if (!isElementWasInViewPort.value) {
+        observeElement(getSlotRef(), [isElementWasInViewPort]);
+        //
+        // const observer = new IntersectionObserver((entries) => {
+        //     entries.forEach((el) => {
+        //         if (el.isIntersecting) {
+        //             isElementWasInViewPort.value = true;
+        //         }
+        //     });
+        // });
+        // observer.observe(getSlotRef().value as Element);
     }
 });
 </script>

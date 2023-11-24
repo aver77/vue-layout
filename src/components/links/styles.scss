@@ -4,11 +4,22 @@
   display: flex;
   flex-direction: row;
   gap: $indentSm;
+  transition: .6s ease;
+}
+
+.linkInitial {
+  opacity: 0;
+  transform: translateY(-30px) translateZ(0);
+}
+
+.linkAnimated {
+  opacity: 1;
+  transform: none;
 }
 
 .linkImage {
   fill: white;
-  transition: opacity .2s;
+  transition: opacity .3s;
   &:hover, &:focus, &:active {
     color: $cYellow !important;
     fill: $cYellow !important;
