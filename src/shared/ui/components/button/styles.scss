@@ -1,8 +1,6 @@
 @import "src/shared/styles/vars.scss";
 @import "src/shared/styles/mixins.scss";
 
-$btnTransition: ease .3s;
-
 @mixin btn($color, $backgroundColor) {
   border-color: $cYellow;
   color: $color;
@@ -10,7 +8,7 @@ $btnTransition: ease .3s;
   background-image: linear-gradient($color, $color);
   background-size: 0 100%;
   background-repeat: no-repeat;
-  transition: ease .3s;
+  transition: $baseTransition;
   &:hover, &:focus, &:active {
     background-color: transparent;
     color: $backgroundColor;

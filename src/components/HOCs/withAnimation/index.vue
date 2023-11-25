@@ -32,21 +32,16 @@ const isElementWasInViewPort = ref(false);
 onMounted(() => {
     if (!isElementWasInViewPort.value) {
         observeElement(getSlotRef(), [isElementWasInViewPort]);
-        //
-        // const observer = new IntersectionObserver((entries) => {
-        //     entries.forEach((el) => {
-        //         if (el.isIntersecting) {
-        //             isElementWasInViewPort.value = true;
-        //         }
-        //     });
-        // });
-        // observer.observe(getSlotRef().value as Element);
     }
 });
 </script>
 
 <template>
-    <div :class="[$style.wrapper, wrapperClass]" :style="wrapperStyle">
+    <div
+        v-show="true"
+        :class="[$style.wrapper, wrapperClass]"
+        :style="wrapperStyle"
+    >
         <div
             :class="[
                 $style.slotWrapper,

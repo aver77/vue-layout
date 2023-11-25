@@ -26,7 +26,7 @@
 .dotContainer {
   padding: $indentLow;
   cursor: crosshair;
-  transition: background .25s;
+  transition: background $baseTransitionDuration;
   border-radius: $brMd;
   height: fit-content;
   &:hover, &:focus, &:active {

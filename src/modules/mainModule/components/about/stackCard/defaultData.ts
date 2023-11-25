@@ -24,7 +24,7 @@ export const stackWorkUsage = [
     "Jest",
     "Playwright",
     "Rest API",
-    "Graph QL",
+    "GraphQL",
     "Postman",
     "Swagger"
 ];

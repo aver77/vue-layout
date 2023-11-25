@@ -68,6 +68,10 @@ $layoutWidth: 1150px;
 //other sizes
 $defaultSvgSize: 28px;
 
+//transition
+$baseTransitionDuration: 0.3s;
+$baseTransition: $baseTransitionDuration ease;
+
 :export {
   ipadLg: #{$ipadLg};
   ipadSm: #{$ipadSm};

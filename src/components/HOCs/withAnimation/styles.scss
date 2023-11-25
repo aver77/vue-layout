@@ -1,5 +1,6 @@
 @import "src/shared/styles/vars.scss";
 
+
 .wrapper {
   position: relative;
   overflow: hidden;
@@ -9,7 +10,7 @@
   width: fit-content;
   height: fit-content;
   opacity: 0;
-  transition: 0.9s ease;
+  transition: calc($baseTransitionDuration * 3) ease;
   transform: translateY(75px) translateZ(0);
 }
 
@@ -20,7 +21,7 @@
 
 .animationDiv {
   position: absolute;
-  transition: 0.6s ease;
+  transition: calc($baseTransitionDuration * 2) ease;
   inset: calc($indentLow / 2) 0 calc($indentLow / 2) 0;
   background: $cYellow;
   z-index: $zIndexPlus;

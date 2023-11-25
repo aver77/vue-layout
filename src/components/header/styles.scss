@@ -41,7 +41,7 @@ $headerPadding: 36px;
 
 .linkImage {
   fill: white;
-  transition: opacity .2s;
+  transition: opacity $baseTransitionDuration;
   &:hover, &:focus, &:active {
     color: $cYellow !important;
     fill: $cYellow !important;
@@ -72,7 +72,7 @@ $headerPadding: 36px;
   gap: $indentXXL;
   opacity: 1;
   visibility: visible;
-  transition: 0.3s ease;
+  transition: $baseTransition;
   @include ipadSm {
     background: $cGray;
     justify-content: flex-end;
@@ -92,7 +92,7 @@ $headerPadding: 36px;
 }
 
 @mixin icon($height, $width) {
-  transition-duration: 0.5s;
+  transition-duration: calc($baseTransitionDuration * 2);
   position: absolute;
   height: $height;
   width: $width;
@@ -101,7 +101,7 @@ $headerPadding: 36px;
 }
 
 @mixin icon-before($height, $width, $top) {
-  transition-duration: 0.5s;
+  transition-duration: calc($baseTransitionDuration * 2);
   position: absolute;
   width: $width;
   height: $height;
@@ -111,7 +111,7 @@ $headerPadding: 36px;
 }
 
 @mixin icon-after($height, $width, $top) {
-  transition-duration: 0.5s;
+  transition-duration: calc($baseTransitionDuration * 2);
   position: absolute;
   width: $width;
   height: $height;
@@ -140,7 +140,7 @@ $headerPadding: 36px;
   top: 50%;
   transform: translateY(-50%);
   right: $headerPadding;
-  transition-duration: 0.5s;
+  transition-duration: calc($baseTransitionDuration * 2);
 
   &:hover {
     cursor: pointer;
@@ -157,7 +157,7 @@ $headerPadding: 36px;
 
 .burgerMenuOpen {
   .line {
-    transition-duration: 0.5s;
+    transition-duration: calc($baseTransitionDuration * 2);
     background: transparent;
 
     &:before{

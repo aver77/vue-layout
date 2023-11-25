@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: row;
   gap: $indentSm;
-  transition: .6s ease;
+  transition: calc($baseTransitionDuration * 2) ease;
 }
 
 .linkInitial {
@@ -19,7 +19,7 @@
 
 .linkImage {
   fill: white;
-  transition: opacity .3s;
+  transition: opacity $baseTransitionDuration;
   &:hover, &:focus, &:active {
     color: $cYellow !important;
     fill: $cYellow !important;
