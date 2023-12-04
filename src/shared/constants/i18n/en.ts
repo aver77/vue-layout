@@ -23,7 +23,7 @@ const en = {
             nameGreet: "Hey, I'm Nikita",
             jobTitle: "Frontend developer",
             description:
-                "I'm creative and constantly growing Frontend developer with more than two years of experience working in various industry-leading projects and improving diverse React.js SPA and web-resources. Seeking to apply my expertise in large-scale or open-source projects, solving extraordinary problems and bringing profit to customers.",
+                "I'm creative and constantly growing Frontend developer with more than three years of total experience working in various industry-leading projects and improving diverse React.js SPA and web-resources. Seeking to apply my expertise in large-scale or open-source projects, solving extraordinary problems and bringing profit to customers.",
             contactBtn: "Contact me"
         },
         about: {
