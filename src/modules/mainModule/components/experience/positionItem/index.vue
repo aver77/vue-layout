@@ -66,12 +66,21 @@ defineProps({
         </div>
         <div :class="$style.descriptionContainer">
             <WithAnimation
-                v-for="(desc, index) in description?.split('\n')"
+                v-for="(descItem, index) in description?.split('\n')"
                 :key="index"
                 :wrapper-class="$style.text"
                 :get-slot-ref="getParentRef"
             >
-                {{ desc }}
+                <span
+                    v-for="(descItemChunk, index) in descItem.split('*')"
+                    :key="index"
+                    :class="
+                        descItem.includes('*' + descItemChunk + '*') &&
+                        $style.highlightedText
+                    "
+                >
+                    {{ descItemChunk.replaceAll("*", "") }}
+                </span>
             </WithAnimation>
         </div>
         <WithAnimation :get-slot-ref="getParentRef" :slot-class="$style.skills">

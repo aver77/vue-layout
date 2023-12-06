@@ -21,17 +21,17 @@ const en = {
     main: {
         shortInformation: {
             nameGreet: "Hey, I'm Nikita",
-            jobTitle: "Frontend developer",
+            jobTitle: "Frontend Engineer",
             description:
-                "I'm creative and constantly growing Frontend developer with more than three years of total experience working in various industry-leading projects and improving diverse React.js SPA and web-resources. Seeking to apply my expertise in large-scale or open-source projects, solving extraordinary problems and bringing profit to customers.",
+                "I'm creative and constantly growing developer with more than three years of total experience working in various industry-leading projects and improving diverse React.js SPA and web-resources. Seeking to apply my expertise in large-scale or open-source projects, solving extraordinary problems and bringing profit to customers.",
             contactBtn: "Contact me"
         },
         about: {
             title: "About",
             information:
-                "My expertise covers many different areas: I developed client parts of high-load product web applications, led the development of a small team, took part in creating the front end for startup projects, and also created custom web applications. The skills I have acquired allow me to quickly delve into any project and make tangible contributions and ideas.\n" +
+                "My expertise covers many different areas: I have developed high-load product web applications and startup projects, led small teams, and also created custom web applications. The skills I have acquired allow me to quickly delve into any project and make tangible contributions and ideas.\n" +
                 "I am well versed in design, responsive cross-browser layout, front-end architecture and working with external APIs. As a stack I prefer React.js / Next.js + Typescript. I have also worked with various ready-made solutions such as Wordpress, Service Manager, as well as low-code platforms.\n" +
-                "I am continuously expanding my horizons in development and Computer Science, developing backend on microservice architecture, using Node.js, Express.js, MongoDB, Docker. And also, working with various front-end frameworks, such as Next.js, Vue.js, Svelte.js.\n" +
+                "I am continuously expanding my horizons in engineering and Computer Science, developing microservice backend using Node.js. And also, working with various front-end frameworks, such as Vue.js, Svelte.js.\n" +
                 "I have excellent communication skills and am always open to new professional acquaintances!",
             myLinks: "My Links",
             stackTitle: {
@@ -114,55 +114,54 @@ const en = {
                 title: "IT1",
                 startDate: "June 2023",
                 endDate: "Present",
-                position: "JS developer",
+                position: "Frontend Engineer",
                 location: "Moscow, Russia (Remote)",
                 description:
-                    "I was developing a corporate application portal based on HP Service Manager for Gazprombank. My responsibilities included improving system functionality, fixing defects, refactoring code, and creating new business logic in ES5 JavaScript.\n" +
+                    "I was developing a corporate application portal based on HP Service Manager for Gazprombank. *My responsibilities included* improving system functionality, fixing defects, refactoring code, and creating new business logic in ES5 JavaScript.\n" +
                     "I have successfully used the SOAP API to create new queries and retrieve XML data, as well as optimize existing queries.\n" +
-                    "My efforts resulted in a noticeable increase in team productivity. I have developed over 20 new applications that are actively used by thousands of users every day, and have made significant improvements to existing ones. In addition, I made important adjustments to the workflow and created detailed documentation to convey my experience to new team members."
+                    "*My efforts resulted* in a noticeable increase in team productivity. I have developed over 30 new applications that are actively used by thousands of users every day, and have made significant improvements to existing ones. Moreover, I made important adjustments to the workflow and created detailed documentation to convey my experience to new team members."
             },
             calendaria: {
                 title: "Calendaria",
                 startDate: "November 2022",
                 endDate: "May 2023",
-                position: "Frontend developer",
+                position: "Frontend Engineer",
                 location: "Almaty, Kazakhstan (Remote)",
                 description:
-                    "I was a key participant in the full development cycle of the enterprise application portal, including:\n" +
-                    "- Setting up frontend architecture on React.js and collaborating with the design team to determine the appearance of the interface.\n" +
-                    "- Analysis of technical specifications and development business logic in accordance with the requirements and goals of the project.\n" +
+                    "I was a key participant in the full development cycle of the enterprise application portal, *including:*\n" +
+                    "- Setting up frontend architecture on React.js, collaborating with the design team and layout the application.\n" +
+                    "- Analysis of technical specifications and development business logic.\n" +
                     "- Coordination of the work of a junior frontend developer.\n" +
-                    "- Layout and styling of the application using the Ant Design library.\n" +
                     "- Interaction with the backend development team, receiving data via Rest API.\n" +
-                    "The result of my work is the successful completion of development on time, ensuring compliance with customer requirements and achieving the goals set for the project. My efforts have resulted in an application that is actively used and maintained."
+                    "*The result of my work* is the successful completion of development on time, ensuring compliance with customer requirements and achieving the goals set for the project. My efforts have resulted in an application that is actively maintained and used by hundreds of users."
             },
             tecom: {
                 title: "Tecom",
                 startDate: "February 2022",
                 endDate: "November 2022",
-                position: "Frontend developer",
+                position: "Frontend Engineer",
                 location: "Nizhny Novgorod, Russia (Remote)",
                 description:
                     "My work experience spans a variety of projects, including editor-like widgets and a core high-load application.\n" +
-                    "My role included:\n" +
+                    "*My role included:*\n" +
                     "- Fixing defects, refactoring code and writing new business logic in React.js.\n" +
                     "- Code coverage with unit and e2e tests to ensure application reliability.\n" +
                     "- Development of key libraries, including a corporate UI-kit with storybook, as well as a library of ready-made utilities.\n" +
-                    "My contributions to editor-like widgets have greatly expanded their functionality and received positive feedback from users. Within the core application, I successfully improved its reliability and fixed major bugs, which significantly improved the quality of the user experience. My efforts in developing libraries have made development faster, more efficient, and more reliable."
+                    "*My contributions* to editor-like widgets have greatly expanded their functionality and received positive feedback from users. Within the core application, I successfully improved its reliability and fixed major bugs, which significantly improved the quality of the user experience. My efforts in developing libraries have made development faster, more efficient, and more reliable."
             },
             julius: {
                 title: "Julius",
                 startDate: "October 2021",
                 endDate: "February 2022",
-                position: "Frontend developer",
+                position: "Frontend Engineer",
                 location: "London, United Kingdom (Remote)",
                 description:
-                    "My job was to prepare the company's main React.js project for release into production. For this I:\n" +
+                    "I was preparing the company's main React.js project for release into production. *For this I:*\n" +
                     "- Redesigned the layout of many interface components, improving design and usability.\n" +
-                    "- Developed many features and complex components, such as tables and dashboards, which expanded functionality.\n" +
-                    "- Interacted with the frontend development project lead, exchanging ideas for the successful implementation of various functionalities.\n" +
+                    "- Developed many features and complex components, such as tables and dashboards.\n" +
+                    "- Interacted with the team leader, exchanging ideas for the successful implementation of various functionalities.\n" +
                     "- Used GraphQL language to retrieve data from the server, working closely with the backend developer.\n" +
-                    "Thus, my efforts led to the rapid development of the project, improving its functionality, interface and improving the quality of user experience. My work also highlights my ability to successfully collaborate within a development team and achieve collective goals."
+                    "Thus, *my efforts led* to the significant acceleration of the project development, improving its functionality, interface and quality of user experience. My work also highlights my ability to successfully collaborate within a development team and achieve collective goals."
             }
         },
         contact: {

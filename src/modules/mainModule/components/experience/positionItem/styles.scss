@@ -53,3 +53,7 @@
 .position {
   @include yellowText;
 }
+
+.highlightedText {
+  font-weight: $fwEBold;
+}
