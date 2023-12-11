@@ -1,18 +1,18 @@
 <script setup lang="ts">
-import { PropType, ref, defineAsyncComponent, Ref } from "vue";
-import { TLink } from "../defaultData";
+import { PropType, ref, defineAsyncComponent, Ref } from 'vue';
+import { TLink } from '../defaultData';
 
-import WithAnimation from "@/components/HOCs/withAnimation/index.vue";
-import WithModal from "@/components/HOCs/withModal/index.vue";
+import WithAnimation from '@/components/HOCs/withAnimation/index.vue';
+import WithModal from '@/components/HOCs/withModal/index.vue';
 
-const Modal = defineAsyncComponent(() => import("./modal/index.vue"));
+const Modal = defineAsyncComponent(() => import('./modal/index.vue'));
 
-import Title from "@/shared/ui/components/title/index.vue";
-import { titleTypesEnum } from "@/shared/ui/components/title/titleEnum";
+import Title from '@/shared/ui/components/title/index.vue';
+import { titleTypesEnum } from '@/shared/ui/components/title/titleEnum';
 
-import Line from "@/shared/ui/components/line/index.vue";
-import GitHub from "@/shared/assets/svg/components/GitHub.vue";
-import GoTo from "@/shared/assets/svg/components/GoTo.vue";
+import Line from '@/shared/ui/components/line/index.vue';
+import GitHub from '@/shared/assets/svg/components/GitHub.vue';
+import GoTo from '@/shared/assets/svg/components/GoTo.vue';
 
 const { stack } = defineProps({
     image: {
@@ -45,7 +45,7 @@ const { stack } = defineProps({
     }
 });
 
-const stackStr = stack?.join(" - ");
+const stackStr = stack?.join(' - ');
 
 const modalOpened = ref(false);
 
@@ -94,7 +94,7 @@ const onCloseModal = () => (modalOpened.value = false);
             >
                 <span :class="$style.shortDesc">{{ shortDesc }}</span>
                 <span :class="$style.learnMore" @click="onOpenModal">
-                    {{ $t("main.projects.learnMore") }} ➤
+                    {{ $t('main.projects.learnMore') }} ➤
                 </span>
             </WithAnimation>
         </div>
@@ -112,5 +112,5 @@ const onCloseModal = () => (modalOpened.value = false);
 </template>
 
 <style lang="scss" module>
-@import "./styles.scss";
+@import './styles.scss';
 </style>

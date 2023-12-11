@@ -2,8 +2,8 @@
 import {
     titleTypesEnum,
     titleWeightsEnum
-} from "@/shared/ui/components/title/titleEnum";
-import { PropType } from "vue";
+} from '@/shared/ui/components/title/titleEnum';
+import { PropType } from 'vue';
 
 const { titleType, weight } = defineProps({
     withDot: {
@@ -23,7 +23,7 @@ const { titleType, weight } = defineProps({
 const defineClass = (style: Record<string, any>) => {
     return {
         class: [
-            style["title_" + titleType],
+            style['title_' + titleType],
             style.text,
             weight === titleWeightsEnum.BOLD && style.boldWeight,
             weight === titleWeightsEnum.USUAL && style.usualWeight
@@ -66,5 +66,5 @@ const defineClass = (style: Record<string, any>) => {
 </template>
 
 <style module lang="scss">
-@import "./styles.scss";
+@import './styles.scss';
 </style>

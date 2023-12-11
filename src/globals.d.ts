@@ -1,17 +1,17 @@
-declare module "*.woff";
-declare module "*.woff2";
-declare module "*.ttf";
-declare module "*.pdf";
-declare module "*.jpg";
-declare module "*.png" {
+declare module '*.woff';
+declare module '*.woff2';
+declare module '*.ttf';
+declare module '*.pdf';
+declare module '*.jpg';
+declare module '*.png' {
     const value: any;
     export default value;
 }
-declare module "*.svg" {
+declare module '*.svg' {
     const value: any;
     export default value;
 }
-declare module "*.scss" {
+declare module '*.scss' {
     const content: { [className: string]: string };
     export = content;
 }

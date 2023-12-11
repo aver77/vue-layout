@@ -1,9 +1,9 @@
 <script lang="ts" setup>
-import Links from "../links/index.vue";
-import ButtonComponent from "@/shared/ui/components/button/index.vue";
-import LangSwitcher from "./langSwitcher/index.vue";
-import pdfCV from "@/shared/assets/pdf/NikitaAverochkinCV.pdf";
-import { ref } from "vue";
+import Links from '../links/index.vue';
+import ButtonComponent from '@/shared/ui/components/button/index.vue';
+import LangSwitcher from './langSwitcher/index.vue';
+import pdfCV from '@/shared/assets/pdf/NikitaAverochkinCV.pdf';
+import { ref } from 'vue';
 
 const burgerOpened = ref(false);
 
@@ -29,7 +29,7 @@ const switchBurgerMenu = () => {
                 <li>
                     <a :href="pdfCV" target="_blank">
                         <ButtonComponent>{{
-                            $t("components.header.resumeBtn")
+                            $t('components.header.resumeBtn')
                         }}</ButtonComponent>
                     </a>
                 </li>
@@ -42,5 +42,5 @@ const switchBurgerMenu = () => {
 </template>
 
 <style lang="scss" module>
-@import "./styles.scss";
+@import './styles.scss';
 </style>

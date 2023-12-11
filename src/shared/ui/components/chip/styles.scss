@@ -1,9 +1,9 @@
-@import "src/shared/styles/vars.scss";
+@import 'src/shared/styles/vars.scss';
 
 .chip {
-  font-size: $fsTextDefault;
-  background: $cLightGray;
-  color: $cLight;
-  padding: $indentLow $indentXS;
-  border-radius: 999px;
+    font-size: $fsTextDefault;
+    background: $cLightGray;
+    color: $cLight;
+    padding: $indentLow $indentXS;
+    border-radius: 999px;
 }

@@ -3,7 +3,7 @@
 <template>
     <footer :class="$style.container">
         {{
-            $t("components.footer.copyright", {
+            $t('components.footer.copyright', {
                 year: new Date().getFullYear()
             })
         }}
@@ -11,5 +11,5 @@
 </template>
 
 <style lang="scss" module>
-@import "./style.scss";
+@import './style.scss';
 </style>

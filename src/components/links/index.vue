@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { links } from "./defaultData";
-import { onMounted, ref } from "vue";
-import { observeElement } from "@/shared/lib/utils/observeElement";
+import { links } from './defaultData';
+import { onMounted, ref } from 'vue';
+import { observeElement } from '@/shared/lib/utils/observeElement';
 
 defineProps({
     heading: {
@@ -43,5 +43,5 @@ onMounted(() => {
 </template>
 
 <style lang="scss" module>
-@import "./styles.scss";
+@import './styles.scss';
 </style>

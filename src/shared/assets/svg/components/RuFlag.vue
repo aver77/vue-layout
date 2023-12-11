@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import getSharedSvgProps from "./getSharedSvgProps";
+import getSharedSvgProps from './getSharedSvgProps';
 
 const { height, width, style, className } = defineProps(getSharedSvgProps());
 </script>

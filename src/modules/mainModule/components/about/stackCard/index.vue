@@ -1,18 +1,18 @@
 <script setup lang="ts">
-import { PropType, Ref } from "vue";
+import { PropType, Ref } from 'vue';
 
-import WithAnimation from "@/components/HOCs/withAnimation/index.vue";
+import WithAnimation from '@/components/HOCs/withAnimation/index.vue';
 
 import {
     getImgAndStackByKey,
     getTitleByKeyAndT,
     stackKeysEnum
-} from "./defaultData";
+} from './defaultData';
 
-import Title from "@/shared/ui/components/title/index.vue";
-import { titleTypesEnum } from "@/shared/ui/components/title/titleEnum";
+import Title from '@/shared/ui/components/title/index.vue';
+import { titleTypesEnum } from '@/shared/ui/components/title/titleEnum';
 
-import Chip from "@/shared/ui/components/chip/index.vue";
+import Chip from '@/shared/ui/components/chip/index.vue';
 
 const { stackKey } = defineProps({
     stackKey: {
@@ -47,5 +47,5 @@ const { currentStack, imgComponent } = getImgAndStackByKey(stackKey);
 </template>
 
 <style module lang="scss">
-@import "./styles.scss";
+@import './styles.scss';
 </style>

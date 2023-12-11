@@ -12,5 +12,5 @@ defineProps({
 </template>
 
 <style lang="scss" module>
-@import "./styles.scss";
+@import './styles.scss';
 </style>

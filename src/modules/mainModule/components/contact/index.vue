@@ -1,14 +1,14 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref } from 'vue';
 
-import WithAnimation from "@/components/HOCs/withAnimation/index.vue";
+import WithAnimation from '@/components/HOCs/withAnimation/index.vue';
 
-import Title from "@/shared/ui/components/title/index.vue";
-import { titleTypesEnum } from "@/shared/ui/components/title/titleEnum";
+import Title from '@/shared/ui/components/title/index.vue';
+import { titleTypesEnum } from '@/shared/ui/components/title/titleEnum';
 
-import Mail from "@/shared/assets/svg/components/Mail.vue";
+import Mail from '@/shared/assets/svg/components/Mail.vue';
 
-import { contactsId } from "@/shared/constants/elementsIds";
+import { contactsId } from '@/shared/constants/elementsIds';
 
 const target = ref<HTMLElement | null>(null);
 const getTargetRef = () => target;
@@ -19,12 +19,12 @@ const getTargetRef = () => target;
         <div :class="$style.contentWrap">
             <WithAnimation :get-slot-ref="getTargetRef">
                 <Title :title-type="titleTypesEnum.h1">{{
-                    $t("main.contact.title")
+                    $t('main.contact.title')
                 }}</Title>
             </WithAnimation>
             <WithAnimation :get-slot-ref="getTargetRef">
                 <p :class="[$style.contactMsg, $style.lightText]">
-                    {{ $t("main.contact.messageStart") }}
+                    {{ $t('main.contact.messageStart') }}
                     <a
                         :class="$style.link"
                         href="https://www.linkedin.com/in/nikita-averochkin-761917276/"
@@ -32,7 +32,7 @@ const getTargetRef = () => target;
                         rel="noreferrer noopener"
                         >LinkedIn</a
                     >
-                    {{ $t("main.contact.messageDivider") }}
+                    {{ $t('main.contact.messageDivider') }}
                     <a
                         :class="$style.link"
                         href="https://t.me/NikitaNWB"
@@ -40,7 +40,7 @@ const getTargetRef = () => target;
                         rel="noreferrer noopener"
                         >Telegram</a
                     >
-                    {{ $t("main.contact.messageEnd") }}
+                    {{ $t('main.contact.messageEnd') }}
                 </p>
             </WithAnimation>
             <WithAnimation :get-slot-ref="getTargetRef">
@@ -59,5 +59,5 @@ const getTargetRef = () => target;
 </template>
 
 <style lang="scss" module>
-@import "./styles.scss";
+@import './styles.scss';
 </style>

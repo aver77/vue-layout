@@ -1,4 +1,4 @@
-import { Ref } from "vue";
+import { Ref } from 'vue';
 
 export const observeElement = (
     ref: Ref<HTMLElement | null>,

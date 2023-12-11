@@ -21,8 +21,8 @@ $cGray: #111;
 $cLightGray: #232323;
 $cLight: #ebecf3;
 $cLines: rgba(235, 236, 243, 0.3);
-$cYellow: #FFD700;
-$cDisabled: #EBEBE4;
+$cYellow: #ffd700;
+$cDisabled: #ebebe4;
 
 //border radius
 $brDefault: 6px;
@@ -73,8 +73,8 @@ $baseTransitionDuration: 0.3s;
 $baseTransition: $baseTransitionDuration ease;
 
 :export {
-  ipadLg: #{$ipadLg};
-  ipadSm: #{$ipadSm};
-  phones: #{$phones};
-  defaultSvgSize: #{$defaultSvgSize};
+    ipadLg: #{$ipadLg};
+    ipadSm: #{$ipadSm};
+    phones: #{$phones};
+    defaultSvgSize: #{$defaultSvgSize};
 }

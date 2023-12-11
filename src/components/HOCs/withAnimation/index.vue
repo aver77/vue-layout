@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import { CSSProperties, onMounted, PropType, Ref, ref } from "vue";
-import { observeElement } from "@/shared/lib/utils/observeElement";
+import { CSSProperties, onMounted, PropType, Ref, ref } from 'vue';
+import { observeElement } from '@/shared/lib/utils/observeElement';
 
 const { getSlotRef } = defineProps({
     getSlotRef: {
@@ -11,7 +11,7 @@ const { getSlotRef } = defineProps({
     },
     wrapperClass: {
         type: String,
-        default: () => ""
+        default: () => ''
     },
     wrapperStyle: {
         type: Object as PropType<CSSProperties>,
@@ -19,7 +19,7 @@ const { getSlotRef } = defineProps({
     },
     slotClass: {
         type: String,
-        default: () => ""
+        default: () => ''
     },
     slotStyle: {
         type: Object as PropType<CSSProperties>,
@@ -62,5 +62,5 @@ onMounted(() => {
 </template>
 
 <style lang="scss" module>
-@import "./styles.scss";
+@import './styles.scss';
 </style>

@@ -1,20 +1,20 @@
 <script setup lang="ts">
-import { onMounted, onUnmounted, reactive, ref } from "vue";
+import { onMounted, onUnmounted, reactive, ref } from 'vue';
 
-import { linkData } from "@/components/sidebar/defaultData";
-import { SidebarKeys } from "@/shared/constants/enums/sidebarKeys";
+import { linkData } from '@/components/sidebar/defaultData';
+import { SidebarKeys } from '@/shared/constants/enums/sidebarKeys';
 import {
     aboutId,
     contactsId,
     experienceId,
     projectsId,
     shortInformationId
-} from "@/shared/constants/elementsIds";
+} from '@/shared/constants/elementsIds';
 import {
     isElementInViewport,
     scrollIntoViewAndWait
-} from "@/components/sidebar/utils";
-import { observeElement } from "@/shared/lib/utils/observeElement";
+} from '@/components/sidebar/utils';
+import { observeElement } from '@/shared/lib/utils/observeElement';
 
 const linkDataWithElements = reactive<Record<string, HTMLElement | null>>({});
 const currentSelectedSidebarKey = ref<string | null>(null);
@@ -58,7 +58,7 @@ onMounted(() => {
 });
 
 onMounted(() => {
-    window.addEventListener("scroll", scrollListener);
+    window.addEventListener('scroll', scrollListener);
 
     Object.entries(linkData).forEach(([sidebarKey, id]) => {
         linkDataWithElements[sidebarKey] = document.getElementById(id);
@@ -66,7 +66,7 @@ onMounted(() => {
 });
 
 onUnmounted(() => {
-    window.removeEventListener("scroll", scrollListener);
+    window.removeEventListener('scroll', scrollListener);
 });
 
 const scrollToTop = () => {
@@ -116,5 +116,5 @@ const scrollToElement = (element: HTMLElement, sidebarKey: string) => {
 </template>
 
 <style lang="scss" module scoped>
-@import "./styles.scss";
+@import './styles.scss';
 </style>

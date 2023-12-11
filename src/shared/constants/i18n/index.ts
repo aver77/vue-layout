@@ -1,6 +1,6 @@
-import en from "./en";
-import ru from "./ru";
-import { EN, RU } from "./locales";
+import en from './en';
+import ru from './ru';
+import { EN, RU } from './locales';
 
 const messages = {
     [EN]: en,

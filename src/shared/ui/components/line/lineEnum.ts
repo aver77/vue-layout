@@ -1,4 +1,4 @@
 export enum lineLayoutsEnum {
-    VERTICAL = "VERTICAL",
-    HORIZONTAL = "HORIZONTAL"
+    VERTICAL = 'VERTICAL',
+    HORIZONTAL = 'HORIZONTAL'
 }

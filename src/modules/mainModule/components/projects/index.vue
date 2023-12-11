@@ -1,16 +1,16 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref } from 'vue';
 
-import WithAnimation from "@/components/HOCs/withAnimation/index.vue";
+import WithAnimation from '@/components/HOCs/withAnimation/index.vue';
 
-import ProjectItem from "./projectItem/index.vue";
+import ProjectItem from './projectItem/index.vue';
 
-import Title from "@/shared/ui/components/title/index.vue";
-import { titleTypesEnum } from "@/shared/ui/components/title/titleEnum";
+import Title from '@/shared/ui/components/title/index.vue';
+import { titleTypesEnum } from '@/shared/ui/components/title/titleEnum';
 
-import Line from "@/shared/ui/components/line/index.vue";
-import { getProjects } from "@/modules/mainModule/components/projects/defaultData";
-import { projectsId } from "@/shared/constants/elementsIds";
+import Line from '@/shared/ui/components/line/index.vue';
+import { getProjects } from '@/modules/mainModule/components/projects/defaultData';
+import { projectsId } from '@/shared/constants/elementsIds';
 
 const target = ref<HTMLElement | null>(null);
 const getTargetRef = () => target;
@@ -22,7 +22,7 @@ const getTargetRef = () => target;
             <Line :flexed="true" />
             <WithAnimation :get-slot-ref="getTargetRef">
                 <Title :with-dot="true" :title-type="titleTypesEnum.h2">{{
-                    $t("main.projects.title")
+                    $t('main.projects.title')
                 }}</Title>
             </WithAnimation>
         </div>
@@ -38,5 +38,5 @@ const getTargetRef = () => target;
 </template>
 
 <style lang="scss" module>
-@import "./styles.scss";
+@import './styles.scss';
 </style>

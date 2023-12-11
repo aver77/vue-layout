@@ -3,9 +3,9 @@ import {
     contactsId,
     experienceId,
     projectsId
-} from "@/shared/constants/elementsIds";
+} from '@/shared/constants/elementsIds';
 
-import { SidebarKeys } from "@/shared/constants/enums/sidebarKeys";
+import { SidebarKeys } from '@/shared/constants/enums/sidebarKeys';
 
 export const linkData = {
     [SidebarKeys.About]: aboutId,

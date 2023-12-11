@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import gridArray from "./gridData";
+import gridArray from './gridData';
 </script>
 
 <template>
@@ -15,5 +15,5 @@ import gridArray from "./gridData";
 </template>
 
 <style module lang="scss">
-@import "./styles.scss";
+@import './styles.scss';
 </style>

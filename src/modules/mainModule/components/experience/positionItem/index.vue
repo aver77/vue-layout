@@ -1,12 +1,12 @@
 <script lang="ts" setup>
-import { PropType, Ref } from "vue";
+import { PropType, Ref } from 'vue';
 
-import WithAnimation from "@/components/HOCs/withAnimation/index.vue";
+import WithAnimation from '@/components/HOCs/withAnimation/index.vue';
 
-import Chip from "@/shared/ui/components/chip/index.vue";
-import Line from "@/shared/ui/components/line/index.vue";
-import Title from "@/shared/ui/components/title/index.vue";
-import { titleTypesEnum } from "@/shared/ui/components/title/titleEnum";
+import Chip from '@/shared/ui/components/chip/index.vue';
+import Line from '@/shared/ui/components/line/index.vue';
+import Title from '@/shared/ui/components/title/index.vue';
+import { titleTypesEnum } from '@/shared/ui/components/title/titleEnum';
 
 defineProps({
     companyName: {
@@ -37,6 +37,9 @@ defineProps({
         }
     }
 });
+
+const underlineSep = '#';
+const boldSep = '*';
 </script>
 
 <template>
@@ -72,14 +75,23 @@ defineProps({
                 :get-slot-ref="getParentRef"
             >
                 <span
-                    v-for="(descItemChunk, index) in descItem.split('*')"
-                    :key="index"
-                    :class="
-                        descItem.includes('*' + descItemChunk + '*') &&
-                        $style.highlightedText
-                    "
+                    v-for="(descItemChunk, chunkIndex) in descItem.split(
+                        /[*#]+/
+                    )"
+                    :key="chunkIndex"
+                    :class="[
+                        descItem.includes(
+                            boldSep + boldSep + descItemChunk + boldSep
+                        ) && $style.boldText,
+                        descItem.includes(
+                            underlineSep +
+                                underlineSep +
+                                descItemChunk +
+                                underlineSep
+                        ) && $style.underlinedText
+                    ]"
                 >
-                    {{ descItemChunk.replaceAll("*", "") }}
+                    {{ descItemChunk.replace(/[*#]+/, '') }}
                 </span>
             </WithAnimation>
         </div>
@@ -95,5 +107,5 @@ defineProps({
 </template>
 
 <style lang="scss" module>
-@import "./styles.scss";
+@import './styles.scss';
 </style>

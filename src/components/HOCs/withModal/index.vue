@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { onUpdated, PropType, ref } from "vue";
-import Close from "@/shared/assets/svg/components/Close.vue";
+import { onUpdated, PropType, ref } from 'vue';
+import Close from '@/shared/assets/svg/components/Close.vue';
 
-import { Presence, Motion } from "motion/vue";
+import { Presence, Motion } from 'motion/vue';
 
 const props = defineProps({
     modalClass: {
@@ -30,11 +30,11 @@ const handleClickOutside = (e: MouseEvent) => {
 };
 
 onUpdated(() => {
-    document.body.style.overflowY = props.modalOpened ? "hidden" : "auto";
+    document.body.style.overflowY = props.modalOpened ? 'hidden' : 'auto';
 
     props.modalOpened
-        ? document.addEventListener("click", handleClickOutside, true)
-        : document.removeEventListener("click", handleClickOutside, true);
+        ? document.addEventListener('click', handleClickOutside, true)
+        : document.removeEventListener('click', handleClickOutside, true);
 });
 </script>
 
@@ -63,5 +63,5 @@ onUpdated(() => {
 </template>
 
 <style lang="scss" module>
-@import "./style.scss";
+@import './style.scss';
 </style>

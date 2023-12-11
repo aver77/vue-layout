@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { PropType } from "vue";
-import buttonTypesEnum from "./buttonTypesEnum";
+import { PropType } from 'vue';
+import buttonTypesEnum from './buttonTypesEnum';
 
 defineProps({
     btnType: {
@@ -30,5 +30,5 @@ defineProps({
 </template>
 
 <style module lang="scss">
-@import "./styles.scss";
+@import './styles.scss';
 </style>

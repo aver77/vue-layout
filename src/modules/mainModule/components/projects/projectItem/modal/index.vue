@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import { PropType } from "vue";
-import { TLink } from "@/modules/mainModule/components/projects/defaultData";
+import { PropType } from 'vue';
+import { TLink } from '@/modules/mainModule/components/projects/defaultData';
 
-import Title from "@/shared/ui/components/title/index.vue";
-import { titleTypesEnum } from "@/shared/ui/components/title/titleEnum";
+import Title from '@/shared/ui/components/title/index.vue';
+import { titleTypesEnum } from '@/shared/ui/components/title/titleEnum';
 
-import GitHub from "@/shared/assets/svg/components/GitHub.vue";
-import GoTo from "@/shared/assets/svg/components/GoTo.vue";
+import GitHub from '@/shared/assets/svg/components/GitHub.vue';
+import GoTo from '@/shared/assets/svg/components/GoTo.vue';
 
 const { longDesc } = defineProps({
     name: {
@@ -30,7 +30,7 @@ const { longDesc } = defineProps({
     }
 });
 
-const parsedLongDesc = longDesc?.split("\n");
+const parsedLongDesc = longDesc?.split('\n');
 </script>
 
 <template>
@@ -54,7 +54,7 @@ const parsedLongDesc = longDesc?.split("\n");
             </div>
             <div :class="$style.subTextsContainer">
                 <Title :with-dot="true" :title-type="titleTypesEnum.h4">{{
-                    $t("main.projects.modal.projectLinks")
+                    $t('main.projects.modal.projectLinks')
                 }}</Title>
                 <div :class="$style.links">
                     <a
@@ -65,7 +65,7 @@ const parsedLongDesc = longDesc?.split("\n");
                     >
                         <GitHub :width="'18px'" :height="'18px'" />
                         <span :class="$style.linkText">{{
-                            $t("main.projects.modal.sourceCode")
+                            $t('main.projects.modal.sourceCode')
                         }}</span>
                     </a>
                     <a
@@ -77,7 +77,7 @@ const parsedLongDesc = longDesc?.split("\n");
                     >
                         <GoTo :width="'18px'" :height="'18px'" />
                         <span :class="$style.linkText">{{
-                            $t("main.projects.modal.liveProject")
+                            $t('main.projects.modal.liveProject')
                         }}</span>
                     </a>
                 </div>
@@ -87,5 +87,5 @@ const parsedLongDesc = longDesc?.split("\n");
 </template>
 
 <style lang="scss" module>
-@import "./styles.scss";
+@import './styles.scss';
 </style>

@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import AppLayout from "./appLayout/index.vue";
-import MainPage from "@/pages/mainPage/index.vue";
+import AppLayout from './appLayout/index.vue';
+import MainPage from '@/pages/mainPage/index.vue';
 
-import { useI18n } from "vue-i18n";
+import { useI18n } from 'vue-i18n';
 
-const { t } = useI18n({ useScope: "global" });
+const { t } = useI18n({ useScope: 'global' });
 </script>
 
 <template>
@@ -14,5 +14,5 @@ const { t } = useI18n({ useScope: "global" });
 </template>
 
 <style lang="scss">
-@import "./globals.scss";
+@import './globals.scss';
 </style>
