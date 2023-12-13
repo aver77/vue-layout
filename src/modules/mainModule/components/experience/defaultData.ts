@@ -25,8 +25,8 @@ export const getPositions = (
             'JavaScript',
             'RAD',
             'SOAP API',
-            'SQL',
-            'JSON'
+            'React.js',
+            'CSS'
         ]
     },
     {

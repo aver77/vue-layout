@@ -22,7 +22,7 @@ const en = {
     main: {
         shortInformation: {
             nameGreet: "Hey, I'm Nikita",
-            jobTitle: 'Frontend Engineer',
+            jobTitle: 'Frontend Developer',
             description:
                 "I'm creative and constantly growing developer with more than three years of experience who loves crafting products that people love. I’m eager to apply my expertise, solving extraordinary problems and bringing profit to customers.",
             contactBtn: 'Contact me'
@@ -115,7 +115,7 @@ const en = {
                 title: 'IT1',
                 startDate: 'June 2023',
                 endDate: 'Present',
-                position: 'Frontend Engineer',
+                position: 'Frontend Developer',
                 location: 'Moscow, Russia (Remote)',
                 description:
                     'I was developing a corporate application portal for Gazprombank. To achieve project goals I:\n' +
@@ -138,7 +138,7 @@ const en = {
                 title: 'Calendaria',
                 startDate: 'November 2022',
                 endDate: 'May 2023',
-                position: 'Frontend Engineer',
+                position: 'Frontend Developer',
                 location: 'Almaty, Kazakhstan (Remote)',
                 description:
                     'I was a key participant in the full development cycle of the enterprise application portal, including:\n' +
@@ -170,7 +170,7 @@ const en = {
                 title: 'Tecom',
                 startDate: 'February 2022',
                 endDate: 'November 2022',
-                position: 'Frontend Engineer',
+                position: 'Frontend Developer',
                 location: 'Nizhny Novgorod, Russia (Remote)',
                 description:
                     'My work experience covers several projects: editor-like widgets and a core high-load application. ' +
@@ -200,7 +200,7 @@ const en = {
                 title: 'Julius',
                 startDate: 'September 2021',
                 endDate: 'February 2022',
-                position: 'Frontend Engineer',
+                position: 'Frontend Developer',
                 location: 'London, United Kingdom (Remote)',
                 description:
                     "I was preparing the company's main React.js project for release into production. For this I:\n" +
