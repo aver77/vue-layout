@@ -16,7 +16,7 @@ const getTargetRef = () => target;
 </script>
 
 <template>
-    <section ref="target" :id="shortInformationId" :class="$style.container">
+    <section :id="shortInformationId" ref="target" :class="$style.container">
         <div :class="$style.infoWrapper">
             <WithAnimation :get-slot-ref="getTargetRef">
                 <Title :title-type="titleTypesEnum.h1">{{
@@ -26,9 +26,9 @@ const getTargetRef = () => target;
             <WithAnimation :get-slot-ref="getTargetRef">
                 <Title :title-type="titleTypesEnum.h3" :with-dot="false">
                     {{ $t('shared.i') }}
-                    <span :class="$style.titleJob">{{
-                        $t('main.shortInformation.jobTitle')
-                    }}</span>
+                    <span :class="$style.titleJob">
+                        {{ $t('main.shortInformation.jobTitle') }}
+                    </span>
                 </Title>
             </WithAnimation>
             <WithAnimation :get-slot-ref="getTargetRef">
