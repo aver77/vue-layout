@@ -118,21 +118,14 @@ const en = {
                 position: 'Frontend Developer',
                 location: 'Moscow, Russia (Remote)',
                 description:
-                    'I was developing a corporate application portal for Gazprombank. To achieve project goals I:\n' +
-                    ` - ${getUnderlinedText(
-                        'Worked on frontend logic'
-                    )} on ES5 JavaScript for Service Manager.\n` +
-                    ` - ${getUnderlinedText(
-                        'Wrote and optimized'
-                    )} a lot of SOAP API queries and increased it’s code quality.\n` +
-                    ` - ${getUnderlinedText(
-                        'Carrying out organizational tasks'
-                    )} of the team.\n` +
-                    `${getBoldText('Eventually, I')} have ${getUnderlinedText(
-                        'completed over 30% of all tasks'
-                    )} assigned to the team on applications that are used by thousands of users every day. Moreover, ${getUnderlinedText(
-                        'I essentially enhanced the workflow and team productivity'
-                    )} by conducting daily briefings and retrospectives and creating detailed project documentation to convey my experience to new team members.`
+                    'I was developing a corporate application portals:\n' +
+                    ` - Worked on diverse projects: on React.js and on HP Service Manager using ES5 JavaScript.\n` +
+                    ` - Carried out organizational tasks of the team.\n` +
+                    `${getBoldText(
+                        'I have completed over 30% of all tasks'
+                    )} assigned to the team on applications that are used by thousands of users and implemented crucial functionality to beta React.js project. Moreover, I essentially ${getBoldText(
+                        'enhanced the workflow and team productivity'
+                    )} by conducting daily briefings, retrospectives and creating detailed project documentation.`
             },
             calendaria: {
                 title: 'Calendaria',
@@ -141,29 +134,14 @@ const en = {
                 position: 'Frontend Developer',
                 location: 'Almaty, Kazakhstan (Remote)',
                 description:
-                    'I was a key participant in the full development cycle of the enterprise application portal, including:\n' +
-                    ` - ${getUnderlinedText(
-                        'Designing frontend architecture'
-                    )} on React.js and application layout ${getUnderlinedText(
-                        'from scratch'
-                    )}.\n` +
-                    ` - ${getUnderlinedText(
-                        'Analysis of technical assignment'
-                    )} and project needs.\n` +
-                    ` - ${getUnderlinedText(
-                        'Coordination of the work'
-                    )} of a junior frontend developer.\n` +
-                    ` - ${getUnderlinedText(
-                        'Interaction with'
-                    )} the backend and design ${getUnderlinedText(
-                        'teams'
-                    )}.\n` +
-                    `${getBoldText(
-                        'As the result, I'
-                    )} successfully ${getUnderlinedText(
-                        'accomplished frontend development'
-                    )} on time, ${getUnderlinedText(
-                        'fully satisfied the customer’s requirements'
+                    'I was a frontend lead of enterprise portal, including:\n' +
+                    ` - Designing frontend architecture on React.js and application layout from scratch.\n` +
+                    ` - Analysing of technical assignment and project needs.\n` +
+                    ` - Coordinating of the work of a junior frontend developer, interacting with various teams.\n` +
+                    `I successfully ${getBoldText(
+                        'accomplished full development process'
+                    )} on time, ${getBoldText(
+                        'completely satisfied the customer’s requirements'
                     )} achieving all project goals. My efforts have resulted in an application that is actively maintained and used by hundreds of users.`
             },
             tecom: {
@@ -173,54 +151,32 @@ const en = {
                 position: 'Frontend Developer',
                 location: 'Nizhny Novgorod, Russia (Remote)',
                 description:
-                    'My work experience covers several projects: editor-like widgets and a core high-load application. ' +
-                    'My role included:\n' +
-                    ` - ${getUnderlinedText(
-                        'Fixing'
-                    )} defects, ${getUnderlinedText(
-                        'refactoring'
-                    )} code and ${getUnderlinedText(
-                        'writing new React.js logic'
-                    )}.\n` +
-                    ` - Code coverage with unit and e2e ${getUnderlinedText(
-                        'tests to ensure application reliability'
-                    )}.\n` +
-                    ` - ${getUnderlinedText(
-                        'Development of key libraries'
-                    )}, including a corporate UI-kit with storybook, as well as a library of ready-made utilities.\n` +
-                    `${getBoldText('In consequence, I')} ${getUnderlinedText(
-                        'implemented ~90% of the required functionality'
-                    )} in editor-like widgets and received positive feedback from customers. Within the core core application, ${getUnderlinedText(
-                        'I made it several times more reliable due to my tests'
-                    )}, which helped me fix the main bugs and improve the user experience. My efforts in developing libraries have ${getUnderlinedText(
-                        'made development faster and more efficient'
-                    )}.`
+                    'I was working on several projects: My role included:\n' +
+                    ` - Fixing, refactoring and writing new logic on React.js.\n` +
+                    ` - Implement unit and e2e tests to ensure the core application reliability.\n` +
+                    ` - Development of key libraries, including a corporate UI-kit with storybook, as well as a library of ready-made utilities.\n` +
+                    `${getBoldText(
+                        'I realized ~90% of the required functionality'
+                    )} in editor-like widgets and received positive feedback from customers. ${getBoldText(
+                        'I made the core application several times more reliable'
+                    )} due to my tests, which helped the team fix the main problems. My efforts in developing libraries ${getBoldText(
+                        'have made development faster'
+                    )} and more efficient.`
             },
             julius: {
                 title: 'Julius',
-                startDate: 'September 2021',
+                startDate: 'August 2021',
                 endDate: 'February 2022',
                 position: 'Frontend Developer',
                 location: 'London, United Kingdom (Remote)',
                 description:
                     "I was preparing the company's main React.js project for release into production. For this I:\n" +
-                    ` - ${getUnderlinedText(
-                        'Redesigned the layout'
-                    )} of many components, ${getUnderlinedText(
-                        'made the app more accessible'
-                    )}.\n` +
-                    ` - ${getUnderlinedText(
-                        'Developed many complex features and components'
-                    )}, such as tables and dashboards.\n` +
-                    ` - ${getUnderlinedText(
-                        'Interacted with the team leader'
-                    )}, exchanging ideas for the successful implementation of various functionalities.\n` +
-                    ` - Used GraphQL language to retrieve data from the server, ${getUnderlinedText(
-                        'working closely with the backend developer'
-                    )}.\n` +
-                    `${getBoldText('Thus, I')} ${getUnderlinedText(
-                        'significantly accelerated the frontend development'
-                    )}, improved a lot of core functionality and quality of user experience. Besides, I successfully ${getUnderlinedText(
+                    ` - Redesigned the layout of many components, made the app more accessible.\n` +
+                    ` - Developed many complex features and components, such as tables and dashboards.\n` +
+                    ` - Worked closely with the team leader and backend developer.\n` +
+                    `${getBoldText(
+                        'I significantly accelerated the frontend development'
+                    )}, improved a lot of core functionality and quality of user experience. Besides, I successfully ${getBoldText(
                         'collaborated with team members and motivated them'
                     )} to achieve collective goals.`
             }
