@@ -19,7 +19,7 @@ const getTargetRef = () => target;
 </script>
 
 <template>
-    <section ref="target" :id="aboutId" :class="$style.container">
+    <section :id="aboutId" ref="target" :class="$style.container">
         <div :class="$style.titleWrap">
             <WithAnimation :get-slot-ref="getTargetRef">
                 <Title :with-dot="true" :title-type="titleTypesEnum.h2">{{
