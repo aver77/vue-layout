@@ -25,7 +25,6 @@ const getTargetRef = () => target;
             </WithAnimation>
             <WithAnimation :get-slot-ref="getTargetRef">
                 <Title :title-type="titleTypesEnum.h3" :with-dot="false">
-                    {{ $t('shared.i') }}
                     <span :class="$style.titleJob">
                         {{ $t('main.shortInformation.jobTitle') }}
                     </span>
