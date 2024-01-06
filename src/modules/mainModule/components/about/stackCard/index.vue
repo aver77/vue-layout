@@ -9,7 +9,7 @@ import {
     stackKeysEnum
 } from './defaultData';
 
-import Title from '@/shared/ui/components/title/index.vue';
+import TitleComponent from '@/shared/ui/components/title/index.vue';
 import { titleTypesEnum } from '@/shared/ui/components/title/titleEnum';
 
 import Chip from '@/shared/ui/components/chip/index.vue';
@@ -34,9 +34,9 @@ const { currentStack, imgComponent } = getImgAndStackByKey(stackKey);
     <WithAnimation :get-slot-ref="getParentRef">
         <div :class="$style.titleContainer">
             <component :is="imgComponent" :class="$style.img"></component>
-            <Title :title-type="titleTypesEnum.h4" :with-dot="false">{{
+            <TitleComponent :title-type="titleTypesEnum.h4" :with-dot="false">{{
                 getTitleByKeyAndT(stackKey, $t)
-            }}</Title>
+            }}</TitleComponent>
         </div>
         <div :class="$style.stackContainer">
             <template v-for="(stName, index) in currentStack" :key="index">

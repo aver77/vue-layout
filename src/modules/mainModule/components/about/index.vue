@@ -4,7 +4,7 @@ import WithAnimation from '@/components/HOCs/withAnimation/index.vue';
 import StackCard from './stackCard/index.vue';
 import { stackKeysEnum } from './stackCard/defaultData';
 
-import Title from '@/shared/ui/components/title/index.vue';
+import TitleComponent from '@/shared/ui/components/title/index.vue';
 import { titleTypesEnum } from '@/shared/ui/components/title/titleEnum';
 
 import Line from '@/shared/ui/components/line/index.vue';
@@ -22,9 +22,11 @@ const getTargetRef = () => target;
     <section :id="aboutId" ref="target" :class="$style.container">
         <div :class="$style.titleWrap">
             <WithAnimation :get-slot-ref="getTargetRef">
-                <Title :with-dot="true" :title-type="titleTypesEnum.h2">{{
-                    $t('main.about.title')
-                }}</Title>
+                <TitleComponent
+                    :with-dot="true"
+                    :title-type="titleTypesEnum.h2"
+                    >{{ $t('main.about.title') }}</TitleComponent
+                >
             </WithAnimation>
             <Line :flexed="true" />
         </div>

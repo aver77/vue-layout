@@ -7,7 +7,7 @@ import WithModal from '@/components/HOCs/withModal/index.vue';
 
 const Modal = defineAsyncComponent(() => import('./modal/index.vue'));
 
-import Title from '@/shared/ui/components/title/index.vue';
+import TitleComponent from '@/shared/ui/components/title/index.vue';
 import { titleTypesEnum } from '@/shared/ui/components/title/titleEnum';
 
 import Line from '@/shared/ui/components/line/index.vue';
@@ -64,11 +64,11 @@ const onCloseModal = () => (modalOpened.value = false);
         </WithAnimation>
         <div :class="$style.textsContainer">
             <WithAnimation :get-slot-ref="getParentRef">
-                <Title
+                <TitleComponent
                     :with-dot="false"
                     :title-type="titleTypesEnum.h4"
                     :class="$style.title"
-                    >{{ name }}</Title
+                    >{{ name }}</TitleComponent
                 >
             </WithAnimation>
             <div :class="$style.linksContainer">

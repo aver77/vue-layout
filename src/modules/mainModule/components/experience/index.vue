@@ -3,7 +3,7 @@ import { ref } from 'vue';
 
 import WithAnimation from '@/components/HOCs/withAnimation/index.vue';
 
-import Title from '@/shared/ui/components/title/index.vue';
+import TitleComponent from '@/shared/ui/components/title/index.vue';
 import { titleTypesEnum } from '@/shared/ui/components/title/titleEnum';
 
 import Line from '@/shared/ui/components/line/index.vue';
@@ -20,9 +20,9 @@ const getTargetRef = () => target;
     <section ref="target" :id="experienceId" :class="$style.container">
         <div :class="$style.titleWrap">
             <WithAnimation :get-slot-ref="getTargetRef">
-                <Title :with-dot="true" :title-type="titleTypesEnum.h2">{{
-                    $t('main.experience.title')
-                }}</Title>
+                <TitleComponent :with-dot="true" :title-type="titleTypesEnum.h2"
+                    >{{ $t('main.experience.title') }}
+                </TitleComponent>
             </WithAnimation>
             <Line :flexed="true" />
         </div>

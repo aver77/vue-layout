@@ -3,7 +3,7 @@ import { ref } from 'vue';
 
 import WithAnimation from '@/components/HOCs/withAnimation/index.vue';
 
-import Title from '@/shared/ui/components/title/index.vue';
+import TitleComponent from '@/shared/ui/components/title/index.vue';
 import { titleTypesEnum } from '@/shared/ui/components/title/titleEnum';
 
 import Mail from '@/shared/assets/svg/components/Mail.vue';
@@ -18,9 +18,9 @@ const getTargetRef = () => target;
     <section ref="target" :id="contactsId" :class="$style.container">
         <div :class="$style.contentWrap">
             <WithAnimation :get-slot-ref="getTargetRef">
-                <Title :title-type="titleTypesEnum.h1">{{
+                <TitleComponent :title-type="titleTypesEnum.h1">{{
                     $t('main.contact.title')
-                }}</Title>
+                }}</TitleComponent>
             </WithAnimation>
             <WithAnimation :get-slot-ref="getTargetRef">
                 <p :class="[$style.contactMsg, $style.lightText]">

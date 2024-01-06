@@ -2,7 +2,7 @@
 import { PropType } from 'vue';
 import { TLink } from '@/modules/mainModule/components/projects/defaultData';
 
-import Title from '@/shared/ui/components/title/index.vue';
+import TitleComponent from '@/shared/ui/components/title/index.vue';
 import { titleTypesEnum } from '@/shared/ui/components/title/titleEnum';
 
 import GitHub from '@/shared/assets/svg/components/GitHub.vue';
@@ -38,9 +38,11 @@ const parsedLongDesc = longDesc?.split('\n');
         <img :class="$style.img" :src="image" alt="project img" />
         <div :class="$style.textsContainer">
             <div :class="$style.subTextsContainer">
-                <Title :with-dot="false" :title-type="titleTypesEnum.h3">{{
-                    name
-                }}</Title>
+                <TitleComponent
+                    :with-dot="false"
+                    :title-type="titleTypesEnum.h3"
+                    >{{ name }}</TitleComponent
+                >
                 <p :class="$style.stackStr">{{ stackStr }}</p>
             </div>
             <div :class="$style.longDescContainer">
@@ -53,9 +55,13 @@ const parsedLongDesc = longDesc?.split('\n');
                 </p>
             </div>
             <div :class="$style.subTextsContainer">
-                <Title :with-dot="true" :title-type="titleTypesEnum.h4">{{
-                    $t('main.projects.modal.projectLinks')
-                }}</Title>
+                <TitleComponent
+                    :with-dot="true"
+                    :title-type="titleTypesEnum.h4"
+                    >{{
+                        $t('main.projects.modal.projectLinks')
+                    }}</TitleComponent
+                >
                 <div :class="$style.links">
                     <a
                         :href="githubLink"

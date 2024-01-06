@@ -5,7 +5,7 @@ import WithAnimation from '@/components/HOCs/withAnimation/index.vue';
 
 import Chip from '@/shared/ui/components/chip/index.vue';
 import Line from '@/shared/ui/components/line/index.vue';
-import Title from '@/shared/ui/components/title/index.vue';
+import TitleComponent from '@/shared/ui/components/title/index.vue';
 import { titleTypesEnum } from '@/shared/ui/components/title/titleEnum';
 
 defineProps({
@@ -46,9 +46,11 @@ const boldSep = '*';
     <div :class="$style.container">
         <div :class="$style.infoContainer">
             <WithAnimation :get-slot-ref="getParentRef">
-                <Title :with-dot="false" :title-type="titleTypesEnum.h4">{{
-                    companyName
-                }}</Title>
+                <TitleComponent
+                    :with-dot="false"
+                    :title-type="titleTypesEnum.h4"
+                    >{{ companyName }}</TitleComponent
+                >
             </WithAnimation>
             <WithAnimation :get-slot-ref="getParentRef">
                 <p :class="$style.text">{{ startDate }} - {{ endDate }}</p>
@@ -56,11 +58,11 @@ const boldSep = '*';
         </div>
         <div :class="$style.infoContainer">
             <WithAnimation :get-slot-ref="getParentRef">
-                <Title
+                <TitleComponent
                     :with-dot="false"
                     :class="$style.position"
                     :title-type="titleTypesEnum.h5"
-                    >{{ position }}</Title
+                    >{{ position }}</TitleComponent
                 >
             </WithAnimation>
             <WithAnimation :get-slot-ref="getParentRef">
