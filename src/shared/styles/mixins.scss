@@ -1,0 +1,26 @@
+@import './vars.scss';
+
+@mixin yellowText {
+    color: $cYellow;
+    &::selection {
+        color: $cDarkGray;
+    }
+}
+
+@mixin ipadLg {
+    @media screen and (max-width: $ipadLg) {
+        @content;
+    }
+}
+
+@mixin ipadSm {
+    @media screen and (max-width: $ipadSm) {
+        @content;
+    }
+}
+
+@mixin iPhones {
+    @media screen and (max-width: $phones), (max-height: $phones) {
+        @content;
+    }
+}

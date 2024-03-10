@@ -1,0 +1,17 @@
+@import 'src/shared/styles/reset.scss';
+@import 'src/shared/styles/vars.scss';
+@import 'src/shared/styles/fonts.scss';
+@import 'src/shared/styles/mixins.scss';
+
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+*::selection {
+    background: $cYellow;
+}
+
+html,
+body {
+    background: $cGray;
+}

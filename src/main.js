@@ -1,5 +1,23 @@
-import { createApp } from "vue";
-import "./style.css";
-import App from "./App.vue";
+import { createApp } from 'vue';
+import App from './app/index.vue';
+import { createI18n, useI18n } from 'vue-i18n';
 
-createApp(App).mount("#app");
+import { EN } from '@/shared/constants/i18n/locales.ts';
+import messages from '@/shared/constants/i18n/index.ts';
+import { LOCALE } from '@/shared/constants/localStorageKeys.ts';
+
+const i18n = createI18n({
+    legacy: false,
+    locale: localStorage.getItem(LOCALE) ?? EN,
+    fallbackLocale: EN,
+    messages
+});
+
+createApp(App, {
+    setup() {
+        const { t } = useI18n();
+        return t;
+    }
+})
+    .use(i18n)
+    .mount('#app');

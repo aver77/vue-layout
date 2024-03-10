@@ -1,0 +1,50 @@
+@import 'src/shared/styles/vars.scss';
+@import 'src/shared/styles/mixins.scss';
+
+.container {
+    z-index: $zIndexDefault;
+    position: absolute;
+    top: $indentXS;
+    bottom: $indentXS;
+    right: $indentLayout;
+    display: grid;
+    grid-template-columns: repeat(25, 1fr);
+    @include ipadLg {
+        overflow: hidden;
+        right: $indentLayoutIpad;
+    }
+    @include ipadSm {
+        right: unset;
+        opacity: 0.6;
+        left: $indentLayoutIpad;
+    }
+    @include iPhones {
+        left: $indentLayoutPhone;
+    }
+}
+
+.dotContainer {
+    padding: $indentLow;
+    cursor: crosshair;
+    transition: background $baseTransitionDuration;
+    border-radius: $brMd;
+    height: fit-content;
+    &:hover,
+    &:focus,
+    &:active {
+        background: $cLightGray;
+        & > div {
+            background: linear-gradient(180deg, $cGray, $cYellow);
+            opacity: 1;
+        }
+    }
+}
+
+.dot {
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    background: linear-gradient(180deg, $cGray, $cLight);
+    transform: scale(1) translateY(1px);
+    opacity: 0.35;
+}

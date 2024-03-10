@@ -1,0 +1,16 @@
+@import 'src/shared/styles/vars.scss';
+@import 'src/shared/styles/mixins.scss';
+
+.container {
+    background: $cGray;
+    color: $cLines;
+    padding: $indentL;
+    text-align: center;
+    font-size: $fsSm;
+    margin-left: $sidebarWidth;
+
+    @include iPhones {
+        padding: $indentMd;
+        margin-left: 0;
+    }
+}

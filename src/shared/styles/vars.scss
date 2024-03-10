@@ -1,0 +1,80 @@
+//dimensions
+$ipadLg: 1000px;
+$ipadSm: 700px;
+$phones: 600px;
+
+//widths
+$sidebarWidth: 60px;
+$headerHeight: 80px;
+
+//zIndexes
+$zIndexAnimation: 6;
+$zIndexModal: 5;
+$sidebarZIndex: 4;
+$headerZIndex: 3;
+$zIndexPlus: 2;
+$zIndexDefault: 1;
+
+//colors
+$cDarkGray: #080808;
+$cGray: #111;
+$cLightGray: #232323;
+$cLight: #ebecf3;
+$cLines: rgba(235, 236, 243, 0.3);
+$cYellow: #ffd700;
+$cDisabled: #ebebe4;
+
+//border radius
+$brDefault: 6px;
+$brMd: 8px;
+
+//font-sizes
+$fsXS: 12px;
+$fsSm: 14px;
+$fsTextDefault: 16px;
+$fsTextMd: 18px;
+$fsTextMdPlus: 20px;
+$fsTextL: 24px;
+$fsTextXL: 32px;
+$fsTextXXL: 44px;
+$fsTextEXL: 52px;
+
+//dimensions
+$ipadLg: 1000px;
+$ipadSm: 700px;
+$phones: 500px;
+
+//indents
+$indentLayoutPhone: 12px;
+$indentLayoutIpad: 36px;
+$indentLayout: 96px;
+
+$indentXXL: 46px;
+$indentXL: 32px;
+$indentL: 24px;
+$indentMd: 20px;
+$indentSm: 16px;
+$indentXS: 12px;
+$indentLow: 8px;
+
+//font-weights
+$fwBold: 700;
+$fwNormal: 400;
+$fwEBold: 900;
+
+//width
+$layoutWidth: 1150px;
+
+//other sizes
+$defaultSvgSize: 28px;
+
+//transition
+$baseTransitionDuration: 0.3s;
+$baseTransition: $baseTransitionDuration ease;
+
+:export {
+    ipadLg: #{$ipadLg};
+    ipadSm: #{$ipadSm};
+    phones: #{$phones};
+    defaultSvgSize: #{$defaultSvgSize};
+}

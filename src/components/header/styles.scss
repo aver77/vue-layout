@@ -1,0 +1,169 @@
+@import 'src/shared/styles/vars.scss';
+@import 'src/shared/styles/mixins.scss';
+
+$headerPadding: 36px;
+
+.container {
+    min-height: $headerHeight;
+    height: $headerHeight;
+    max-height: $headerHeight;
+    z-index: $headerZIndex;
+    padding-left: $sidebarWidth;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.innerContainer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0 $headerPadding;
+    background: $cGray;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include iPhones {
+        padding: 0 $indentLayoutPhone;
+    }
+}
+
+.linksSection {
+    display: flex;
+    flex-direction: row;
+    gap: $indentSm;
+}
+
+.linkImage {
+    fill: white;
+    transition: opacity $baseTransitionDuration;
+    &:hover,
+    &:focus,
+    &:active {
+        color: $cYellow !important;
+        fill: $cYellow !important;
+    }
+}
+
+.sectionWrapper {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    @include ipadSm {
+        width: 100%;
+    }
+}
+
+.hidden {
+    @include ipadSm {
+        visibility: hidden !important;
+        opacity: 0 !important;
+    }
+}
+
+.ulMenu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: $indentXXL;
+    opacity: 1;
+    visibility: visible;
+    transition: $baseTransition;
+    @include ipadSm {
+        background: $cGray;
+        justify-content: flex-end;
+        border-top: 1px solid $cLines;
+        width: 100%;
+        position: absolute;
+        bottom: -$headerHeight;
+        right: 0;
+        height: $headerHeight;
+        padding: 0 $headerPadding;
+    }
+    @include iPhones {
+        justify-content: center;
+        gap: $indentXL;
+        padding: 0 $indentLayoutPhone;
+    }
+}
+
+@mixin icon($height, $width) {
+    transition-duration: calc($baseTransitionDuration * 2);
+    position: absolute;
+    height: $height;
+    width: $width;
+    top: 10px;
+    background-color: white;
+}
+
+@mixin icon-before($height, $width, $top) {
+    transition-duration: calc($baseTransitionDuration * 2);
+    position: absolute;
+    width: $width;
+    height: $height;
+    background-color: white;
+    content: '';
+    top: $top;
+}
+
+@mixin icon-after($height, $width, $top) {
+    transition-duration: calc($baseTransitionDuration * 2);
+    position: absolute;
+    width: $width;
+    height: $height;
+    background-color: white;
+    content: '';
+    top: $top;
+}
+
+.line {
+    @include icon(4px, 30px); //$height, $width
+
+    &:before {
+        @include icon-before(4px, 30px, -10px); //$height, $width, $top
+    }
+
+    &:after {
+        @include icon-after(4px, 30px, 10px);
+    }
+}
+
+.burgerMenu {
+    display: none;
+    position: absolute;
+    width: 30px;
+    height: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: $headerPadding;
+    transition-duration: calc($baseTransitionDuration * 2);
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    @include ipadSm {
+        display: unset;
+    }
+
+    @include iPhones {
+        right: $indentLayoutPhone;
+    }
+}
+
+.burgerMenuOpen {
+    .line {
+        transition-duration: calc($baseTransitionDuration * 2);
+        background: transparent;
+
+        &:before {
+            transform: rotateZ(45deg) scaleX(1.25) translate(6.5px, 6.5px);
+        }
+
+        &:after {
+            transform: rotateZ(-45deg) scaleX(1.25) translate(6px, -6px);
+        }
+    }
+}

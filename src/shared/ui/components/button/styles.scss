@@ -1,0 +1,45 @@
+@import 'src/shared/styles/vars.scss';
+@import 'src/shared/styles/mixins.scss';
+
+@mixin btn($color, $backgroundColor) {
+    border-color: $cYellow;
+    color: $color;
+    background-color: $backgroundColor;
+    background-image: linear-gradient($color, $color);
+    background-size: 0 100%;
+    background-repeat: no-repeat;
+    transition: $baseTransition;
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: transparent;
+        color: $backgroundColor;
+        background-size: 100% 100%;
+    }
+}
+
+.btnShared {
+    cursor: pointer;
+    padding: $indentXS $indentSm;
+    font-size: $fsTextMd;
+    border-radius: $brDefault;
+    border-width: 1px;
+    border-style: solid;
+    @include iPhones {
+        padding: $indentLow $indentXS;
+        font-size: $fsTextDefault;
+    }
+}
+
+.disabled {
+    background-color: $cDisabled;
+    border-color: $cDisabled;
+}
+
+.filled {
+    @include btn($cGray, $cYellow);
+}
+
+.unfilled {
+    @include btn($cYellow, $cGray);
+}

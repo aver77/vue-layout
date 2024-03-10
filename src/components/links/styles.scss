@@ -1,0 +1,29 @@
+@import 'src/shared/styles/vars.scss';
+
+.linksSection {
+    display: flex;
+    flex-direction: row;
+    gap: $indentSm;
+    transition: calc($baseTransitionDuration * 2) ease;
+}
+
+.linkInitial {
+    opacity: 0;
+    transform: translateY(-30px) translateZ(0);
+}
+
+.linkAnimated {
+    opacity: 1;
+    transform: none;
+}
+
+.linkImage {
+    fill: white;
+    transition: opacity $baseTransitionDuration;
+    &:hover,
+    &:focus,
+    &:active {
+        color: $cYellow !important;
+        fill: $cYellow !important;
+    }
+}

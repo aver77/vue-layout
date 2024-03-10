@@ -1,0 +1,33 @@
+@import 'src/shared/styles/vars.scss';
+@import 'src/shared/styles/mixins.scss';
+
+.container {
+    position: relative;
+    padding: $indentLayout;
+    @include ipadLg {
+        padding: $indentLayoutIpad;
+    }
+    @include iPhones {
+        padding: $indentLayoutPhone;
+    }
+}
+
+.infoWrapper {
+    position: relative;
+    z-index: $zIndexPlus;
+    max-width: 700px;
+}
+
+.description {
+    color: $cLight;
+    font-size: $fsTextL;
+    margin: $indentMd 0;
+    @include iPhones {
+        margin: $indentSm 0;
+        font-size: $fsTextMdPlus;
+    }
+}
+
+.titleJob {
+    @include yellowText;
+}

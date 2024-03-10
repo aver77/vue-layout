@@ -1,0 +1,78 @@
+@import 'src/shared/styles/vars.scss';
+@import 'src/shared/styles/mixins.scss';
+
+.container {
+    position: relative;
+    padding: $indentLayout;
+    @include ipadLg {
+        padding: $indentLayoutIpad;
+    }
+    @include iPhones {
+        padding: $indentLayoutPhone;
+    }
+}
+
+.titleWrap {
+    display: flex;
+    align-items: center;
+    gap: $indentXS;
+}
+
+.infoContainer {
+    margin-top: $indentL;
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    grid-gap: $indentL;
+    @include ipadLg {
+        grid-template-columns: 1fr;
+    }
+    @include iPhones {
+        margin-top: $indentXS;
+        grid-gap: $indentSm;
+    }
+}
+
+.text {
+    color: $cLight;
+    font-size: $fsTextMdPlus;
+    margin-bottom: $indentMd;
+    @include iPhones {
+        font-size: $fsTextMd;
+        margin-bottom: $indentLow;
+    }
+}
+
+.stackWrap {
+    display: flex;
+    flex-direction: column;
+    gap: $indentL;
+}
+
+.linksContainer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: $indentSm;
+    @include ipadLg {
+        margin-top: $indentL;
+    }
+    @include iPhones {
+        margin-top: $indentSm;
+    }
+}
+
+.linksArrowSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: $indentLow;
+}
+
+.myLinks {
+    font-size: $fsTextMdPlus;
+    @include yellowText;
+}
+
+.arrow {
+    fill: $cYellow;
+}

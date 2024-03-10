@@ -1,0 +1,39 @@
+@import 'src/shared/styles/vars.scss';
+@import 'src/shared/styles/mixins.scss';
+
+.modalContainer {
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    cursor: pointer;
+    height: 100vh;
+    height: 100dvh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: auto;
+    padding: $indentLayout;
+    display: flex;
+    justify-content: center;
+    z-index: $zIndexModal;
+    @include ipadLg {
+        padding: $indentLayoutIpad;
+    }
+}
+
+.closeIcon {
+    fill: $cLight;
+    position: absolute;
+    top: $indentL;
+    right: $indentL;
+    cursor: pointer;
+    @include ipadLg {
+        top: $indentLow;
+        right: $indentLow;
+    }
+}
+
+.slotWrapper {
+    width: fit-content;
+    height: fit-content;
+}

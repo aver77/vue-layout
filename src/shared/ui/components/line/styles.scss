@@ -1,0 +1,17 @@
+@import 'src/shared/styles/vars.scss';
+
+.horizontal {
+    width: 100%;
+    border-bottom-color: $cLines !important;
+}
+
+.vertical {
+    height: 100%;
+    border-left-color: $cLines !important;
+}
+
+.flexed {
+    flex-grow: 1;
+    width: unset;
+    height: unset;
+}

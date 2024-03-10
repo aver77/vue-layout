@@ -1,0 +1,28 @@
+@import 'src/shared/styles/vars.scss';
+@import 'src/shared/styles/mixins.scss';
+
+.titleContainer {
+    display: flex;
+    gap: $indentLow;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: $indentL;
+    @include iPhones {
+        margin-bottom: $indentXS;
+    }
+}
+
+.stackContainer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: $indentXS;
+    @include iPhones {
+        gap: $indentLow;
+    }
+}
+
+.img {
+    min-width: $defaultSvgSize;
+    fill: $cYellow;
+}

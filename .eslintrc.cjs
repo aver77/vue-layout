@@ -10,18 +10,22 @@ module.exports = {
         parser: "@typescript-eslint/parser"
     },
     //define only plugins
-    "plugins": ["vue", "@typescript-eslint", "prettier"],
+    plugins: ["vue", "@typescript-eslint", "prettier"],
     //load plugins and configs
     extends: [
         "plugin:vue/vue3-recommended",
         "plugin:@typescript-eslint/recommended",
-        '@vue/typescript/recommended',
+        "@vue/typescript/recommended",
         "prettier"
     ],
     //rules for vue
     rules: {
+        "@typescript-eslint/no-explicit-any": "warn",
+        "@typescript-eslint/no-unused-vars": 0,
         "vue/component-api-style": ["warn", ["script-setup", "composition"]],
         "vue/require-default-prop": 0,
+        "vue/no-unused-components": 0,
+        "vue/multi-word-component-names": 0,
         "vue/order-in-components": [
             "warn",
             {
@@ -62,6 +66,6 @@ module.exports = {
                 ]
             }
         ],
-        'prettier/prettier': ['error']
+        "prettier/prettier": ["warn"]
     }
 };

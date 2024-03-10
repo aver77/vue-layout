@@ -1,0 +1,63 @@
+@import 'src/shared/styles/vars.scss';
+@import 'src/shared/styles/mixins.scss';
+
+.infoContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: $indentSm;
+    gap: $indentMd;
+    @include iPhones {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: $indentLow;
+    }
+}
+
+.skills {
+    margin: $indentL 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: $indentLow;
+    @include iPhones {
+        margin: $indentSm 0;
+    }
+}
+
+.line {
+    opacity: 0.3;
+}
+
+.descriptionContainer {
+    display: flex;
+    flex-direction: column;
+    gap: $indentLow;
+    @include iPhones {
+        gap: calc($indentLow / 2);
+    }
+}
+
+.text {
+    color: $cLight;
+    font-size: $fsTextMdPlus;
+    @include ipadSm {
+        font-size: $fsTextMd;
+    }
+    @include iPhones {
+        font-size: $fsTextDefault;
+    }
+}
+
+.position {
+    @include yellowText;
+}
+
+.boldText {
+    font-weight: $fwEBold;
+}
+
+.underlinedText {
+    text-decoration: underline;
+}

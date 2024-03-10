@@ -1,0 +1,85 @@
+@import 'src/shared/styles/vars.scss';
+@import 'src/shared/styles/mixins.scss';
+
+.container {
+    cursor: default;
+    max-width: 700px;
+    width: 100%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: $brDefault;
+    height: fit-content;
+    background: $cLightGray;
+}
+
+.img {
+    border-top-right-radius: $brDefault;
+    border-top-left-radius: $brDefault;
+}
+
+.longDescContainer {
+    display: flex;
+    flex-direction: column;
+    gap: $indentLow;
+    @include iPhones {
+        gap: calc($indentLow / 2);
+    }
+}
+
+.longDescPart {
+    color: $cLight;
+    font-size: $fsTextMd;
+    @include iPhones {
+        font-size: $fsTextDefault;
+    }
+}
+
+.textsContainer {
+    padding: $indentL $indentMd;
+    display: flex;
+    flex-direction: column;
+    gap: $indentMd;
+    @include iPhones {
+        padding: $indentSm $indentXS;
+        gap: $indentLow;
+    }
+}
+
+.subTextsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: $indentLow;
+}
+
+.stackStr {
+    @include yellowText;
+    font-size: $fsTextMd;
+    @include iPhones {
+        font-size: $fsTextDefault;
+    }
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: $indentLow;
+}
+
+.link {
+    color: $cYellow;
+    fill: $cYellow;
+    font-style: $fsSm;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: calc($indentLow / 2);
+    &:hover,
+    &:focus,
+    &:active {
+        text-decoration: underline;
+    }
+}
+
+.linkText {
+    @include yellowText;
+}

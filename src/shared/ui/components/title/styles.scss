@@ -1,0 +1,75 @@
+@import 'src/shared/styles/vars.scss';
+@import 'src/shared/styles/mixins.scss';
+
+$baseFSDecr: 8px;
+
+.boldWeight {
+    font-weight: $fwBold;
+}
+
+.usualWeight {
+    font-weight: $fwNormal;
+}
+
+.text {
+    color: $cLight;
+    font-weight: $fwEBold;
+}
+
+.dot {
+    @include yellowText;
+}
+
+.title_h1 {
+    font-size: $fsTextEXL;
+    @include ipadSm {
+        font-size: $fsTextEXL - $baseFSDecr;
+    }
+    @include iPhones {
+        font-size: $fsTextEXL - $baseFSDecr * 2;
+    }
+}
+
+.title_h2 {
+    font-size: $fsTextXXL;
+    @include ipadSm {
+        font-size: $fsTextXXL - $baseFSDecr;
+    }
+    @include iPhones {
+        font-size: $fsTextXXL - $baseFSDecr * 2;
+    }
+}
+
+.title_h3 {
+    font-size: $fsTextXL;
+    @include ipadSm {
+        font-size: calc($fsTextXL - $baseFSDecr / 2);
+    }
+    @include iPhones {
+        font-size: calc($fsTextXL - $baseFSDecr);
+    }
+}
+
+.title_h4 {
+    font-size: $fsTextL;
+    @include ipadSm {
+        font-size: calc($fsTextL - $baseFSDecr / 4);
+    }
+    @include iPhones {
+        font-size: calc($fsTextL - $baseFSDecr / 2);
+    }
+}
+
+.title_h5 {
+    font-size: $fsTextMdPlus;
+    @include iPhones {
+        font-size: calc($fsTextMdPlus - $baseFSDecr / 4);
+    }
+}
+
+.title_h6 {
+    font-size: $fsTextMd;
+    @include iPhones {
+        font-size: calc($fsTextMd - $baseFSDecr / 4);
+    }
+}

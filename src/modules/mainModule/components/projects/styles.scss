@@ -1,0 +1,36 @@
+@import 'src/shared/styles/vars.scss';
+@import 'src/shared/styles/mixins.scss';
+
+.container {
+    padding: 0 $indentLayout $indentLayout $indentLayout;
+    @include ipadLg {
+        padding: 0 $indentLayoutIpad $indentLayoutIpad $indentLayoutIpad;
+    }
+    @include iPhones {
+        padding: $indentLayoutPhone;
+    }
+}
+
+.titleWrap {
+    display: flex;
+    align-items: center;
+    gap: $indentL;
+    @include iPhones {
+        gap: $indentXS;
+    }
+}
+
+.projectsWrap {
+    width: 100%;
+    margin-top: $indentL;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: $indentXL;
+    @include ipadSm {
+        grid-template-columns: 1fr;
+    }
+    @include iPhones {
+        margin-top: $indentXS;
+        grid-gap: $indentL;
+    }
+}
