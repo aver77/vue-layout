@@ -175,8 +175,7 @@ const en = {
                     ` - Developed many features, such as theming and internalization and components, such as tables and dashboards.\n` +
                     `${getBoldText(
                         'I significantly accelerated the frontend development'
-                    )} due to my SCSS modifications, 
-                    ${getBoldText(
+                    )} due to my SCSS modifications, ${getBoldText(
                         'improved a lot of core functionality'
                     )}, quality of user experience making the app pixel-perfect identical to Figma and ${getBoldText(
                         ' app accessibility up to 90%'
