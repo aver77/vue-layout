@@ -171,12 +171,16 @@ const en = {
                 location: 'London, United Kingdom (Remote)',
                 description:
                     "I was preparing the company's main React.js project for release into production. For this I:\n" +
-                    ` - Redesigned the layout of many components, made the app more accessible.\n` +
-                    ` - Developed many complex features and components, such as tables and dashboards.\n` +
-                    ` - Worked closely with the team leader and backend developer.\n` +
+                    ` - Redesigned the layout of almost all the components, improved app accessibility.\n` +
+                    ` - Developed many features, such as theming and internalization and components, such as tables and dashboards.\n` +
                     `${getBoldText(
                         'I significantly accelerated the frontend development'
-                    )}, improved a lot of core functionality and quality of user experience. Besides, I successfully ${getBoldText(
+                    )} due to my SCSS modifications, 
+                    ${getBoldText(
+                        'improved a lot of core functionality'
+                    )}, quality of user experience making the app pixel-perfect identical to Figma and ${getBoldText(
+                        ' app accessibility up to 90%'
+                    )}. Besides, I successfully ${getBoldText(
                         'collaborated with team members and motivated them'
                     )} to achieve collective goals.`
             }
