@@ -35,7 +35,10 @@
 .text {
     color: $cLight;
     font-size: $fsTextMdPlus;
-    margin-bottom: $indentMd;
+    margin-bottom: $indent2XL;
+    @include ipadLg {
+        margin-bottom: $indentMd;
+    }
     @include iPhones {
         font-size: $fsTextMd;
         margin-bottom: $indentLow;
