@@ -27,7 +27,7 @@ export const getPositions = (
             'Styled Components',
             'Webpack',
             'HP Service Manager',
-            'SOAP API'
+            'RAD'
         ]
     },
     {
