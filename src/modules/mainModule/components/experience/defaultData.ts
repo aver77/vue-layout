@@ -21,12 +21,13 @@ export const getPositions = (
         endDate: t('main.experience.it1.endDate'),
         location: t('main.experience.it1.location'),
         skills: [
-            'HP Service Manager',
-            'JavaScript',
-            'RAD',
-            'SOAP API',
             'React.js',
-            'CSS'
+            'JavaScript',
+            'CSS',
+            'Styled Components',
+            'Webpack',
+            'HP Service Manager',
+            'RAD'
         ]
     },
     {
