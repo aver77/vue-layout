@@ -119,13 +119,17 @@ const en = {
                 location: 'Moscow, Russia (Remote)',
                 description:
                     'I was developing a corporate application portals:\n' +
-                    ` - Worked on diverse projects: on React.js and on HP Service Manager using ES5 JavaScript.\n` +
+                    ` - Worked on diverse projects: on React.js and on pure ES5 JavaScript.\n` +
                     ` - Carried out organizational tasks of the team.\n` +
                     `${getBoldText(
-                        'I have completed over 30% of all tasks'
-                    )} assigned to the team on applications that are used by thousands of users and implemented crucial functionality to beta React.js project. Moreover, I essentially ${getBoldText(
-                        'enhanced the workflow and team productivity'
-                    )} by conducting daily briefings, retrospectives and creating detailed project documentation.`
+                        'I have completed over 30% of request templates'
+                    )} that are used by ~700 unique users daily. ${getBoldText(
+                        'I accelerated the build time of a React.js project by 200%'
+                    )} and ${getBoldText(
+                        'improved UX by 40%'
+                    )} through optimizing it’s performance and redesigning. ${getBoldText(
+                        ' I created detailed project documentation which sped up the onboadring process by 20%.'
+                    )}`
             },
             calendaria: {
                 title: 'Calendaria',
@@ -137,12 +141,12 @@ const en = {
                     'I was a frontend lead of enterprise portal, including:\n' +
                     ` - Designing frontend architecture on React.js and application layout from scratch.\n` +
                     ` - Analysing of technical assignment and project needs.\n` +
-                    ` - Coordinating of the work of a junior frontend developer, interacting with various teams.\n` +
+                    ` - Mentored 2 junior developers, interacted with various teams.\n` +
                     `I successfully ${getBoldText(
-                        'accomplished full development process'
-                    )} on time, ${getBoldText(
-                        'completely satisfied the customer’s requirements'
-                    )} achieving all project goals. My efforts have resulted in an application that is actively maintained and used by hundreds of users.`
+                        'accomplished the full development process within contract period'
+                    )}, achieving the main goal of, ${getBoldText(
+                        "digitizing up to 80% of the company's document flow"
+                    )}. My efforts have resulted in an application that is actively used by 4500 employees.`
             },
             tecom: {
                 title: 'Tecom',
@@ -156,12 +160,10 @@ const en = {
                     ` - Implement unit and e2e tests to ensure the core application reliability.\n` +
                     ` - Development of key libraries, including a corporate UI-kit with storybook, as well as a library of ready-made utilities.\n` +
                     `${getBoldText(
-                        'I realized ~90% of the required functionality'
-                    )} in editor-like widgets and received positive feedback from customers. ${getBoldText(
-                        'I made the core application several times more reliable'
-                    )} due to my tests, which helped the team fix the main problems. My efforts in developing libraries ${getBoldText(
-                        'have made development faster'
-                    )} and more efficient.`
+                        'I implemented 100% of the core functionality'
+                    )} in editor-like widgets and received positive feedback from customers. Due to my tests ${getBoldText(
+                        'I decreased the amount of pre-deployment bugs by 80%. My efforts in developing libraries have made the development process several times more efficient.'
+                    )}`
             },
             julius: {
                 title: 'Julius',
@@ -174,14 +176,12 @@ const en = {
                     ` - Redesigned the layout of almost all the components, improved app accessibility.\n` +
                     ` - Developed many features, such as theming and internalization and components, such as tables and dashboards.\n` +
                     `${getBoldText(
-                        'I significantly accelerated the frontend development'
-                    )} due to my SCSS modifications, ${getBoldText(
-                        'improved a lot of core functionality'
-                    )}, quality of user experience making the app pixel-perfect identical to Figma and ${getBoldText(
-                        ' app accessibility up to 90%'
-                    )}. Besides, I successfully ${getBoldText(
-                        'collaborated with team members and motivated them'
-                    )} to achieve collective goals.`
+                        'I significantly accelerated frontend development'
+                    )} through my SCSS refactoring and theming. ${getBoldText(
+                        'Noticeably increased the overall app performance and it’s accessibility up to 90%'
+                    )}, improved numerous core functionalities and quality of user experience ${getBoldText(
+                        'making the app 100% pixel-perfect identical to Figma.'
+                    )}`
             }
         },
         contact: {
