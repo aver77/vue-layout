@@ -31,6 +31,7 @@ const switchBurgerMenu = () => {
                 <li>
                     <a
                         :href="$i18n.locale === EN ? pdfCVEn : pdfCVRu"
+                        rel="noreferrer noopener"
                         target="_blank"
                     >
                         <ButtonComponent>{{
