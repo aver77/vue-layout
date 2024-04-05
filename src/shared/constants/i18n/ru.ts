@@ -112,7 +112,7 @@ const ru = {
         experience: {
             title: 'Опыт',
             it1: {
-                title: 'ИТ1',
+                title: 'IT_ONE',
                 startDate: 'Май 2023',
                 endDate: 'По настоящее время',
                 position: 'JS разработчик',

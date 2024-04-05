@@ -112,23 +112,21 @@ const en = {
         experience: {
             title: 'Experience',
             it1: {
-                title: 'IT1',
+                title: 'IT_ONE',
                 startDate: 'May 2023',
                 endDate: 'Present',
                 position: 'Frontend Developer',
                 location: 'Moscow, Russia (Remote)',
                 description:
-                    'I was developing a corporate application portals:\n' +
-                    ` - Worked on diverse projects: on React.js and on pure ES5 JavaScript.\n` +
+                    'I was developing corporate application portals:\n' +
+                    ` - Worked with several code bases: on React.js and on HPSM using pure ES5 JavaScript.\n` +
                     ` - Carried out organizational tasks of the team.\n` +
                     `${getBoldText(
-                        'I have completed over 30% of request templates'
-                    )} that are used by ~700 unique users daily. ${getBoldText(
-                        'I accelerated the build time of a React.js project by 200%'
-                    )} and ${getBoldText(
-                        'improved UX by 40%'
-                    )} through optimizing it’s performance and redesigning. ${getBoldText(
-                        ' I created detailed project documentation which sped up the onboadring process by 20%.'
+                        'I improved UI/UX user satisfaction metrics by ~40%'
+                    )} through optimizing performance, redesigning  core components and creating UI Kit from scratch for an application which is used by 25.000 bank employees. ${getBoldText(
+                        'I reduced the build time of a React.js project by 1.5 times'
+                    )} and created detailed project documentation which ${getBoldText(
+                        'sped up the onboadring process.'
                     )}`
             },
             calendaria: {
@@ -138,15 +136,15 @@ const en = {
                 position: 'Frontend Developer',
                 location: 'Almaty, Kazakhstan (Remote)',
                 description:
-                    'I was a frontend lead of enterprise portal, including:\n' +
-                    ` - Designing frontend architecture on React.js and application layout from scratch.\n` +
-                    ` - Analysing of technical assignment and project needs.\n` +
-                    ` - Mentored 2 junior developers, interacted with various teams.\n` +
+                    'I was a frontend lead of an enterprise IAM portal:\n' +
+                    ` - Designed frontend architecture on React.js and application layout from scratch.\n` +
+                    ` - Analysed technical assignment and project needs.\n` +
+                    ` - Mentored two junior developers, conducted interviews.\n` +
                     `I successfully ${getBoldText(
                         'accomplished the full development process within contract period'
                     )}, achieving the main goal of, ${getBoldText(
-                        "digitizing up to 80% of the company's document flow"
-                    )}. My efforts have resulted in an application that is actively used by 4500 employees.`
+                        "digitizing up to 80% of the company's document flow."
+                    )} My efforts have resulted in an application that is actively used by 4.500 employees.`
             },
             tecom: {
                 title: 'Tecom',
@@ -155,14 +153,14 @@ const en = {
                 position: 'Frontend Developer',
                 location: 'Nizhny Novgorod, Russia (Remote)',
                 description:
-                    'I was working on several projects: My role included:\n' +
-                    ` - Fixing, refactoring and writing new logic on React.js.\n` +
-                    ` - Implement unit and e2e tests to ensure the core application reliability.\n` +
+                    'I was developing a remote device tracking system:\n' +
+                    ` - Fixing, refactoring, writing new logic on React.js and achieved 80% test coverage by unit and e2e tests.\n` +
+                    ` - Developed core libraries, including a corporate UI-kit with storybook, as well as a library of ready-made utilities.\n` +
                     ` - Development of key libraries, including a corporate UI-kit with storybook, as well as a library of ready-made utilities.\n` +
                     `${getBoldText(
-                        'I implemented 100% of the core functionality'
-                    )} in editor-like widgets and received positive feedback from customers. Due to my tests ${getBoldText(
-                        'I decreased the amount of pre-deployment bugs by 80%. My efforts in developing libraries have made the development process several times more efficient.'
+                        'I released MVP versions of 3 editor-like interfaces libraries'
+                    )} (pdf, diagrams, charts) and received positive feedback from customers. My contribution in migration to newer React.js version without class components ${getBoldText(
+                        'made development process more efficient.'
                     )}`
             },
             julius: {
@@ -172,15 +170,14 @@ const en = {
                 position: 'Frontend Developer',
                 location: 'London, United Kingdom (Remote)',
                 description:
-                    "I was preparing the company's main React.js project for release into production. For this I:\n" +
-                    ` - Redesigned the layout of almost all the components, improved app accessibility.\n` +
-                    ` - Developed many features, such as theming and internalization and components, such as tables and dashboards.\n` +
+                    'I developed UI of ML platform for managing backend services:\n' +
+                    ` - Implemented many features, such as theming and internalization.\n` +
+                    ` - Worked on accessible responsive design and refactoring styles by utilizing modern SCSS features.\n` +
+                    ` - Developed complex components: large tables, scatter charts, menus.\n` +
                     `${getBoldText(
-                        'I significantly accelerated frontend development'
-                    )} through my SCSS refactoring and theming. ${getBoldText(
-                        'Noticeably increased the overall app performance and it’s accessibility up to 90%'
-                    )}, improved numerous core functionalities and quality of user experience ${getBoldText(
-                        'making the app 100% pixel-perfect identical to Figma.'
+                        'I reduced page loading times'
+                    )} by implementing Relay data-fetching mechanisms. ${getBoldText(
+                        'I enhanced application accessibility up to 90%  in Lighthouse and made it pixel-perfect identical to Figma.'
                     )}`
             }
         },
