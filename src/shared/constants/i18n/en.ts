@@ -123,7 +123,7 @@ const en = {
                     ` - Carried out organizational tasks of the team.\n` +
                     `${getBoldText(
                         'I improved UI/UX user satisfaction metrics by ~40%'
-                    )} through optimizing performance, redesigning  core components and creating UI Kit from scratch for an application which is used by 25.000 bank employees. ${getBoldText(
+                    )} through optimizing performance, refactoring layout of core components in the process of migration from pure CSS and also creating UI Kit from scratch for an app which is used by 25.000 bank employees. ${getBoldText(
                         'I reduced the build time of a React.js project by 1.5 times'
                     )} and created detailed project documentation which ${getBoldText(
                         'sped up the onboadring process.'
@@ -138,11 +138,11 @@ const en = {
                 description:
                     'I was a frontend lead of an enterprise IAM portal:\n' +
                     ` - Designed frontend architecture on React.js and application layout from scratch.\n` +
-                    ` - Analysed technical assignment and project needs.\n` +
+                    ` - Analyzed TA, project goals and needs.\n` +
                     ` - Mentored two junior developers, conducted interviews.\n` +
                     `I successfully ${getBoldText(
                         'accomplished the full development process within contract period'
-                    )}, achieving the main goal of, ${getBoldText(
+                    )}, achieving the main goal of ${getBoldText(
                         "digitizing up to 80% of the company's document flow."
                     )} My efforts have resulted in an application that is actively used by 4.500 employees.`
             },
@@ -156,7 +156,6 @@ const en = {
                     'I was developing a remote device tracking system:\n' +
                     ` - Fixing, refactoring, writing new logic on React.js and achieved 80% test coverage by unit and e2e tests.\n` +
                     ` - Developed core libraries, including a corporate UI-kit with storybook, as well as a library of ready-made utilities.\n` +
-                    ` - Development of key libraries, including a corporate UI-kit with storybook, as well as a library of ready-made utilities.\n` +
                     `${getBoldText(
                         'I released MVP versions of 3 editor-like interfaces libraries'
                     )} (pdf, diagrams, charts) and received positive feedback from customers. My contribution in migration to newer React.js version without class components ${getBoldText(
@@ -173,7 +172,7 @@ const en = {
                     'I developed UI of ML platform for managing backend services:\n' +
                     ` - Implemented many features, such as theming and internalization.\n` +
                     ` - Worked on accessible responsive design and refactoring styles by utilizing modern SCSS features.\n` +
-                    ` - Developed complex components: large tables, scatter charts, menus.\n` +
+                    ` - Developed complex components: large tables, scatter charts, trees.\n` +
                     `${getBoldText(
                         'I reduced page loading times'
                     )} by implementing Relay data-fetching mechanisms. ${getBoldText(
