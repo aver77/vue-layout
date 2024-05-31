@@ -4,13 +4,11 @@
 .container {
     background: $cGray;
     color: $cLines;
-    padding: $indentL;
+    padding: $indentL $indentL $indentL $sidebarWidth;
     text-align: center;
     font-size: $fsSm;
-    margin-left: $sidebarWidth;
 
     @include iPhones {
-        padding: $indentMd;
-        margin-left: 0;
+        padding: $indentMd $indentMd $indentMd $sidebarWidth;
     }
 }
