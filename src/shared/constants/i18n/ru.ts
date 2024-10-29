@@ -122,7 +122,7 @@ const ru = {
             it1: {
                 title: 'IT_ONE',
                 startDate: 'Май 2023',
-                endDate: 'По настоящее время',
+                endDate: 'Июнь 2024',
                 position: 'JS разработчик',
                 location: 'Москва, Россия (Удаленно)',
                 description:
