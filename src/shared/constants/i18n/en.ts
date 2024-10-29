@@ -111,10 +111,19 @@ const en = {
         },
         experience: {
             title: 'Experience',
+            vk: {
+                title: 'VK',
+                startDate: 'July 2024',
+                endDate: 'Present',
+                position: 'Frontend Developer',
+                location: 'Moscow, Russia (Remote)',
+                description:
+                    'Development of the ok.ru website in the core frontend team.'
+            },
             it1: {
                 title: 'IT_ONE',
                 startDate: 'May 2023',
-                endDate: 'Present',
+                endDate: 'July 2024',
                 position: 'Frontend Developer',
                 location: 'Moscow, Russia (Remote)',
                 description:

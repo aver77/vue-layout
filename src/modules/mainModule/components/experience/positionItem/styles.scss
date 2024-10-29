@@ -1,6 +1,10 @@
 @import 'src/shared/styles/vars.scss';
 @import 'src/shared/styles/mixins.scss';
 
+.container {
+    width: 100%;
+}
+
 .infoContainer {
     display: flex;
     justify-content: space-between;

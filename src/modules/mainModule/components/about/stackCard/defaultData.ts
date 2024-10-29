@@ -2,6 +2,7 @@ import Frontend from '@/shared/assets/svg/components/Frontend.vue';
 import Server from '@/shared/assets/svg/components/Server.vue';
 import Console from '@/shared/assets/svg/components/Console.vue';
 import { Component } from 'vue';
+import type { TranslateFunction } from '@/shared/ts/types';
 
 export enum stackKeysEnum {
     WORK = 'WORK',
@@ -78,7 +79,7 @@ export const getImgAndStackByKey = (
     }
 };
 
-export const getTitleByKeyAndT = (key: stackKeysEnum, t: any) => {
+export const getTitleByKeyAndT = (key: stackKeysEnum, t: TranslateFunction) => {
     switch (key) {
         case stackKeysEnum.WORK: {
             return t('main.about.stackTitle.work');

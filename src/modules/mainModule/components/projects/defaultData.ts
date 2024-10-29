@@ -4,7 +4,7 @@ import imgWebCompiler from '@/shared/assets/images/compiler.png';
 import imgInsuranceApp from '@/shared/assets/images/policy.png';
 import imgNextPortfolio from '@/shared/assets/images/portfolioNext.png';
 import imgVuePortfolio from '@/shared/assets/images/vuePortfolio.png';
-import { TranslateResult } from 'vue-i18n';
+import type { TranslateFunction } from '@/shared/ts/types';
 
 export type TLink = `https://${string}` | `http://${string}`;
 interface IProject {
@@ -16,9 +16,7 @@ interface IProject {
     shortDesc: string;
     longDesc: string;
 }
-export const getProjects = (
-    t: (key: string, named?: Record<string, any>) => TranslateResult
-): IProject[] => [
+export const getProjects = (t: TranslateFunction): IProject[] => [
     {
         image: imgWebChat,
         name: t('main.projects.webChat.title'),

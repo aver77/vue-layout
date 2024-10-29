@@ -18,9 +18,10 @@ module.exports = {
         "@vue/typescript/recommended",
         "prettier"
     ],
+    ignorePatterns: ["*.d.ts"],
     //rules for vue
     rules: {
-        "@typescript-eslint/no-explicit-any": "warn",
+        "@typescript-eslint/no-explicit-any": "error",
         "@typescript-eslint/no-unused-vars": 0,
         "vue/component-api-style": ["warn", ["script-setup", "composition"]],
         "vue/require-default-prop": 0,

@@ -20,7 +20,7 @@ const { titleType, weight } = defineProps({
     }
 });
 
-const defineClass = (style: Record<string, any>) => {
+const defineClass = (style: Record<string, unknown>) => {
     return {
         class: [
             style['title_' + titleType],

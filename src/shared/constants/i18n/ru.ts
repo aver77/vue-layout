@@ -111,6 +111,14 @@ const ru = {
         },
         experience: {
             title: 'Опыт',
+            vk: {
+                title: 'VK',
+                startDate: 'Июнь 2024',
+                endDate: 'По настоящее время',
+                position: 'Фронтенд разработчик',
+                location: 'Москва, Россия (Удаленно)',
+                description: 'Разработка сайта ok.ru в core команде.'
+            },
             it1: {
                 title: 'IT_ONE',
                 startDate: 'Май 2023',

@@ -1,4 +1,4 @@
-import { TranslateResult } from 'vue-i18n';
+import type { TranslateFunction } from '@/shared/ts/types';
 
 interface IPosition {
     companyName: string;
@@ -10,76 +10,68 @@ interface IPosition {
     skills: string[];
 }
 
-export const getPositions = (
-    t: (key: any, named?: Record<string, any>) => TranslateResult
-): IPosition[] => [
-    {
-        companyName: t('main.experience.it1.title'),
-        position: t('main.experience.it1.position'),
-        description: t('main.experience.it1.description'),
-        startDate: t('main.experience.it1.startDate'),
-        endDate: t('main.experience.it1.endDate'),
-        location: t('main.experience.it1.location'),
-        skills: [
-            'React.js',
-            'JavaScript',
-            'CSS',
-            'Styled Components',
-            'Webpack',
-            'HP Service Manager',
-            'RAD'
-        ]
-    },
-    {
-        companyName: t('main.experience.calendaria.title'),
-        position: t('main.experience.calendaria.position'),
-        description: t('main.experience.calendaria.description'),
-        startDate: t('main.experience.calendaria.startDate'),
-        endDate: t('main.experience.calendaria.endDate'),
-        location: t('main.experience.calendaria.location'),
-        skills: [
-            'React.js',
-            'Typescript',
-            'Jss',
-            'Ant Design',
-            'Redux-toolkit',
-            'Webpack'
-        ]
-    },
-    {
-        companyName: t('main.experience.tecom.title'),
-        position: t('main.experience.tecom.position'),
-        description: t('main.experience.tecom.description'),
-        startDate: t('main.experience.tecom.startDate'),
-        endDate: t('main.experience.tecom.endDate'),
-        location: t('main.experience.tecom.location'),
-        skills: [
-            'React.js',
-            'JavaScript',
-            'Jss',
-            'material-UI',
-            'i18n',
-            'Redux',
-            'Reselect',
-            'Jest',
-            'Playwright',
-            'lerna'
-        ]
-    },
-    {
-        companyName: t('main.experience.julius.title'),
-        position: t('main.experience.julius.position'),
-        description: t('main.experience.julius.description'),
-        startDate: t('main.experience.julius.startDate'),
-        endDate: t('main.experience.julius.endDate'),
-        location: t('main.experience.julius.location'),
-        skills: [
-            'React.js',
-            'Typescript',
-            'Scss',
-            'Ant Design',
-            'React Relay',
-            'GraphQL'
-        ]
-    }
+const getPosition = (
+    t: TranslateFunction,
+    companyName: string,
+    skills: string[]
+) => {
+    return {
+        companyName: t(`main.experience.${companyName}.title`),
+        position: t(`main.experience.${companyName}.position`),
+        description: t(`main.experience.${companyName}.description`),
+        startDate: t(`main.experience.${companyName}.startDate`),
+        endDate: t(`main.experience.${companyName}.endDate`),
+        location: t(`main.experience.${companyName}.location`),
+        skills
+    };
+};
+
+export const getPositions = (t: TranslateFunction): IPosition[] => [
+    getPosition(t, 'vk', [
+        'React.js',
+        'TypeScript',
+        'Stylus',
+        'MobX',
+        'Webpack',
+        'Java',
+        'Spring',
+        'GWT'
+    ]),
+    getPosition(t, 'it1', [
+        'React.js',
+        'JavaScript',
+        'CSS',
+        'Styled Components',
+        'Webpack',
+        'HP Service Manager',
+        'RAD'
+    ]),
+    getPosition(t, 'calendaria', [
+        'React.js',
+        'Typescript',
+        'Jss',
+        'Ant Design',
+        'Redux-toolkit',
+        'Webpack'
+    ]),
+    getPosition(t, 'tecom', [
+        'React.js',
+        'JavaScript',
+        'Jss',
+        'material-UI',
+        'i18n',
+        'Redux',
+        'Reselect',
+        'Jest',
+        'Playwright',
+        'lerna'
+    ]),
+    getPosition(t, 'tecom', [
+        'React.js',
+        'Typescript',
+        'Scss',
+        'Ant Design',
+        'React Relay',
+        'GraphQL'
+    ])
 ];
