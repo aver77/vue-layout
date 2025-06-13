@@ -115,78 +115,41 @@ const en = {
                 title: 'VK',
                 startDate: 'July 2024',
                 endDate: 'Present',
-                position: 'Frontend Developer',
-                location: 'Moscow, Russia (Remote)',
+                position: 'Senior Frontend Developer',
+                location: 'Remote',
                 description:
-                    'Development of the ok.ru website in the core frontend team.'
+                    ` - ${getBoldText('Accelerated the build time of React part by 30%.')} Added caching, with it the ${getBoldText('speed is higher up to 80%.')}\n` +
+                    ` - ${getBoldText('Increased crash-free from 79% to 88.5%')} by implementing filtering of advertising and Adblock errors into our logging system.\n` +
+                    ` - ${getBoldText('Fixed more than 20% of failing autotests and reduced them overall running time by 5%')}, increased the number of test attributes by ~3.5 times.\n` +
+                    ` - ${getBoldText('Increased the INP metric by 7%')}, optimized the initial loading of js modules.\n` +
+                    ` - Developed the page ok.ru/pozdravleniya, many components in UI Kit.\n` +
+                    ` - Stabilized the project: implemented PMD analysis of Java code, added stylus linter, transferred the project to strict tsconfig, ${getBoldText('fixed more than 4,500 typescript errors')}, wrote an eslint rule for checking attributes.\n`
             },
             it1: {
-                title: 'IT_ONE',
+                title: 'Gazprombank',
                 startDate: 'May 2023',
                 endDate: 'July 2024',
-                position: 'Frontend Developer',
-                location: 'Moscow, Russia (Remote)',
+                position: 'Senior Frontend Developer',
+                location: 'Remote',
                 description:
-                    'I was developing corporate application portals:\n' +
-                    ` - Worked with several code bases: on React.js and on HPSM using pure ES5 JavaScript.\n` +
-                    ` - Carried out organizational tasks of the team.\n` +
-                    `${getBoldText(
-                        'I improved UI/UX user satisfaction metrics by ~40%'
-                    )} through optimizing performance, refactoring layout of core components in the process of migration from pure CSS and also creating UI Kit from scratch for an app which is used by 25.000 bank employees. ${getBoldText(
-                        'I reduced the build time of a React.js project by 1.5 times'
-                    )} and created detailed project documentation which ${getBoldText(
-                        'sped up the onboadring process.'
-                    )}`
-            },
-            calendaria: {
-                title: 'Calendaria',
-                startDate: 'November 2022',
-                endDate: 'May 2023',
-                position: 'Frontend Developer',
-                location: 'Almaty, Kazakhstan (Remote)',
-                description:
-                    'I was a frontend lead of an enterprise IAM portal:\n' +
-                    ` - Designed frontend architecture on React.js and application layout from scratch.\n` +
-                    ` - Analyzed TA, project goals and needs.\n` +
-                    ` - Mentored two junior developers, conducted interviews.\n` +
-                    `I successfully ${getBoldText(
-                        'accomplished the full development process within contract period'
-                    )}, achieving the main goal of ${getBoldText(
-                        "digitizing up to 80% of the company's document flow."
-                    )} My efforts have resulted in an application that is actively used by 4.500 employees.`
+                    ` - Reduced the ${getBoldText('build time')} of the entire project ${getBoldText('by ~50%.')}\n` +
+                    ` - ${getBoldText('Reduced')} the number of monthly support ${getBoldText('crash requests from 800 to 600')} (by average).\n` +
+                    ` - ${getBoldText('Improved the UI/UX')} user satisfaction metric ${getBoldText('by ~40%.')}\n` +
+                    ` - ${getBoldText('Configured the CI process')}, which led to a ${getBoldText('12% increase in TTM.')}\n` +
+                    ` - Developed a UI Kit for the entire application from scratch.\n` +
+                    ` - Created detailed design documentation, ${getBoldText('sped up the onboarding process by 2 times.')}`
             },
             tecom: {
                 title: 'Tecom',
-                startDate: 'November 2021',
-                endDate: 'November 2022',
-                position: 'Frontend Developer',
-                location: 'Nizhny Novgorod, Russia (Remote)',
-                description:
-                    'I was developing a remote device tracking system:\n' +
-                    ` - Fixing, refactoring, writing new logic on React.js and achieved 80% test coverage by unit and e2e tests.\n` +
-                    ` - Developed core libraries, including a corporate UI-kit with storybook, as well as a library of ready-made utilities.\n` +
-                    `${getBoldText(
-                        'I released MVP versions of 3 editor-like interfaces libraries'
-                    )} (pdf, diagrams, charts) and received positive feedback from customers. My contribution in migration to newer React.js version without class components ${getBoldText(
-                        'made development process more efficient.'
-                    )}`
-            },
-            julius: {
-                title: 'Julius',
                 startDate: 'December 2020',
-                endDate: 'November 2021',
+                endDate: 'May 2023',
                 position: 'Frontend Developer',
-                location: 'London, United Kingdom (Remote)',
+                location: 'Remote',
                 description:
-                    'I developed UI of ML platform for managing backend services:\n' +
-                    ` - Implemented many features, such as theming and internalization.\n` +
-                    ` - Worked on accessible responsive design and refactoring styles by utilizing modern SCSS features.\n` +
-                    ` - Developed complex components: large tables, scatter charts, trees.\n` +
-                    `${getBoldText(
-                        'I reduced page loading times'
-                    )} by implementing Relay data-fetching mechanisms. ${getBoldText(
-                        'I enhanced application accessibility up to 90%  in Lighthouse and made it pixel-perfect identical to Figma.'
-                    )}`
+                    ` - Increased the project's ${getBoldText('unit and e2e test coverage from ~20% to ~80%.')}\n` +
+                    ` - Migrated the project from class components to React 17, ${getBoldText('increased TTM to 10%.')}\n` +
+                    ` - ${getBoldText('Reduced pages loading time by an average of 15%')} by implementing the react-query data-fetching mechanism.\n` +
+                    ` - Developed 3 key libraries from scratch that covers up to 80% of the company's report flow: chart, graph builder, pdf-builder.`
             }
         },
         contact: {

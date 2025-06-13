@@ -46,14 +46,6 @@ export const getPositions = (t: TranslateFunction): IPosition[] => [
         'HP Service Manager',
         'RAD'
     ]),
-    getPosition(t, 'calendaria', [
-        'React.js',
-        'Typescript',
-        'Jss',
-        'Ant Design',
-        'Redux-toolkit',
-        'Webpack'
-    ]),
     getPosition(t, 'tecom', [
         'React.js',
         'JavaScript',
@@ -65,13 +57,5 @@ export const getPositions = (t: TranslateFunction): IPosition[] => [
         'Jest',
         'Playwright',
         'lerna'
-    ]),
-    getPosition(t, 'tecom', [
-        'React.js',
-        'Typescript',
-        'Scss',
-        'Ant Design',
-        'React Relay',
-        'GraphQL'
     ])
 ];
