@@ -135,7 +135,7 @@ const en = {
                     ` - Reduced the ${getBoldText('build time')} of the entire project ${getBoldText('by ~50%.')}\n` +
                     ` - ${getBoldText('Reduced')} the number of monthly support ${getBoldText('crash requests from 800 to 600')} (by average).\n` +
                     ` - ${getBoldText('Improved the UI/UX')} user satisfaction metric ${getBoldText('by ~40%.')}\n` +
-                    ` - ${getBoldText('Configured the CI process')}, which led to a ${getBoldText('12% increase in TTM.')}\n` +
+                    ` - ${getBoldText('Configured the CI process')}, which led to a ${getBoldText('12% reduction in TTM.')}\n` +
                     ` - Developed a UI Kit for the entire application from scratch.\n` +
                     ` - Created detailed design documentation, ${getBoldText('sped up the onboarding process by 2 times.')}`
             },
@@ -147,7 +147,7 @@ const en = {
                 location: 'Remote',
                 description:
                     ` - Increased the project's ${getBoldText('unit and e2e test coverage from ~20% to ~80%.')}\n` +
-                    ` - Migrated the project from class components to React 17, ${getBoldText('increased TTM to 10%.')}\n` +
+                    ` - Migrated the project from class components to React 17, ${getBoldText('achieved a TTM reduction of up to 10%.')}\n` +
                     ` - ${getBoldText('Reduced pages loading time by an average of 15%')} by implementing the react-query data-fetching mechanism.\n` +
                     ` - Developed 3 key libraries from scratch that covers up to 80% of the company's report flow: chart, graph builder, pdf-builder.`
             }
