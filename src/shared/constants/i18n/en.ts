@@ -119,7 +119,7 @@ const en = {
                 location: 'Remote',
                 description:
                     ` - ${getBoldText('Accelerated the build time of React part by 30%.')} Added caching, with it the ${getBoldText('speed is higher up to 80%.')}\n` +
-                    ` - ${getBoldText('Increased crash-free from 79% to 88.5%')} by implementing filtering of advertising and Adblock errors into our logging system.\n` +
+                    ` - ${getBoldText('Increased crash-free from 76% to 88.5%')} by implementing filtering of advertising and Adblock errors into our logging system.\n` +
                     ` - ${getBoldText('Fixed more than 20% of failing autotests and reduced them overall running time by 5%')}, increased the number of test attributes by ~3.5 times.\n` +
                     ` - ${getBoldText('Increased the INP metric by 7%')}, optimized the initial loading of js modules.\n` +
                     ` - Developed the page ok.ru/pozdravleniya, many components in UI Kit.\n` +
