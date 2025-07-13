@@ -60,7 +60,12 @@ const onCloseModal = () => (modalOpened.value = false);
             :wrapper-class="$style.imgContainer"
             @click="onOpenModal"
         >
-            <img :src="image" :class="$style.img" alt="project image" loading="lazy" />
+            <img
+                :src="image"
+                :class="$style.img"
+                alt="project image"
+                loading="lazy"
+            />
         </WithAnimation>
         <div :class="$style.textsContainer">
             <WithAnimation :get-slot-ref="getParentRef">
