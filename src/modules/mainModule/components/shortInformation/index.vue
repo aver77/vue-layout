@@ -10,9 +10,14 @@ import { titleTypesEnum } from '@/shared/ui/components/title/titleEnum';
 
 import DotsGrid from './dotsGrid/index.vue';
 import { shortInformationId } from '@/shared/constants/elementsIds';
+import { fetchInformation } from '@/shared/api';
+import { IInformation } from '@/shared/ts/contentful';
+import useContentfulData from '@/shared/hooks/useContentfulData';
 
 const target = ref<HTMLElement | null>(null);
 const getTargetRef = () => target;
+
+const information = useContentfulData<IInformation>(fetchInformation);
 </script>
 
 <template>
@@ -20,7 +25,7 @@ const getTargetRef = () => target;
         <div :class="$style.infoWrapper">
             <WithAnimation :get-slot-ref="getTargetRef">
                 <TitleComponent :title-type="titleTypesEnum.h1">{{
-                    $t('main.shortInformation.nameGreet')
+                    information?.name
                 }}</TitleComponent>
             </WithAnimation>
             <WithAnimation :get-slot-ref="getTargetRef">
@@ -30,13 +35,13 @@ const getTargetRef = () => target;
                 >
                     {{ $t('shared.i') }}
                     <span :class="$style.titleJob">
-                        {{ $t('main.shortInformation.jobTitle') }}
+                        {{ information?.position }}
                     </span>
                 </TitleComponent>
             </WithAnimation>
             <WithAnimation :get-slot-ref="getTargetRef">
                 <p :class="$style.description">
-                    {{ $t('main.shortInformation.description') }}
+                    {{ information?.about }}
                 </p>
             </WithAnimation>
             <WithAnimation :get-slot-ref="getTargetRef">

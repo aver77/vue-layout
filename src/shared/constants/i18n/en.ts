@@ -21,10 +21,6 @@ const en = {
     },
     main: {
         shortInformation: {
-            nameGreet: "Hey, I'm Nikita",
-            jobTitle: 'Frontend Developer',
-            description:
-                "I'm creative and constantly growing developer with more than three years of experience who loves crafting products that people love. I’m eager to apply my expertise, solving extraordinary problems and bringing profit to customers.",
             contactBtn: 'Contact me'
         },
         about: {
