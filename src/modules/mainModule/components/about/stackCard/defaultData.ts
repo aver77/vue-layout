@@ -10,71 +10,17 @@ export enum stackKeysEnum {
     PERSONAL_BACK = 'PERSONAL_BACK'
 }
 
-export const stackWorkUsage = [
-    'JavaScript',
-    'Typescript',
-    'React.js',
-    'Redux',
-    'HTML',
-    'CSS',
-    'SASS',
-    'CSS in JS',
-    'Ant Design',
-    'Material UI',
-    'Webpack',
-    'Jest',
-    'Playwright',
-    'Rest API',
-    'GraphQL',
-    'Postman',
-    'Swagger'
-];
-
-export const stackPersonalFrontUsage = [
-    'Next.js',
-    'Vue.js',
-    'VueX',
-    'Pinia',
-    'Svelte.js',
-    'Tailwind',
-    'Vite'
-];
-
-export const stackPersonalBackUsage = [
-    'Node.js',
-    'Express.js',
-    'MongoDB',
-    'Docker',
-    'Docker-compose',
-    'Microservices'
-];
-
-interface IGetImgAndStackByKey {
-    imgComponent: Component;
-    currentStack: string[];
-}
-export const getImgAndStackByKey = (
-    key: stackKeysEnum
-): IGetImgAndStackByKey => {
+export const getImgComponentByKey = (key: stackKeysEnum): Component => {
     switch (key) {
         case stackKeysEnum.WORK: {
-            return {
-                imgComponent: Console,
-                currentStack: stackWorkUsage
-            };
+            return Console;
         }
         case stackKeysEnum.PERSONAL_BACK: {
-            return {
-                imgComponent: Server,
-                currentStack: stackPersonalBackUsage
-            };
+            return Server;
         }
         case stackKeysEnum.PERSONAL_FRONT:
         default: {
-            return {
-                imgComponent: Frontend,
-                currentStack: stackPersonalFrontUsage
-            };
+            return Frontend;
         }
     }
 };

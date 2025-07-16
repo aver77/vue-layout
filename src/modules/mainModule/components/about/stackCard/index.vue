@@ -4,7 +4,7 @@ import { PropType, Ref } from 'vue';
 import WithAnimation from '@/components/HOCs/withAnimation/index.vue';
 
 import {
-    getImgAndStackByKey,
+    getImgComponentByKey,
     getTitleByKeyAndT,
     stackKeysEnum
 } from './defaultData';
@@ -19,6 +19,10 @@ const { stackKey } = defineProps({
         type: String as PropType<stackKeysEnum>,
         default: () => stackKeysEnum.WORK
     },
+    currentStack: {
+        type: Array as PropType<string[]>,
+        default: () => []
+    },
     getParentRef: {
         type: Function as PropType<() => Ref<HTMLElement | null>>,
         default: () => {
@@ -27,7 +31,7 @@ const { stackKey } = defineProps({
     }
 });
 
-const { currentStack, imgComponent } = getImgAndStackByKey(stackKey);
+const imgComponent = getImgComponentByKey(stackKey);
 </script>
 
 <template>

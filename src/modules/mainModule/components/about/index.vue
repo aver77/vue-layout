@@ -13,9 +13,14 @@ import Arrow from '@/shared/assets/svg/components/Arrow.vue';
 
 import { aboutId } from '@/shared/constants/elementsIds';
 import { ref } from 'vue';
+import useContentfulData from '@/shared/hooks/useContentfulData';
+import { fetchAbout } from '@/shared/api';
+import type { IAbout } from '@/shared/ts/contentful';
 
 const target = ref<HTMLElement | null>(null);
 const getTargetRef = () => target;
+
+const about = useContentfulData<IAbout>(fetchAbout);
 </script>
 
 <template>
@@ -33,9 +38,7 @@ const getTargetRef = () => target;
         <div :class="$style.infoContainer">
             <div>
                 <WithAnimation
-                    v-for="(infoText, index) in $t(
-                        'main.about.information'
-                    ).split('\n')"
+                    v-for="(infoText, index) in about?.information?.split('\n')"
                     :key="index"
                     :wrapper-class="$style.text"
                     :get-slot-ref="getTargetRef"
@@ -57,14 +60,17 @@ const getTargetRef = () => target;
             <div :class="$style.stackWrap">
                 <StackCard
                     :stack-key="stackKeysEnum.WORK"
+                    :current-stack="about?.workUsage"
                     :get-parent-ref="getTargetRef"
                 />
                 <StackCard
                     :stack-key="stackKeysEnum.PERSONAL_FRONT"
+                    :current-stack="about?.personalUsage"
                     :get-parent-ref="getTargetRef"
                 />
                 <StackCard
                     :stack-key="stackKeysEnum.PERSONAL_BACK"
+                    :current-stack="about?.personalBackendUsage"
                     :get-parent-ref="getTargetRef"
                 />
             </div>

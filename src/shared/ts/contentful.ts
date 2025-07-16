@@ -30,3 +30,10 @@ export interface IInformation {
     position: string;
     about: string;
 }
+
+export interface IAbout {
+    information: string;
+    workUsage: string[];
+    personalUsage: string[];
+    personalBackendUsage: string[];
+}

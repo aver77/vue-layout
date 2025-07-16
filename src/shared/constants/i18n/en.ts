@@ -25,11 +25,6 @@ const en = {
         },
         about: {
             title: 'About',
-            information:
-                'My expertise covers many different areas: I have developed high-load products and startup projects, led team, and also created custom web applications.\n' +
-                'I am highly product-oriented and willing to do whatever it takes to ensure the success of the product. I immerse myself in projects quickly, delivering value to the business, offering tangible contributions and ideas, all while maintaining a customer-centric mindset.\n' +
-                'I do not limit myself to certain technologies working with various libraries and frameworks, such as React.js, Next.js, Vue.js, etc.\n' +
-                'I have excellent communication skills and am always open to new professional acquaintances!',
             myLinks: 'My Links',
             stackTitle: {
                 work: 'Use at work',
