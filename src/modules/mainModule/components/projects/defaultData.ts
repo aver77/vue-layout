@@ -4,7 +4,7 @@ import imgWebCompiler from '@/shared/assets/images/compiler.png';
 import imgInsuranceApp from '@/shared/assets/images/policy.png';
 import imgNextPortfolio from '@/shared/assets/images/portfolioNext.png';
 import imgVuePortfolio from '@/shared/assets/images/vuePortfolio.png';
-import type { TranslateFunction } from '@/shared/ts/types';
+import type { TranslateFunction } from '@/shared/ts/i18n';
 
 export type TLink = `https://${string}` | `http://${string}`;
 interface IProject {

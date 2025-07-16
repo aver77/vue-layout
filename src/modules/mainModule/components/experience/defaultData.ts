@@ -1,4 +1,4 @@
-import type { TranslateFunction } from '@/shared/ts/types';
+import type { TranslateFunction } from '@/shared/ts/i18n';
 
 interface IPosition {
     companyName: string;
