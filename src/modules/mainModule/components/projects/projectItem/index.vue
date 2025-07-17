@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { PropType, ref, defineAsyncComponent, Ref } from 'vue';
-import { TLink } from '../defaultData';
+import { TLink } from '@/shared/ts/shared';
 
 import WithAnimation from '@/components/HOCs/withAnimation/index.vue';
 import WithModal from '@/components/HOCs/withModal/index.vue';

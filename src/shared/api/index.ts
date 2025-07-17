@@ -6,6 +6,7 @@ import type {
     IInformation,
     ILinks
 } from '@/shared/ts/contentful';
+import { IProject } from '@/shared/ts/contentful';
 
 const client = createClient({
     space: import.meta.env.VITE_SPACE,
@@ -51,4 +52,8 @@ export const fetchAbout = async (locale: string) => {
 
 export const fetchLinks = async (locale: string) => {
     return await fetchBase<ILinks>(locale, 'portfolioLinks', true);
+};
+
+export const fetchProjects = async (locale: string) => {
+    return await fetchBase<IProject>(locale, 'portfolioProjects', false);
 };

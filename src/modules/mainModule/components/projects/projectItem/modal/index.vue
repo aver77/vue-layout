@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { PropType } from 'vue';
-import { TLink } from '@/modules/mainModule/components/projects/defaultData';
+import { TLink } from '@/shared/ts/shared';
 
 import TitleComponent from '@/shared/ui/components/title/index.vue';
 import { titleTypesEnum } from '@/shared/ui/components/title/titleEnum';

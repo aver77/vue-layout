@@ -9,11 +9,14 @@ import TitleComponent from '@/shared/ui/components/title/index.vue';
 import { titleTypesEnum } from '@/shared/ui/components/title/titleEnum';
 
 import Line from '@/shared/ui/components/line/index.vue';
-import { getProjects } from '@/modules/mainModule/components/projects/defaultData';
 import { projectsId } from '@/shared/constants/elementsIds';
+import useContentfulData from '@/shared/hooks/useContentfulData';
+import { fetchProjects } from '@/shared/api';
 
 const target = ref<HTMLElement | null>(null);
 const getTargetRef = () => target;
+
+const projects = useContentfulData(fetchProjects);
 </script>
 
 <template>
@@ -30,9 +33,10 @@ const getTargetRef = () => target;
         </div>
         <div :class="$style.projectsWrap">
             <ProjectItem
-                v-for="(project, index) in getProjects($t)"
+                v-for="(project, index) in projects"
                 :key="index"
-                v-bind="project"
+                v-bind="project.fields"
+                :image="project.fields?.image?.fields?.file?.url"
                 :get-parent-ref="getTargetRef"
             />
         </div>

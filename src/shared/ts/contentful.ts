@@ -20,7 +20,7 @@ interface IFile {
     };
 }
 
-interface IContentfulMetadata {
+export interface IContentfulMetadata {
     title: string;
     file: IFile;
 }
@@ -45,4 +45,14 @@ export interface ILinks {
     resumePdf: IContentfulResourceFields<IContentfulMetadata>;
     email: string;
     telegramUrl: string;
+}
+
+export interface IProject {
+    name: string;
+    image: IContentfulResourceFields<IContentfulMetadata>;
+    stack: string[];
+    githubLink: string;
+    projectLink?: string;
+    shortDesc: string;
+    longDesc: string;
 }
