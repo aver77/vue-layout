@@ -37,3 +37,10 @@ export interface IAbout {
     personalUsage: string[];
     personalBackendUsage: string[];
 }
+
+export interface ILinks {
+    githubUrl: string;
+    linkedinUrl: string;
+    codewarsUrl: string;
+    resumePdf: IContentfulResourceFields<IContentfulMetadata>;
+}

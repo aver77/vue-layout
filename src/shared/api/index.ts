@@ -2,7 +2,9 @@ import { createClient } from 'contentful';
 import type {
     IAbout,
     IContentfulResource,
-    IInformation
+    IContentfulResourceFields,
+    IInformation,
+    ILinks
 } from '@/shared/ts/contentful';
 
 const client = createClient({
@@ -10,22 +12,43 @@ const client = createClient({
     accessToken: import.meta.env.VITE_ACCESS_TOKEN
 });
 
-export const fetchInformation = async (locale: string) => {
-    const about = (await client
-        .getEntries({ content_type: 'portfolioInformation', locale })
+async function fetchBase<T>(
+    locale: string,
+    contentType: string,
+    isSingleRecord: true
+): Promise<T>;
+
+async function fetchBase<T>(
+    locale: string,
+    contentType: string,
+    isSingleRecord: false
+): Promise<IContentfulResourceFields<T>[]>;
+async function fetchBase<T>(
+    locale: string,
+    contentType: string,
+    isSingleRecord: boolean
+) {
+    const data = (await client
+        .getEntries({ content_type: contentType, locale })
         .catch(() => ({
             items: []
-        }))) as IContentfulResource<IInformation>;
+        }))) as IContentfulResource<T>;
 
-    return about?.items?.[0]?.fields || {};
+    if (isSingleRecord) {
+        return data?.items?.[0]?.fields || {};
+    }
+
+    return data?.items || [];
+}
+
+export const fetchInformation = async (locale: string) => {
+    return await fetchBase<IInformation>(locale, 'portfolioInformation', true);
 };
 
 export const fetchAbout = async (locale: string) => {
-    const about = (await client
-        .getEntries({ content_type: 'portfolioAbout', locale })
-        .catch(() => ({
-            items: []
-        }))) as IContentfulResource<IAbout>;
+    return await fetchBase<IAbout>(locale, 'portfolioAbout', true);
+};
 
-    return about?.items?.[0]?.fields || {};
+export const fetchLinks = async (locale: string) => {
+    return await fetchBase<ILinks>(locale, 'portfolioLinks', true);
 };
