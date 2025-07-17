@@ -43,4 +43,6 @@ export interface ILinks {
     linkedinUrl: string;
     codewarsUrl: string;
     resumePdf: IContentfulResourceFields<IContentfulMetadata>;
+    email: string;
+    telegramUrl: string;
 }

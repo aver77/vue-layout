@@ -1,7 +1,8 @@
 <script setup lang="ts">
-import { links } from './defaultData';
+import { getLinksWithComponents } from './defaultData';
 import { onMounted, ref } from 'vue';
 import { observeElement } from '@/shared/lib/utils/observeElement';
+import { useGlobalContentfulData } from '@/shared/providers/globalContentfulDataProvider';
 
 defineProps({
     heading: {
@@ -18,12 +19,20 @@ onMounted(() => {
         observeElement(linksRef, [isElementWasInViewPort]);
     }
 });
+
+const { links } = useGlobalContentfulData();
+
+const linksStructure = getLinksWithComponents(
+    links.value?.githubUrl as string,
+    links.value?.linkedinUrl as string,
+    links.value?.codewarsUrl as string
+);
 </script>
 
 <template>
     <div ref="linksRef" :class="$style.linksSection">
         <a
-            v-for="({ link, linkComponent }, index) in links"
+            v-for="({ link, linkComponent }, index) in linksStructure"
             :key="link"
             :href="link"
             target="_blank"

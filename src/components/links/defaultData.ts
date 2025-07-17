@@ -7,17 +7,21 @@ interface ILink {
     link: string;
     linkComponent: Component;
 }
-export const links: ILink[] = [
+export const getLinksWithComponents = (
+    githubUrl: string,
+    linkedinUrl: string,
+    codewarsUrl: string
+): ILink[] => [
     {
-        link: 'https://github.com/aver77',
+        link: githubUrl,
         linkComponent: GitHub
     },
     {
-        link: 'https://www.linkedin.com/in/nikita-averochkin-761917276/',
+        link: linkedinUrl,
         linkComponent: LinkedIn
     },
     {
-        link: 'https://www.codewars.com/users/aver77',
+        link: codewarsUrl,
         linkComponent: CodeWars
     }
 ];
