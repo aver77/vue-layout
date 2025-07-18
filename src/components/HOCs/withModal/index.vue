@@ -1,8 +1,10 @@
 <script setup lang="ts">
-import { onUpdated, PropType, ref } from 'vue';
+import type { PropType } from 'vue';
+import { onUpdated, ref } from 'vue';
+
 import Close from '@/shared/assets/svg/components/Close.vue';
 
-import { Presence, Motion } from '@oku-ui/motion';
+import { Motion, Presence } from '@oku-ui/motion';
 
 const props = defineProps({
     modalClass: {

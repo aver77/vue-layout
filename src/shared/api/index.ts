@@ -1,4 +1,5 @@
 import { createClient } from 'contentful';
+
 import type {
     IAbout,
     IContentfulResource,
@@ -6,7 +7,7 @@ import type {
     IInformation,
     ILinks
 } from '@/shared/ts/contentful';
-import { IProject } from '@/shared/ts/contentful';
+import type { IProject } from '@/shared/ts/contentful';
 
 const client = createClient({
     space: import.meta.env.VITE_SPACE,

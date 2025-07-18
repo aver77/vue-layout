@@ -1,9 +1,10 @@
 <script lang="ts" setup>
-import Links from '../links/index.vue';
-import ButtonComponent from '@/shared/ui/components/button/index.vue';
-import LangSwitcher from './langSwitcher/index.vue';
 import { ref } from 'vue';
+
 import { useGlobalContentfulData } from '@/shared/providers/globalContentfulDataProvider';
+import ButtonComponent from '@/shared/ui/components/button/index.vue';
+import Links from '../links/index.vue';
+import LangSwitcher from './langSwitcher/index.vue';
 
 const burgerOpened = ref(false);
 

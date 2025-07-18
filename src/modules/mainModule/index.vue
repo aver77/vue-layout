@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import ShortInformation from './components/shortInformation/index.vue';
 import About from './components/about/index.vue';
-import Projects from './components/projects/index.vue';
-import Experience from './components/experience/index.vue';
 import Contact from './components/contact/index.vue';
+import Experience from './components/experience/index.vue';
+import Projects from './components/projects/index.vue';
+import ShortInformation from './components/shortInformation/index.vue';
 </script>
 
 <template>

@@ -2,7 +2,10 @@
 import { onMounted, onUnmounted, reactive, ref } from 'vue';
 
 import { linkData } from '@/components/sidebar/defaultData';
-import { SidebarKeys } from '@/shared/constants/enums/sidebarKeys';
+import {
+    isElementInViewport,
+    scrollIntoViewAndWait
+} from '@/components/sidebar/utils';
 import {
     aboutId,
     contactsId,
@@ -10,10 +13,7 @@ import {
     projectsId,
     shortInformationId
 } from '@/shared/constants/elementsIds';
-import {
-    isElementInViewport,
-    scrollIntoViewAndWait
-} from '@/components/sidebar/utils';
+import { SidebarKeys } from '@/shared/constants/enums/sidebarKeys';
 import { observeElement } from '@/shared/lib/utils/observeElement';
 
 const linkDataWithElements = reactive<Record<string, HTMLElement | null>>({});

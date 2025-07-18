@@ -1,21 +1,18 @@
 <script setup lang="ts">
+import { ref } from 'vue';
+
 import WithAnimation from '@/components/HOCs/withAnimation/index.vue';
-
-import StackCard from './stackCard/index.vue';
-import { stackKeysEnum } from './stackCard/defaultData';
-
+import Links from '@/components/links/index.vue';
+import { fetchAbout } from '@/shared/api';
+import Arrow from '@/shared/assets/svg/components/Arrow.vue';
+import { aboutId } from '@/shared/constants/elementsIds';
+import useContentfulData from '@/shared/hooks/useContentfulData';
+import type { IAbout } from '@/shared/ts/contentful';
+import Line from '@/shared/ui/components/line/index.vue';
 import TitleComponent from '@/shared/ui/components/title/index.vue';
 import { titleTypesEnum } from '@/shared/ui/components/title/titleEnum';
-
-import Line from '@/shared/ui/components/line/index.vue';
-import Links from '@/components/links/index.vue';
-import Arrow from '@/shared/assets/svg/components/Arrow.vue';
-
-import { aboutId } from '@/shared/constants/elementsIds';
-import { ref } from 'vue';
-import useContentfulData from '@/shared/hooks/useContentfulData';
-import { fetchAbout } from '@/shared/api';
-import type { IAbout } from '@/shared/ts/contentful';
+import { stackKeysEnum } from './stackCard/defaultData';
+import StackCard from './stackCard/index.vue';
 
 const target = ref<HTMLElement | null>(null);
 const getTargetRef = () => target;

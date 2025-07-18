@@ -1,18 +1,15 @@
 <script setup lang="ts">
-import { PropType, Ref } from 'vue';
+import type { PropType, Ref } from 'vue';
 
 import WithAnimation from '@/components/HOCs/withAnimation/index.vue';
-
+import Chip from '@/shared/ui/components/chip/index.vue';
+import TitleComponent from '@/shared/ui/components/title/index.vue';
+import { titleTypesEnum } from '@/shared/ui/components/title/titleEnum';
 import {
     getImgComponentByKey,
     getTitleByKeyAndT,
     stackKeysEnum
 } from './defaultData';
-
-import TitleComponent from '@/shared/ui/components/title/index.vue';
-import { titleTypesEnum } from '@/shared/ui/components/title/titleEnum';
-
-import Chip from '@/shared/ui/components/chip/index.vue';
 
 const { stackKey } = defineProps({
     stackKey: {

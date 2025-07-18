@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import { getLinksWithComponents } from './defaultData';
 import { onMounted, ref } from 'vue';
+
 import { observeElement } from '@/shared/lib/utils/observeElement';
 import { useGlobalContentfulData } from '@/shared/providers/globalContentfulDataProvider';
+import { getLinksWithComponents } from './defaultData';
 
 defineProps({
     heading: {

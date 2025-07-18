@@ -1,10 +1,10 @@
 import { createApp } from 'vue';
-import App from './app/index.vue';
 import { createI18n, useI18n } from 'vue-i18n';
 
-import { EN } from '@/shared/constants/i18n/locales.ts';
 import messages from '@/shared/constants/i18n/index.ts';
+import { EN } from '@/shared/constants/i18n/locales.ts';
 import { LOCALE } from '@/shared/constants/localStorageKeys.ts';
+import App from './app/index.vue';
 
 const i18n = createI18n({
     legacy: false,

@@ -2,15 +2,12 @@
 import { ref } from 'vue';
 
 import WithAnimation from '@/components/HOCs/withAnimation/index.vue';
-
-import TitleComponent from '@/shared/ui/components/title/index.vue';
-import { titleTypesEnum } from '@/shared/ui/components/title/titleEnum';
-
-import Line from '@/shared/ui/components/line/index.vue';
-import PositionItem from './positionItem/index.vue';
-
 import { getPositions } from '@/modules/mainModule/components/experience/defaultData';
 import { experienceId } from '@/shared/constants/elementsIds';
+import Line from '@/shared/ui/components/line/index.vue';
+import TitleComponent from '@/shared/ui/components/title/index.vue';
+import { titleTypesEnum } from '@/shared/ui/components/title/titleEnum';
+import PositionItem from './positionItem/index.vue';
 
 const target = ref<HTMLElement | null>(null);
 const getTargetRef = () => target;

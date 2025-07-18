@@ -1,8 +1,7 @@
 <script lang="ts" setup>
-import { PropType, Ref } from 'vue';
+import type { PropType, Ref } from 'vue';
 
 import WithAnimation from '@/components/HOCs/withAnimation/index.vue';
-
 import Chip from '@/shared/ui/components/chip/index.vue';
 import Line from '@/shared/ui/components/line/index.vue';
 import TitleComponent from '@/shared/ui/components/title/index.vue';

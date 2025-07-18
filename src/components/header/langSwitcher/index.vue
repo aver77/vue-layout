@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n';
-import { EN, RU } from '@/shared/constants/i18n/locales';
 
-import UsFlag from '@/shared/assets/svg/components/UsFlag.vue';
 import RuFlag from '@/shared/assets/svg/components/RuFlag.vue';
+import UsFlag from '@/shared/assets/svg/components/UsFlag.vue';
+import { EN, RU } from '@/shared/constants/i18n/locales';
 import { LOCALE } from '@/shared/constants/localStorageKeys';
 
 const { locale } = useI18n({ useScope: 'global' });

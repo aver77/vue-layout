@@ -2,16 +2,13 @@
 import { ref } from 'vue';
 
 import WithAnimation from '@/components/HOCs/withAnimation/index.vue';
-
-import ProjectItem from './projectItem/index.vue';
-
-import TitleComponent from '@/shared/ui/components/title/index.vue';
-import { titleTypesEnum } from '@/shared/ui/components/title/titleEnum';
-
-import Line from '@/shared/ui/components/line/index.vue';
+import { fetchProjects } from '@/shared/api';
 import { projectsId } from '@/shared/constants/elementsIds';
 import useContentfulData from '@/shared/hooks/useContentfulData';
-import { fetchProjects } from '@/shared/api';
+import Line from '@/shared/ui/components/line/index.vue';
+import TitleComponent from '@/shared/ui/components/title/index.vue';
+import { titleTypesEnum } from '@/shared/ui/components/title/titleEnum';
+import ProjectItem from './projectItem/index.vue';
 
 const target = ref<HTMLElement | null>(null);
 const getTargetRef = () => target;

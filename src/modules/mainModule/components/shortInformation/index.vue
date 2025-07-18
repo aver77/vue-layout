@@ -1,18 +1,16 @@
 <script setup lang="ts">
 import { ref } from 'vue';
+
 import WithAnimation from '@/components/HOCs/withAnimation/index.vue';
-
-import ButtonComponent from '@/shared/ui/components/button/index.vue';
+import { fetchInformation } from '@/shared/api';
+import { shortInformationId } from '@/shared/constants/elementsIds';
+import useContentfulData from '@/shared/hooks/useContentfulData';
+import type { IInformation } from '@/shared/ts/contentful';
 import buttonTypesEnum from '@/shared/ui/components/button/buttonTypesEnum';
-
+import ButtonComponent from '@/shared/ui/components/button/index.vue';
 import TitleComponent from '@/shared/ui/components/title/index.vue';
 import { titleTypesEnum } from '@/shared/ui/components/title/titleEnum';
-
 import DotsGrid from './dotsGrid/index.vue';
-import { shortInformationId } from '@/shared/constants/elementsIds';
-import { fetchInformation } from '@/shared/api';
-import { IInformation } from '@/shared/ts/contentful';
-import useContentfulData from '@/shared/hooks/useContentfulData';
 
 const target = ref<HTMLElement | null>(null);
 const getTargetRef = () => target;

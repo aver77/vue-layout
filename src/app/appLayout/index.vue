@@ -1,7 +1,7 @@
 <script setup lang="ts">
+import Footer from '@/components/footer/index.vue';
 import Header from '@/components/header/index.vue';
 import Sidebar from '@/components/sidebar/index.vue';
-import Footer from '@/components/footer/index.vue';
 </script>
 
 <template>

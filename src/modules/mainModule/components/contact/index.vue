@@ -2,14 +2,11 @@
 import { ref } from 'vue';
 
 import WithAnimation from '@/components/HOCs/withAnimation/index.vue';
-
-import TitleComponent from '@/shared/ui/components/title/index.vue';
-import { titleTypesEnum } from '@/shared/ui/components/title/titleEnum';
-
 import Mail from '@/shared/assets/svg/components/Mail.vue';
-
 import { contactsId } from '@/shared/constants/elementsIds';
 import { useGlobalContentfulData } from '@/shared/providers/globalContentfulDataProvider';
+import TitleComponent from '@/shared/ui/components/title/index.vue';
+import { titleTypesEnum } from '@/shared/ui/components/title/titleEnum';
 
 const target = ref<HTMLElement | null>(null);
 const getTargetRef = () => target;

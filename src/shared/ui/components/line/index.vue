@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { PropType } from 'vue';
+import type { PropType } from 'vue';
+
 import { lineLayoutsEnum } from '@/shared/ui/components/line/lineEnum';
 
 const { layout } = defineProps({

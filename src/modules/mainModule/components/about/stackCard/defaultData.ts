@@ -1,7 +1,8 @@
+import type { Component } from 'vue';
+
+import Console from '@/shared/assets/svg/components/Console.vue';
 import Frontend from '@/shared/assets/svg/components/Frontend.vue';
 import Server from '@/shared/assets/svg/components/Server.vue';
-import Console from '@/shared/assets/svg/components/Console.vue';
-import { Component } from 'vue';
 import type { TranslateFunction } from '@/shared/ts/i18n';
 
 export enum stackKeysEnum {

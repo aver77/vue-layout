@@ -1,18 +1,18 @@
 <script setup lang="ts">
-import { PropType, ref, defineAsyncComponent, Ref } from 'vue';
-import { TLink } from '@/shared/ts/shared';
+import type { PropType, Ref } from 'vue';
+import { defineAsyncComponent, ref } from 'vue';
 
 import WithAnimation from '@/components/HOCs/withAnimation/index.vue';
 import WithModal from '@/components/HOCs/withModal/index.vue';
+import type { TLink } from '@/shared/ts/shared';
 
 const Modal = defineAsyncComponent(() => import('./modal/index.vue'));
 
-import TitleComponent from '@/shared/ui/components/title/index.vue';
-import { titleTypesEnum } from '@/shared/ui/components/title/titleEnum';
-
-import Line from '@/shared/ui/components/line/index.vue';
 import GitHub from '@/shared/assets/svg/components/GitHub.vue';
 import GoTo from '@/shared/assets/svg/components/GoTo.vue';
+import Line from '@/shared/ui/components/line/index.vue';
+import TitleComponent from '@/shared/ui/components/title/index.vue';
+import { titleTypesEnum } from '@/shared/ui/components/title/titleEnum';
 
 const { stack } = defineProps({
     image: {

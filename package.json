@@ -7,7 +7,8 @@
     "start": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "lint": "npx eslint .eslintrc.cjs src"
+    "lint": "npx eslint .eslintrc.cjs src",
+    "lint-fix": "npx eslint .eslintrc.cjs src --fix"
   },
   "dependencies": {
     "@oku-ui/motion": "^0.3.2",

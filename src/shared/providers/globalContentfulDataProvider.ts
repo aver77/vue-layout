@@ -1,7 +1,9 @@
-import { InjectionKey, Ref, provide, inject } from 'vue';
-import type { ILinks } from '@/shared/ts/contentful';
+import type { InjectionKey, Ref } from 'vue';
+import { inject, provide } from 'vue';
+
 import { fetchLinks } from '@/shared/api';
 import useContentfulData from '@/shared/hooks/useContentfulData';
+import type { ILinks } from '@/shared/ts/contentful';
 
 export interface IGlobalContentfulDataContext {
     links: Ref<ILinks | null>;

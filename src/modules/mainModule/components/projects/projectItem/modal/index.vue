@@ -1,12 +1,11 @@
 <script setup lang="ts">
-import { PropType } from 'vue';
-import { TLink } from '@/shared/ts/shared';
-
-import TitleComponent from '@/shared/ui/components/title/index.vue';
-import { titleTypesEnum } from '@/shared/ui/components/title/titleEnum';
+import type { PropType } from 'vue';
 
 import GitHub from '@/shared/assets/svg/components/GitHub.vue';
 import GoTo from '@/shared/assets/svg/components/GoTo.vue';
+import type { TLink } from '@/shared/ts/shared';
+import TitleComponent from '@/shared/ui/components/title/index.vue';
+import { titleTypesEnum } from '@/shared/ui/components/title/titleEnum';
 
 const { longDesc } = defineProps({
     name: {

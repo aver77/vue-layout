@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import AppLayout from './appLayout/index.vue';
-import MainPage from '@/pages/mainPage/index.vue';
-
 import { useI18n } from 'vue-i18n';
+
+import MainPage from '@/pages/mainPage/index.vue';
 import { globalContentfulDataProvider } from '@/shared/providers/globalContentfulDataProvider';
+import AppLayout from './appLayout/index.vue';
 
 const { t } = useI18n({ useScope: 'global' });
 

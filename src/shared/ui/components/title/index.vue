@@ -1,9 +1,10 @@
 <script setup lang="ts">
+import type { PropType } from 'vue';
+
 import {
     titleTypesEnum,
     titleWeightsEnum
 } from '@/shared/ui/components/title/titleEnum';
-import { PropType } from 'vue';
 
 const { titleType, weight } = defineProps({
     withDot: {

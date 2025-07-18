@@ -4,7 +4,6 @@ import {
     experienceId,
     projectsId
 } from '@/shared/constants/elementsIds';
-
 import { SidebarKeys } from '@/shared/constants/enums/sidebarKeys';
 
 export const linkData = {

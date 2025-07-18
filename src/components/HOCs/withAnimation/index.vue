@@ -1,5 +1,7 @@
 <script lang="ts" setup>
-import { CSSProperties, onMounted, PropType, Ref, ref } from 'vue';
+import type { CSSProperties, PropType, Ref } from 'vue';
+import { onMounted, ref } from 'vue';
+
 import { observeElement } from '@/shared/lib/utils/observeElement';
 
 const { getSlotRef } = defineProps({
