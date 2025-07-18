@@ -10,7 +10,7 @@ module.exports = {
         parser: "@typescript-eslint/parser"
     },
     //define only plugins
-    plugins: ["vue", "@typescript-eslint", "prettier"],
+    plugins: ["vue", "@typescript-eslint", "prettier", "simple-import-sort"],
     //load plugins and configs
     extends: [
         "plugin:vue/vue3-recommended",
@@ -67,6 +67,26 @@ module.exports = {
                 ]
             }
         ],
-        "prettier/prettier": ["warn"]
+        "prettier/prettier": ["warn"],
+        "simple-import-sort/imports": ["error", {
+            groups: [
+                /** 1. Imports from solid-js */
+                ["^vue", "^vue-i18n"],
+                /** 2. Imports from rest external libs */
+                ["^\\w"],
+                /** 3. Absolute project imports (@/) and relative import */
+                ["^@/", "^\\."],
+                /** 4. Type-imports */
+                ["^type:"],
+                /** 5. Media-files (images, fonts etc.) */
+                ["\\.(png|jpe?g|gif|svg|webp|avif|mp4|mp3|woff2?|eot|ttf|otf)$"],
+                /** 6. Styles */
+                ["'\\.css$', '\\.scss$', '\\.sass$', '\\.less$'"],
+            ],
+        }],
+        "@typescript-eslint/consistent-type-imports": ["error", {
+            prefer: "type-imports",
+            disallowTypeAnnotations: false,
+        }],
     }
 };

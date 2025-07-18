@@ -7,7 +7,7 @@
     "start": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "lint": "npx eslint .eslintrc.cjs"
+    "lint": "npx eslint .eslintrc.cjs src"
   },
   "dependencies": {
     "@oku-ui/motion": "^0.3.2",
@@ -26,6 +26,7 @@
     "eslint": "^8.50.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
     "eslint-plugin-vue": "^9.17.0",
     "prettier": "^3.0.3",
     "sass": "^1.68.0",
