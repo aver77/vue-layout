@@ -37,8 +37,7 @@ defineProps({
     }
 });
 
-const underlineSep = '#';
-const boldSep = '*';
+const boldSep = '__';
 </script>
 
 <template>
@@ -77,22 +76,15 @@ const boldSep = '*';
             >
                 <span
                     v-for="(descItemChunk, chunkIndex) in descItem.split(
-                        /[*#]+/
+                        new RegExp(`[${boldSep}]+`)
                     )"
                     :key="chunkIndex"
                     :class="[
-                        descItem.includes(
-                            boldSep + boldSep + descItemChunk + boldSep
-                        ) && $style.boldText,
-                        descItem.includes(
-                            underlineSep +
-                                underlineSep +
-                                descItemChunk +
-                                underlineSep
-                        ) && $style.underlinedText
+                        descItem.includes(boldSep + descItemChunk + boldSep) &&
+                            $style.boldText
                     ]"
                 >
-                    {{ descItemChunk.replace(/[*#]+/, '') }}
+                    {{ descItemChunk.replace(new RegExp(`[${boldSep}]+`), '') }}
                 </span>
             </WithAnimation>
         </div>

@@ -3,7 +3,9 @@ import { ref } from 'vue';
 
 import WithAnimation from '@/components/HOCs/withAnimation/index.vue';
 import { getPositions } from '@/modules/mainModule/components/experience/defaultData';
+import { fetchExperience } from '@/shared/api';
 import { experienceId } from '@/shared/constants/elementsIds';
+import useContentfulData from '@/shared/hooks/useContentfulData';
 import Line from '@/shared/ui/components/line/index.vue';
 import TitleComponent from '@/shared/ui/components/title/index.vue';
 import { titleTypesEnum } from '@/shared/ui/components/title/titleEnum';
@@ -11,6 +13,8 @@ import PositionItem from './positionItem/index.vue';
 
 const target = ref<HTMLElement | null>(null);
 const getTargetRef = () => target;
+
+const positions = useContentfulData(fetchExperience);
 </script>
 
 <template>
@@ -25,9 +29,9 @@ const getTargetRef = () => target;
         </div>
         <div :class="$style.positionsWrap">
             <PositionItem
-                v-for="(position, index) in getPositions($t)"
+                v-for="(position, index) in positions"
                 :key="index"
-                v-bind="position"
+                v-bind="position.fields"
                 :get-parent-ref="getTargetRef"
             />
         </div>

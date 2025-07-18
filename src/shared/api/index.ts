@@ -4,6 +4,7 @@ import type {
     IAbout,
     IContentfulResource,
     IContentfulResourceFields,
+    IExperience,
     IInformation,
     ILinks
 } from '@/shared/ts/contentful';
@@ -57,4 +58,8 @@ export const fetchLinks = async (locale: string) => {
 
 export const fetchProjects = async (locale: string) => {
     return await fetchBase<IProject>(locale, 'portfolioProjects', false);
+};
+
+export const fetchExperience = async (locale: string) => {
+    return await fetchBase<IExperience>(locale, 'portfolioExperience', false);
 };

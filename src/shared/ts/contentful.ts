@@ -56,3 +56,14 @@ export interface IProject {
     shortDesc: string;
     longDesc: string;
 }
+
+export interface IExperience {
+    companyName: string;
+    companyLink?: string;
+    position: string;
+    description: string;
+    startDate: string;
+    endDate: string;
+    location: string;
+    skills: string[];
+}
