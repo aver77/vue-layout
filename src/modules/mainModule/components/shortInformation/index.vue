@@ -5,6 +5,7 @@ import WithAnimation from '@/components/HOCs/withAnimation/index.vue';
 import { fetchInformation } from '@/shared/api';
 import { shortInformationId } from '@/shared/constants/elementsIds';
 import useContentfulData from '@/shared/hooks/useContentfulData';
+import { useGlobalContentfulData } from '@/shared/providers/globalContentfulDataProvider';
 import type { IInformation } from '@/shared/ts/contentful';
 import buttonTypesEnum from '@/shared/ui/components/button/buttonTypesEnum';
 import ButtonComponent from '@/shared/ui/components/button/index.vue';
@@ -16,6 +17,7 @@ const target = ref<HTMLElement | null>(null);
 const getTargetRef = () => target;
 
 const information = useContentfulData<IInformation>(fetchInformation);
+const { links } = useGlobalContentfulData();
 </script>
 
 <template>
@@ -44,7 +46,7 @@ const information = useContentfulData<IInformation>(fetchInformation);
             </WithAnimation>
             <WithAnimation :get-slot-ref="getTargetRef">
                 <a
-                    href="mailto:aser-14@bk.ru"
+                    :href="`mailto:${links?.email}`"
                     target="_blank"
                     rel="noreferrer noopener"
                 >

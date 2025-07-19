@@ -55,6 +55,9 @@
             fill: $cYellow;
         }
     }
+    @include iPhones {
+        font-size: $fsTextMdPlus;
+    }
 }
 
 .mailIcon {
