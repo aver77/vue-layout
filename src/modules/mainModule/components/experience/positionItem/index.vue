@@ -38,6 +38,7 @@ defineProps({
 });
 
 const boldSep = '__';
+const boldRegex = new RegExp(`[${boldSep}]+`);
 </script>
 
 <template>
@@ -76,7 +77,7 @@ const boldSep = '__';
             >
                 <span
                     v-for="(descItemChunk, chunkIndex) in descItem.split(
-                        new RegExp(`[${boldSep}]+`)
+                        boldRegex
                     )"
                     :key="chunkIndex"
                     :class="[
@@ -84,7 +85,7 @@ const boldSep = '__';
                             $style.boldText
                     ]"
                 >
-                    {{ descItemChunk.replace(new RegExp(`[${boldSep}]+`), '') }}
+                    {{ descItemChunk.replace(boldRegex, '') }}
                 </span>
             </WithAnimation>
         </div>
