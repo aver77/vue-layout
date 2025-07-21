@@ -5,6 +5,7 @@ import WithAnimation from '@/components/HOCs/withAnimation/index.vue';
 import { fetchProjects } from '@/shared/api';
 import { projectsId } from '@/shared/constants/elementsIds';
 import useContentfulData from '@/shared/hooks/useContentfulData';
+import { sortContentfulArrays } from '@/shared/lib/utils/sortContentfulArrays';
 import Line from '@/shared/ui/components/line/index.vue';
 import TitleComponent from '@/shared/ui/components/title/index.vue';
 import { titleTypesEnum } from '@/shared/ui/components/title/titleEnum';
@@ -30,7 +31,7 @@ const projects = useContentfulData(fetchProjects);
         </div>
         <div :class="$style.projectsWrap">
             <ProjectItem
-                v-for="(project, index) in projects"
+                v-for="(project, index) in sortContentfulArrays(projects)"
                 :key="index"
                 v-bind="project.fields"
                 :image="project.fields?.image?.fields?.file?.url"

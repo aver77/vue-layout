@@ -49,6 +49,7 @@ export interface ILinks {
 
 export interface IProject {
     name: string;
+    id: number;
     image: IContentfulResourceFields<IContentfulMetadata>;
     stack: string[];
     githubLink: string;
@@ -59,6 +60,7 @@ export interface IProject {
 
 export interface IExperience {
     companyName: string;
+    id: number;
     companyLink?: string;
     position: string;
     description: string;

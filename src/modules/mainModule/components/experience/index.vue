@@ -2,10 +2,10 @@
 import { ref } from 'vue';
 
 import WithAnimation from '@/components/HOCs/withAnimation/index.vue';
-import { getPositions } from '@/modules/mainModule/components/experience/defaultData';
 import { fetchExperience } from '@/shared/api';
 import { experienceId } from '@/shared/constants/elementsIds';
 import useContentfulData from '@/shared/hooks/useContentfulData';
+import { sortContentfulArrays } from '@/shared/lib/utils/sortContentfulArrays';
 import Line from '@/shared/ui/components/line/index.vue';
 import TitleComponent from '@/shared/ui/components/title/index.vue';
 import { titleTypesEnum } from '@/shared/ui/components/title/titleEnum';
@@ -29,7 +29,7 @@ const positions = useContentfulData(fetchExperience);
         </div>
         <div :class="$style.positionsWrap">
             <PositionItem
-                v-for="(position, index) in positions"
+                v-for="(position, index) in sortContentfulArrays(positions)"
                 :key="index"
                 v-bind="position.fields"
                 :get-parent-ref="getTargetRef"
