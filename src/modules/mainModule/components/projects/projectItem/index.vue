@@ -63,7 +63,7 @@ const onCloseModal = () => (modalOpened.value = false);
             <img
                 :src="image"
                 :class="$style.img"
-                alt="project image"
+                :alt="`image of ${name} project`"
                 loading="lazy"
             />
         </WithAnimation>
